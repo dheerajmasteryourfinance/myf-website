@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master Your Finance | Your extended finance team</title>
+<meta name="description" content="Master Your Finance is the extended finance team for professional service firms in the US, UK and Australia: bookkeeping, reporting, AR/AP, cash flow forecasting and CFO-lite support.">
+<meta name="theme-color" content="#266952">
+<link rel="icon" href="assets/logo-green.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="myf.css">
+<style>
+html,body{margin:0;background:#231F20}
+#app{transform-origin:0 0}
+.boot{min-height:100vh;display:grid;place-items:center;font-family:Montserrat,system-ui,sans-serif;color:#266952;font-weight:700}
+</style>
+</head>
+<body>
+<div id="app"><div class="boot">Loading…</div></div>
+<noscript><p style="font-family:sans-serif;padding:24px">This preview needs JavaScript turned on.</p></noscript>
+<script src="dc-runtime.js"></script>
+<script>
+(function () {
+  var DESK = {name:'Main',w:1280}, MOB = {name:'Mobile',w:390};
+  var app = document.getElementById('app');
+  function pick() { return MOB && window.innerWidth < 700 ? MOB : DESK; }
+  var cur = pick();
+  function fit() {
+    var w = window.innerWidth, z = cur === MOB ? w / cur.w : Math.min(1.5, w / cur.w);
+    app.style.zoom = z === 1 ? '' : String(z);
+  }
+  app.innerHTML = '';
+  DCRuntime.mount(cur.name, app).ready.then(function () {
+    fit();
+    if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function () { el.scrollIntoView(); }, 300); }
+  });
+  fit();
+  window.addEventListener('resize', function () { if (pick() !== cur) location.reload(); else fit(); });
+})();
+</script>
+</body>
+</html>

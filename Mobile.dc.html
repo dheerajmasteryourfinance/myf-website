@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MYF homepage · phone</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./myf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+</style>
+</helmet>
+<div class="myf {{motionCls}} {{rvReadyCls}} {{allCls}}" ref="{{setRoot}}" onClick="{{onLinkClick}}" style="width: 390px; height: auto; margin: 0 auto; display: flex; flex-direction: column; background: #231F20; overflow: clip; position: relative">
+
+<sc-if value="{{allOn}}" hint-placeholder-val="{{ false }}">
+<div class="at-page" role="region" aria-label="All tools page">
+<header class="hdr" style="position: sticky; top: 0; z-index: 30; height: 64px">
+<div style="height: 64px; padding: 0 20px; display: flex; align-items: center; gap: 16px">
+<img src="assets/logo-white.png" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px">
+<button type="button" class="btn btn-light btn-sm" onClick="{{closeAll}}" style="margin-left: auto"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true" style="transform: scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>Back to homepage</button>
+</div>
+</header>
+<main id="all-tools" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 90% 0%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 36px 20px 56px">
+<nav aria-label="Breadcrumb" class="small" style="margin-bottom: 20px"><button type="button" class="at-crumb" onClick="{{closeAll}}">Home</button> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">Tools &amp; Resources</span></nav>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
+<span class="eyebrow">Tools &amp; Resources</span>
+<h1 class="h1" style="font-size: 32px">Free finance tools for professional service firms</h1>
+<p class="lede">Explore 6+ free tools for managing your firm’s finances, from quick diagnostics to a 30-day improvement plan.</p>
+</div>
+<a class="btn" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="flex-shrink: 0">Book a free 30-min finance review<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="card-green tp-feat" style="border-radius: 28px; padding: 26px 22px; margin-top: 28px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; color: #FFFFFF">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 680px">
+<span class="tl-new" style="align-self: flex-start">Start here · Free</span>
+<h2 class="h2" style="color: #FFFFFF; font-size: 24px">Your free Financial GPS snapshot</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #DCEBE4">Your finances deserve direction, not just data. See where your business stands on cash flow, reporting and performance, with the gaps, quick wins and actionable insights to stay on course.</p>
+</div>
+<a class="btn btn-light" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="flex-shrink: 0">Get my free snapshot<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div role="group" aria-label="Filter tools" style="display: flex; gap: 10px; flex-wrap: wrap; margin: 28px 0 20px">
+<button type="button" class="tp-f {{atFaC}}" aria-pressed="{{atFaP}}" onClick="{{atFaGo}}">All tools<span class="tp-n">6</span></button>
+<button type="button" class="tp-f {{atFbC}}" aria-pressed="{{atFbP}}" onClick="{{atFbGo}}">Diagnostics<span class="tp-n">3</span></button>
+<button type="button" class="tp-f {{atFcC}}" aria-pressed="{{atFcP}}" onClick="{{atFcGo}}">Cash flow<span class="tp-n">1</span></button>
+<button type="button" class="tp-f {{atFrC}}" aria-pressed="{{atFrP}}" onClick="{{atFrGo}}">Planning<span class="tp-n">2</span></button>
+</div>
+<div role="list" aria-label="Tools" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: stretch">
+<sc-if value="{{atSh1}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card card-green" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></div><span class="tl-new">Law firms</span></div>
+<h2 class="h3" style="color: #FFFFFF">Health check for law firms</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Calculates your firm’s annual revenue leakage from billing rates, utilisation, realisation, collections, WIP DSO and AR DSO.</p>
+<ul class="tl-chips" aria-label="What it checks"><li>Billing rates</li><li>Utilisation</li><li>Realisation</li><li>Collections</li><li>WIP DSO</li><li>AR DSO</li></ul>
+<a class="btn btn-light btn-sm" href="health-check.html" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+<sc-if value="{{atSh2}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"></path><path d="M12 18l4-6"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Diagnostics</span></div>
+<h2 class="h3" style="">Utilisation, realisation &amp; DSO self-diagnostic</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Benchmark your firm’s performance like a CFO. Turn time into revenue.</p>
+<a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+<sc-if value="{{atSh3}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Diagnostics</span></div>
+<h2 class="h3" style="">Self-check table: last 30-day actuals</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Track last month’s performance against targets to uncover patterns and improvement areas.</p>
+<a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+<sc-if value="{{atSh4}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16l4-8 4 5 4-9"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Cash flow</span></div>
+<h2 class="h3" style="">Cash flow runway estimator</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Find out how long your current cash will last. Estimate your runway in minutes and see if your business is built to sustain growth.</p>
+<a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+<sc-if value="{{atSh5}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M8 15l2 2 4-4"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Planning</span></div>
+<h2 class="h3" style="">30-day finance improvement sprint planner</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
+<a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+<sc-if value="{{atSh6}}" hint-placeholder-val="{{ true }}">
+<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12M10 20V6M16 20v-9M2 20h20"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Planning</span></div>
+<h2 class="h3" style="">Turn your sprint plan into a scalable system</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Turn your 30-day finance sprint into a repeatable system, with the key KPIs to track progress and scale performance.</p>
+<a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</sc-if>
+</div>
+</main>
+<section style="flex-shrink: 0; background: #FFFFFF; padding: 40px 20px">
+<div class="card-green" style="border-radius: 28px; padding: 28px 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; color: #FFFFFF">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px">
+<h2 class="h2" style="color: #FFFFFF; font-size: 24px">Want someone to read the numbers with you?</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #DCEBE4">Book a free 30-minute finance review. We’ll look at your results together and show you the next turn to take.</p>
+</div>
+<a class="btn btn-light" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="flex-shrink: 0">Book a free finance review<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</section>
+<footer style="background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 36px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px"><img src="assets/logo-white.png" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px"><p style="margin: 0; font-size: 14px">The extended finance team for professional service firms.</p></div>
+<p style="margin: 0; font-size: 13px; max-width: 420px; text-align: left">Tool results are indicative estimates based on your inputs. Not financial advice. © Master Your Finance</p>
+</footer>
+</div>
+</sc-if>
+<header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
+<div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
+<a href="#top" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.png" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<div style="display: flex; align-items: center; gap: 8px">
+<a class="btn btn-light btn-sm" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="padding: 0 16px">Book<span class="sr-only"> (opens in a new tab)</span></a>
+<button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
+<sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+</button>
+</div>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
+<a href="#top" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">Home</a>
+<a href="#services" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="#industries" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
+<a href="#tools" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="#about" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
+<a href="#contact" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
+<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="margin-top: 16px">Book a free review<span class="sr-only"> (opens in a new tab)</span></a>
+</nav>
+</sc-if>
+</header>
+
+<section id="top" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(55% 65% at 88% 35%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), radial-gradient(40% 50% at 8% 0%, rgba(209,103,74,.10) 0%, rgba(209,103,74,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #FFFFFF 90%); padding: 32px 20px 48px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="tag"><span class="dot"></span>For firms of 11–250 staff</span><span class="tag"><span class="dot"></span>US · UK · Australia</span></div>
+<h1 class="h1" style="font-size: 36px; line-height: 1.1"><span class="sr-only">Is your finance team keeping pace with your firm?</span><span aria-hidden="true">Is your finance team keeping pace with your</span><span class="flipbox" style="color: #D1674A" aria-hidden="true"><span class="fw {{fw0}}">growing firm?</span><span class="fw {{fw1}}">law firm?</span><span class="fw {{fw2}}">agency?</span><span class="fw {{fw3}}">consultancy?</span></span></h1>
+<p class="lede" style="font-size: 17px">Your extended finance team for complete financial clarity: bookkeeping, reporting, AR/AP, cash flow forecasting and CFO-lite support, tailored for professional service firms.</p>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free 30-min finance review<span class="sr-only"> (opens in a new tab)</span></a>
+<a class="btn btn-ghost btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Get my Financial GPS<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+<ul style="display: flex; flex-direction: column; gap: 10px">
+<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Costs less than an in-house team</li>
+<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Reports on time, every month</li>
+<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Pricing shared upfront</li>
+</ul>
+<div style="width: 350px; height: 350px; align-self: center; margin-top: 8px">
+<div style="width: 560px; height: 560px; transform: scale(.625); transform-origin: 0 0"><dc-import name="GPS" mode="phone" hint-size="560px,560px"></dc-import></div>
+</div>
+</section>
+
+<section data-rv="0" class="rsec {{rv0}}" id="proof" tabindex="-1" aria-label="Experience and clients" style="flex-shrink: 0; background: radial-gradient(60% 90% at 100% 0%, rgba(244,180,155,.20) 0%, rgba(244,180,155,0) 60%), radial-gradient(50% 80% at 0% 100%, rgba(38,105,82,.10) 0%, rgba(38,105,82,0) 60%), linear-gradient(180deg, #FFFFFF 0%, #F2F7F3 100%); padding: 48px 20px; border-top: 1px solid #ECE8D6; border-bottom: 1px solid #ECE8D6">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px">
+<div class="rv rv-d2" style="display: flex; flex-direction: column; gap: 8px"><div class="stat-n" style="font-size: 40px">{{s24}}<span class="plus">+</span></div><div class="small" style="font-weight: 600">years of finance experience</div></div>
+<div class="rv rv-d3" style="display: flex; flex-direction: column; gap: 8px"><div class="stat-n" style="font-size: 40px">{{s15}}<span class="plus">+</span></div><div class="small" style="font-weight: 600">years in finance leadership</div></div>
+<div class="rv rv-d4" style="display: flex; flex-direction: column; gap: 8px"><div class="stat-n" style="font-size: 40px">{{s3}}</div><div class="small" style="font-weight: 600">regions: US · UK · Australia</div></div>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; margin-top: 32px; margin-bottom: 12px">
+<span class="small" style="font-weight: 700; color: #231F20">Our clients</span>
+<button type="button" class="btn btn-ghost btn-sm" aria-pressed="{{mqPressed}}" onClick="{{toggleMq}}">{{mqLabel}}</button>
+</div>
+<div class="rv rv-d3 marquee {{mqCls}}">
+<div class="mq-track">
+<sc-for list="{{logos}}" as="lg" hint-placeholder-count="8">
+<div class="logo-ph" aria-hidden="{{lg.hidden}}" style="width: 140px">{{lg.label}}</div>
+</sc-for>
+</div>
+</div>
+<div class="rv rv-d4" style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-size: 14px; font-weight: 800; color: #231F20">Tools we work in every day</span><span class="small">Accounting, ERP, practice management and reporting</span></div>
+<div class="sw-grid" role="list" aria-label="Software we use" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Zoho Books"><img class="sw-logo" src="assets/zoho.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Zoho Books</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Exact"><img class="sw-logo" src="assets/exact.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Exact</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="NetSuite"><img class="sw-logo" src="assets/netsuite.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">NetSuite</span><span class="sw-kind">ERP</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Actionstep"><img class="sw-logo" src="assets/actionstep.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Actionstep</span><span class="sw-kind">Practice mgmt</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="QuickBooks"><img class="sw-logo" src="assets/quickbooks.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">QuickBooks</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Xero"><img class="sw-logo" src="assets/xero.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Xero</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Wave"><img class="sw-logo" src="assets/wave-accounting.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Wave</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Power BI"><img class="sw-logo" src="assets/powerbi.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Power BI</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Excel"><img class="sw-logo" src="assets/microsoftexcel.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Excel</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Web reporting"><span class="sw-mark" aria-hidden="true">W</span><span><span class="sw-name" style="font-size: 14px">Web reporting</span><span class="sw-kind">Dashboards</span></span></div></div>
+</div>
+</section>
+
+<section data-rv="1" class="rsec {{rv1}}" id="services" tabindex="-1" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
+<span class="eyebrow rv">What we do</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">We close your books. Then we open new opportunities.</h2>
+<p class="body rv rv-d2">Five services, one extended finance team behind you. Use them together or one at a time.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<article class="rv rv-d2 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 3 8-9"></path><path d="M15 6h5v5"></path></svg></div>
+<h3 class="h3">Cash Flow Forecasting</h3>
+<p class="body" style="font-size: 15px">See what is coming in and going out over the next 13 weeks. Track DSO and chase receivables before they age.</p>
+<div style="border-radius: 16px; background: #FDFCF5; border: 1px solid #ECE8D6; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span class="small" style="font-weight: 700; color: #231F20; font-size: 12px">Weekly cash, next 13 weeks</span><span class="ex">Example</span></div>
+<div aria-hidden="true" style="height: 72px; display: flex; align-items: flex-end; gap: 4px">
+<span style="flex-grow: 1; height: 38%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 44%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 36%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 52%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 48%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 60%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 56%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 30%; border-radius: 3px; background: #D1674A"></span><span style="flex-grow: 1; height: 64%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 70%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 68%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 78%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 86%; border-radius: 3px; background: #266952"></span>
+</div>
+</div>
+<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="rv rv-d3 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></div>
+<h3 class="h3">Bookkeeping &amp; Accounting</h3>
+<p class="body" style="font-size: 15px">Clean books, reconciled accounts, and AR/AP handled every week.</p>
+<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<article class="rv rv-d4 card" style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16v-8"></path></svg></div>
+<h3 class="h3" style="font-size: 16px">Monthly Reporting</h3>
+<p class="small">Reports on schedule, explained in plain words.</p>
+</article>
+<article class="rv rv-d5 card" style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></div>
+<h3 class="h3" style="font-size: 16px">CFO-Lite Support</h3>
+<p class="small">Hiring, pricing and growth calls, without a full-time CFO.</p>
+</article>
+</div>
+<article class="rv rv-d2 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg></div>
+<h3 class="h3">Finance Operations</h3>
+<p class="body" style="font-size: 15px">We run receivables and reporting day to day so you can get back to clients.</p>
+<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+<article class="rv rv-d3 card card-green" style="padding: 28px 24px; display: flex; flex-direction: column; gap: 14px">
+<h3 class="h3" style="color: #FFFFFF; font-size: 22px">Not sure what you need?</h3>
+<p class="body" style="color: #DCEBE4; font-size: 15px">Book a free review and we will point out the two or three gaps worth fixing first.</p>
+<a class="btn btn-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+</div>
+</section>
+
+<section data-rv="2" class="rsec {{rv2}}" style="flex-shrink: 0; background: radial-gradient(50% 60% at 0% 0%, rgba(209,103,74,.09) 0%, rgba(209,103,74,0) 60%), radial-gradient(55% 70% at 100% 100%, rgba(38,105,82,.11) 0%, rgba(38,105,82,0) 65%), linear-gradient(135deg, #FFFFFF 0%, #FBF5EF 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px">
+<span class="eyebrow rv">Before and after</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Still waiting weeks for your monthly reports?</h2>
+<p class="body rv rv-d2">Tap to compare the old way with the MYF way.</p>
+</div>
+<div class="ba-toggle rv rv-d3" role="group" aria-label="Compare the old way with MYF">
+<button type="button" class="{{baOldCls}}" aria-pressed="{{baOldP}}" onClick="{{showOld}}">The old way</button>
+<button type="button" class="{{baNewCls}}" aria-pressed="{{baNewP}}" onClick="{{showNew}}">With MYF</button>
+</div>
+<div class="rv rv-d4" style="margin-top: 16px">
+<sc-if value="{{baOld}}" hint-placeholder-val="{{ true }}">
+<div class="ba-flip" role="list" style="display: flex; flex-direction: column; gap: 10px">
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Waiting days after month-end for reports</span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle><path d="M6 9v.01M18 15v.01"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Cash surprises you only spot when payroll is due</span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Unpaid invoices noticed weeks too late</span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Owners doing the books at night</span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"></path><path d="M12 17v.01"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Revenue leaking through unbilled hours and missed invoices</span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M16 14h2"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Spending drifts past budget and nobody notices until year-end</span></div>
+<button type="button" class="more" onClick="{{showNew}}" style="border: 0; background: transparent; cursor: pointer; font-family: inherit; padding: 0; align-self: flex-start">See the MYF way<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+</sc-if>
+<sc-if value="{{baNew}}" hint-placeholder-val="{{ false }}">
+<div class="ba-flip" role="list" style="display: flex; flex-direction: column; gap: 10px">
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16v-8"></path></svg></span><span><span class="sr-only">With MYF: </span>A monthly report pack on a set date, explained in plain words</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9"></path><path d="M15 6h5v5"></path></svg></span><span><span class="sr-only">With MYF: </span>A 13-week cash forecast you can read at a glance</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M8 12l3 3 5-6"></path></svg></span><span><span class="sr-only">With MYF: </span>Receivables tracked and chased before they age</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"></path></svg></span><span><span class="sr-only">With MYF: </span>A finance team runs the books, so your evenings are yours</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span><span><span class="sr-only">With MYF: </span>Every billable hour invoiced and reconciled, so no revenue slips through</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 12h.01"></path></svg></span><span><span class="sr-only">With MYF: </span>Expenses tracked against budget every month, with overspends flagged early</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section data-rv="3" class="rsec {{rv3}}" id="how" tabindex="-1" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px">
+<span class="eyebrow rv">How it works</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Your Financial GPS</h2>
+<p class="body rv rv-d2">Five stops from a free check-up to clarity and growth.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
+<span class="rv rv-d2" style="font-size: 15px; font-weight: 800; color: #1A4A3A">Four directions that drive every business forward</span>
+<div role="list" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px"><div role="listitem" class="dir-card n rv rv-d2" style="padding: 16px"><span class="dir-l" aria-hidden="true">N</span><b style="font-size: 15px; color: #1A4A3A">Financial Clarity</b><span class="small" style="font-size: 12px">Staying aligned with accurate numbers.</span></div><div role="listitem" class="dir-card  rv rv-d3" style="padding: 16px"><span class="dir-l" aria-hidden="true">W</span><b style="font-size: 15px; color: #1A4A3A">Growth</b><span class="small" style="font-size: 12px">Forward-looking insights and analysis that help you scale with confidence.</span></div><div role="listitem" class="dir-card  rv rv-d4" style="padding: 16px"><span class="dir-l" aria-hidden="true">E</span><b style="font-size: 15px; color: #1A4A3A">Efficiency</b><span class="small" style="font-size: 12px">Automating and streamlining processes to avoid wasted time and effort.</span></div><div role="listitem" class="dir-card  rv rv-d5" style="padding: 16px"><span class="dir-l" aria-hidden="true">S</span><b style="font-size: 15px; color: #1A4A3A">Stability</b><span class="small" style="font-size: 12px">Keeping books clean, preventing cash leaks, and ensuring compliance and security.</span></div></div>
+</div>
+<div class="rv rv-d2" style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span class="tag" style="font-size: 12px">Stop {{stepNo}} of 5 · {{stepName}}</span><span style="flex-grow: 1; height: 6px; border-radius: 99px; background: #E6F0EC; overflow: hidden"><span class="hw-bar" style="display: block; height: 100%; width: {{pct}}%; border-radius: 99px; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span></div>
+<div style="position: relative; display: flex; flex-direction: column; gap: 14px">
+<div class="hw-rail" aria-hidden="true"><span style="height: {{pct}}%"></span></div>
+<sc-for list="{{hw}}" as="h" hint-placeholder-count="5">
+<article id="{{h.id}}" class="hw-card rv rv-d2 {{h.cls}}" style="margin-left: 0; padding: 20px 18px 20px 68px; border-radius: 20px; transform: none">
+<h3 style="margin: 0"><button type="button" class="hw-head" onClick="{{h.pick}}" aria-current="{{h.current}}" style="gap: 10px; flex-wrap: wrap; min-height: 44px"><span class="hw-n" style="position: absolute; z-index: 2; left: 6px; top: 16px; width: 44px; height: 44px; font-size: 16px">{{h.n}}</span><span><span class="hw-kicker">Stop {{h.n}} of 5 · {{h.sub}}</span><span class="hw-title" style="font-size: 18px">{{h.title}}</span></span><span class="hw-time" style="margin-left: 0">{{h.time}}</span></button></h3>
+<p class="body" style="margin-top: 10px; font-size: 15px">{{h.text}}</p>
+<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px">
+<div class="hw-who" style="padding: 12px 14px"><span class="hw-who-k">You do</span><span>{{h.you}}</span></div>
+<div class="hw-who hw-we" style="padding: 12px 14px"><span class="hw-who-k">We do</span><span>{{h.we}}</span></div>
+</div>
+</article>
+</sc-for>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px">
+<div class="card-green rv rv-d2" style="border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #F6C1AC">Start with the Vehicle Check</span>
+<b style="font-size: 20px">Get your free Financial GPS snapshot</b>
+<span style="font-size: 14px; color: #DCEBE4">See where your finances stand today, before you commit to anything.</span>
+<a class="btn btn-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Get my Financial GPS<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+</div>
+</section>
+
+<section data-rv="4" class="rsec {{rv4}}" id="industries" tabindex="-1" style="flex-shrink: 0; background: #FFFFFF; padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px">
+<span class="eyebrow rv">Industries</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Built for firms that sell expertise</h2>
+<p class="body rv rv-d2">Pick your industry to see where cash gets stuck, how we fix it, and what we track.</p>
+</div>
+<div class="rv rv-d3">
+<div class="ind-scroll" role="tablist" aria-label="Industries">
+<button type="button" role="tab" id="ind-t0" class="ind-pill {{indC0}}" aria-selected="{{indS0}}" aria-controls="ind-p0" tabindex="{{indT0}}" onClick="{{indPick0}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span>Law firms</button><button type="button" role="tab" id="ind-t1" class="ind-pill {{indC1}}" aria-selected="{{indS1}}" aria-controls="ind-p1" tabindex="{{indT1}}" onClick="{{indPick1}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"></path></svg></span>Agencies</button><button type="button" role="tab" id="ind-t2" class="ind-pill {{indC2}}" aria-selected="{{indS2}}" aria-controls="ind-p2" tabindex="{{indT2}}" onClick="{{indPick2}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></span>IT &amp; consulting firms</button><button type="button" role="tab" id="ind-t3" class="ind-pill {{indC3}}" aria-selected="{{indS3}}" aria-controls="ind-p3" tabindex="{{indT3}}" onClick="{{indPick3}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg></span>Other services</button><button type="button" role="tab" id="ind-t4" class="ind-pill {{indC4}}" aria-selected="{{indS4}}" aria-controls="ind-p4" tabindex="{{indT4}}" onClick="{{indPick4}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"></path><path d="M9 15l-3-3c1-4 4-8 10-9 0 6-4 9-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></span>Startups</button>
+</div>
+<sc-if value="{{ind0}}" hint-placeholder-val="{{ true }}">
+<div class="ind-panel" role="tabpanel" id="ind-p0" aria-labelledby="ind-t0" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3" style="font-size: 18px">For law firms</h3>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Work done but not yet billed sits for weeks</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Clients pay late, so lock-up keeps stretching</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Partner drawings planned without a clear view of cash</span></li></ul></div>
+<div style="height: 1px; background: #ECE8D6"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Monthly reviews of unbilled work and unpaid invoices, with named follow-ups</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A 13-week cash forecast that includes partner drawings</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Billing and collections reports partners will actually read</span></li></ul></div>
+</div>
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for law firms</span><span class="ex">Example data</span></div>
+<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Lock-up days</span><b>112 days</b><span class="bar"><span style="width: 68%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Unbilled work + debtor days</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Realisation rate</span><b>88%</b><span class="bar"><span style="width: 88%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Billed ÷ recorded time</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>54 days</b><span class="bar"><span style="width: 54%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<figure class="card" style="margin: 0; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div>
+<blockquote style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 500; color: #231F20">“Joel’s strategic clarity, deep empathy, and hands-on approach helped us transform complexity into clear, actionable steps… A true partner in purposeful growth, helping us all “sleep better at night”.”</blockquote>
+<figcaption style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 14px; color: #1A4A3A">N. Hepple</b><span class="small">Director, HBA Legal</span></figcaption>
+</figure>
+<a class="more" href="#">See how we work with law firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ind1}}" hint-placeholder-val="{{ false }}">
+<div class="ind-panel" role="tabpanel" id="ind-p1" aria-labelledby="ind-t1" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3" style="font-size: 18px">For marketing and creative agencies</h3>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Projects run over scope before anyone sees the margin</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Retainer income swings from month to month</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Freelancers and media are paid before clients pay you</span></li></ul></div>
+<div style="height: 1px; background: #ECE8D6"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Project margin tracked every month, job by job</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A forecast that separates retainers from one-off projects</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Supplier payments timed against client receipts</span></li></ul></div>
+
+</div>
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for agencies</span><span class="ex">Example data</span></div>
+<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Project margin</span><b>41%</b><span class="bar"><span style="width: 41%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Average across live jobs</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Retainer share</span><b>63%</b><span class="bar"><span style="width: 63%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Of monthly revenue</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Freelancer spend</span><b>18%</b><span class="bar"><span style="width: 18%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Of revenue</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<a class="more" href="#">See how we work with agencies<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ind2}}" hint-placeholder-val="{{ false }}">
+<div class="ind-panel" role="tabpanel" id="ind-p2" aria-labelledby="ind-t2" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3" style="font-size: 18px">For IT and consulting firms</h3>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Billable hours slip as the team grows</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Renewals and recurring revenue are hard to see ahead</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Clients pay in different currencies</span></li></ul></div>
+<div style="height: 1px; background: #ECE8D6"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Utilisation and billing reported every month</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Recurring revenue and renewals built into the cash forecast</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Receivables in every currency tracked in one view</span></li></ul></div>
+</div>
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for IT and consulting firms</span><span class="ex">Example data</span></div>
+<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Utilisation</span><b>74%</b><span class="bar"><span style="width: 74%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Billable ÷ available hours</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Recurring revenue</span><b>$86k / mo</b><span class="bar"><span style="width: 70%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Contracted monthly</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>47 days</b><span class="bar"><span style="width: 47%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<a class="more" href="#">See how we work with IT and consulting firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ind3}}" hint-placeholder-val="{{ false }}">
+<div class="ind-panel" role="tabpanel" id="ind-p3" aria-labelledby="ind-t3" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3" style="font-size: 18px">For other professional service firms</h3>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Cash tied up in unpaid invoices</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Month-end reports arrive too late to act on</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Nobody owns finance day to day</span></li></ul></div>
+<div style="height: 1px; background: #ECE8D6"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Receivables chased before they age</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A report pack on a set date, explained in plain words</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A finance team that owns the numbers</span></li></ul></div>
+
+</div>
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for professional service firms</span><span class="ex">Example data</span></div>
+<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>49 days</b><span class="bar"><span style="width: 49%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Cash runway</span><b>5.2 months</b><span class="bar"><span style="width: 52%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">At current spend</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Reports ready</span><b>Day [X]</b><span class="bar"><span style="width: 30%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">After month-end</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<figure class="card" style="margin: 0; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div>
+<blockquote style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 500; color: #231F20">“He helped us identify opportunities to think about our business in a better way and then assist with the execution of a successful turnaround in one of our loss-making businesses.”</blockquote>
+<figcaption style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 14px; color: #1A4A3A">J. Blanco</b><span class="small">Former Global President, Crawford &amp; Company</span></figcaption>
+</figure>
+<a class="more" href="#">See how we work with professional service firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ind4}}" hint-placeholder-val="{{ false }}">
+<div class="ind-panel" role="tabpanel" id="ind-p4" aria-labelledby="ind-t4" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
+<h3 class="h3" style="font-size: 18px">For founder-led startups</h3>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Burn creeping up without a clear runway number</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Investor and board updates pulled together at the last minute</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Founders doing the books between product and sales</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Raising money without investor-ready numbers or a pitch deck</span></li></ul></div>
+<div style="height: 1px; background: #ECE8D6"></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A monthly burn and runway view you can trust</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A board-ready reporting pack on a set date</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Cash flow forecasts that show your runway week by week</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Investor pitch decks and financial models ready for fundraising</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A finance team from day one, without a full-time hire</span></li></ul></div>
+</div>
+<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for startups</span><span class="ex">Example data</span></div>
+<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Monthly burn</span><b>$42k</b><span class="bar"><span style="width: 60%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Net cash out each month</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Runway</span><b>14 months</b><span class="bar"><span style="width: 70%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">At current burn</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Gross margin</span><b>58%</b><span class="bar"><span style="width: 58%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">On services revenue</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<a class="more" href="#">See how we work with startups<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section data-rv="11" class="rsec {{rv11}}" id="proof-quotes" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px; margin-bottom: 28px">
+<span class="eyebrow rv">What clients say</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Trusted by service firms globally</h2>
+</div>
+<div class="tq-mq tq-mq-m rv rv-d2 {{tqCls}}" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+<div class="tq-track" style="--tq-dur: 80s; gap: 14px; padding-right: 14px">
+<figure class="tq" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel Schenk and his team have been game-changers for us. Joel’s strategic clarity, deep empathy, and hands-on approach helped us transform complexity into clear, actionable steps. He became an extension of our team from day one, bringing structure, focus, and peace of mind. A true partner in purposeful growth, helping us all “sleep better at night”.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">NH</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">N. Hepple</b><span class="small">Director, HBA Legal</span></span></figcaption></figure>
+<figure class="tq" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“I can confirm Joel to be an insightful and inspiring thought partner. He helped us identify opportunities to think about our business in a better way and then assist with the execution of a successful turnaround in one of our loss-making businesses. Joel’s guidance was invaluable, and I can firmly recommend him as a CFO or coach for your personal and business wellbeing.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">JB</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">J. Blanco</b><span class="small">Former Global President, Crawford &amp; Company</span></span></figcaption></figure>
+<figure class="tq" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel helped me address concerns I had in financial performance and growth. His guidance helped us successfully acquiring several companies to keep momentum and expand European Operations in a thoughtful manner. His analytical thinking and personal, open and honest way of communicating builds trust among all stakeholders and it will give great coaching experience to any business leader.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">CV</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">C. Von Krogh</b><span class="small">Former President of a large firm</span></span></figcaption></figure>
+<figure class="tq" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel has made the difference for me and guided our company financially to a better grip on results. His guidance in this gave me insight and control and reassured me enormously.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">GO</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">G. Oostrom</b><span class="small">Managing Director</span></span></figcaption></figure>
+<figure class="tq" aria-hidden="true" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel Schenk and his team have been game-changers for us. Joel’s strategic clarity, deep empathy, and hands-on approach helped us transform complexity into clear, actionable steps. He became an extension of our team from day one, bringing structure, focus, and peace of mind. A true partner in purposeful growth, helping us all “sleep better at night”.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">NH</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">N. Hepple</b><span class="small">Director, HBA Legal</span></span></figcaption></figure>
+<figure class="tq" aria-hidden="true" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“I can confirm Joel to be an insightful and inspiring thought partner. He helped us identify opportunities to think about our business in a better way and then assist with the execution of a successful turnaround in one of our loss-making businesses. Joel’s guidance was invaluable, and I can firmly recommend him as a CFO or coach for your personal and business wellbeing.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">JB</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">J. Blanco</b><span class="small">Former Global President, Crawford &amp; Company</span></span></figcaption></figure>
+<figure class="tq" aria-hidden="true" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel helped me address concerns I had in financial performance and growth. His guidance helped us successfully acquiring several companies to keep momentum and expand European Operations in a thoughtful manner. His analytical thinking and personal, open and honest way of communicating builds trust among all stakeholders and it will give great coaching experience to any business leader.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">CV</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">C. Von Krogh</b><span class="small">Former President of a large firm</span></span></figcaption></figure>
+<figure class="tq" aria-hidden="true" style="width: 300px; flex-shrink: 0; padding: 22px"><div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div><blockquote style="font-size: 15px">“Joel has made the difference for me and guided our company financially to a better grip on results. His guidance in this gave me insight and control and reassured me enormously.”</blockquote><figcaption style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid #ECE8D6"><span class="tq-av" aria-hidden="true">GO</span><span style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 15px; color: #1A4A3A">G. Oostrom</b><span class="small">Managing Director</span></span></figcaption></figure>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 8px">
+<button type="button" class="tq-pause" aria-pressed="{{tqPausedStr}}" onClick="{{tqToggle}}">{{tqLabel}}</button>
+</div>
+</section>
+
+<section data-rv="9" class="rsec {{rv9}}" id="about" tabindex="-1" style="flex-shrink: 0; background: #FFFFFF; padding: 64px 20px; border-top: 1px solid #ECE8D6">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
+<span class="eyebrow rv">About us</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">The people behind your numbers</h2>
+<p class="body rv rv-d2">Finance shouldn’t need your full attention… just your approval. 24+ years in finance and 15+ years of leadership, across the US, UK and Australia.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<article class="card rv rv-d2" style="padding: 12px; display: flex; flex-direction: column; gap: 16px">
+<sc-if value="{{vidOff}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="yt-facade" onClick="{{playVid}}" onMouseEnter="{{prevOn}}" onMouseLeave="{{prevOff}}" aria-label="Play video with sound: Why MYF? (1 minute 51 seconds)">
+<img class="vd-bg" src="assets/video-thumb.jpg" alt="" aria-hidden="true">
+<video class="vd-prev" src="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+<span class="vd-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"></path></svg>Click to play with sound</span>
+<span class="yt-chip vd-muted" style="left: 16px; top: 16px" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M17 9l5 6M22 9l-5 6"></path></svg>Muted preview</span>
+<span class="yt-chip" style="right: 16px; bottom: 16px">1:51</span>
+</button>
+</sc-if>
+<sc-if value="{{vidOn}}" hint-placeholder-val="{{ false }}">
+<video class="vd-player" src="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" controls autoplay playsinline preload="auto" poster="assets/video-thumb.jpg" aria-label="Why MYF? video" ref="{{setVidRef}}"></video>
+</sc-if>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px 4px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span class="hw-kicker">Watch · 2 min</span>
+<h3 class="h3" style="font-size: 17px">Why MYF?</h3>
+<span class="small">Your extended finance team: who we are, who we work with and how we bring clarity to your numbers.</span>
+</div>
+<a class="more" href="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" target="_blank" rel="noopener" style="flex-shrink: 0">Open full screen<span class="sr-only"> (opens in a new tab)</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+<article class="card tilt rv rv-d3" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CEO</span><h3 class="h3">Joel Schenk</h3><span class="small" style="font-weight: 700; color: #266952">Founder &amp; Chief Executive Officer</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">With 24 years in finance and over 15 years in leadership, Joel is the driving force behind Master Your Finance and Master Your Business. His vision is to make financial clarity accessible and actionable for business owners.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article>
+<article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, CFO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CFO</span><h3 class="h3">Himanshu Sachdeva</h3><span class="small" style="font-weight: 700; color: #266952">Chief Financial Officer</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Himanshu combines analytical precision with a practical approach to help firms make confident financial decisions.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article>
+<a class="btn btn-ghost btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Meet us on a free call<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+</section>
+
+<section data-rv="5" class="rsec {{rv5}}" id="tools" tabindex="-1" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
+<span class="eyebrow rv">Tools &amp; Resources</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">If cash flow surprises you, you’re not in control.</h2>
+<p class="body rv rv-d2">Your numbers should be as easy to read as your car’s dashboard. Start with these free tools.</p>
+</div>
+<div class="rv rv-d2">
+<div class="dk-deck" role="list" aria-label="Free tools, stacked like a deck of cards">
+<div role="listitem" class="dk {{dkP1}}" aria-hidden="{{dkH1}}" onClick="{{dkClick}}">
+<article class="card card-green dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></div><span class="tl-new">New · Law firms</span></div>
+<h3 class="h3" style="color: #FFFFFF">Health check for law firms</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #DCEBE4">How much money is your firm leaving on the table? Find out in 60 seconds.</p>
+<ul class="tl-chips" aria-label="What it checks"><li>Utilisation</li><li>Realisation</li><li>Collection rate</li><li>WIP DSO</li><li>AR DSO</li></ul>
+<p class="small" style="color: #CFE0D8">Enter your actuals or adjust the defaults. Results are indicative estimates.</p>
+<a class="btn btn-light btn-block" href="health-check.html" target="_blank" rel="noopener" style="margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+<div role="listitem" class="dk {{dkP2}}" aria-hidden="{{dkH2}}" onClick="{{dkClick}}">
+<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<div style="display: flex; align-items: center; gap: 12px"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><h3 class="h3">Utilisation, realisation &amp; DSO self-diagnostic</h3><p class="small" style="margin-top: 4px">Benchmark your firm like a CFO. Start with your debtor days:</p></div></div>
+<label class="fld">Money owed to you today<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{ar}}" onChange="{{setAr}}"></label>
+<label class="fld">Billed in the last 90 days<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{rev}}" onChange="{{setRev}}"></label>
+<div role="status" style="margin-top: auto; border-radius: 16px; background: linear-gradient(135deg, #1A4A3A 0%, #266952 100%); color: #FFFFFF; padding: 16px 20px">
+<div style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #CFE0D8">Your DSO</div>
+<div style="font-size: 34px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15">{{dsoOut}} <span style="font-size: 16px; font-weight: 700">days</span></div>
+<div style="font-size: 12px; color: #CFE0D8; margin-top: 4px">Owed ÷ billed × 90. Figures stay in your browser.</div>
+</div>
+<a class="more" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener">Run the full self-diagnostic<span class="sr-only"> (opens in a new tab)</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</article>
+</div>
+<div role="listitem" class="dk {{dkP3}}" aria-hidden="{{dkH3}}" onClick="{{dkClick}}">
+<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16l4-8 4 5 4-9"></path></svg></div>
+<h3 class="h3">Cash flow runway estimator</h3>
+<p class="body" style="font-size: 15px">Find out how long your current cash will last, and whether your business is built to sustain growth.</p>
+<div style="border-radius: 14px; background: #FDFCF5; border: 1px solid #ECE8D6; padding: 14px 16px; font-size: 13px; font-weight: 600; color: #231F20">Cash on hand ÷ average monthly spend</div>
+<a class="btn btn-ghost btn-block" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="margin-top: auto">Estimate my runway<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+</div>
+<div role="listitem" class="dk {{dkP4}}" aria-hidden="{{dkH4}}" onClick="{{dkClick}}">
+<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M8 15l2 2 4-4"></path></svg></div>
+<h3 class="h3">30-day finance improvement sprint planner</h3>
+<p class="body" style="font-size: 15px">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
+<ul class="dk-chips" aria-label="What it covers"><li>Reporting</li><li>Cash flow</li><li>Forecasting</li></ul>
+<a class="btn btn-ghost btn-block" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="margin-top: auto">Get the sprint planner<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+</div>
+</div>
+<p class="dk-hint" aria-hidden="true" style="margin-top: 52px">Tap the pile for the next card</p>
+<div class="tl-ctl" style="margin-top: 18px; gap: 12px">
+<span class="tl-count" role="status">Tool <b>{{tlPos}}</b> of 4<span class="sr-only">: {{tlName}}</span></span>
+<span class="tl-dots" aria-hidden="true"><i class="{{tlD1}}"></i><i class="{{tlD2}}"></i><i class="{{tlD3}}"></i><i class="{{tlD4}}"></i></span>
+<button type="button" class="btn btn-sm" onClick="{{tlNext}}" style="margin-left: auto">Next tool<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px">
+<button type="button" class="btn btn-ghost btn-block" onClick="{{openAll}}">See all 6 tools</button>
+<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Get your free Financial GPS snapshot<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+</div>
+</section>
+
+<section data-rv="10" class="rsec {{rv10}}" style="flex-shrink: 0; background: radial-gradient(60% 70% at 88% 8%, rgba(38,105,82,.13) 0%, rgba(38,105,82,0) 65%), radial-gradient(45% 55% at 0% 100%, rgba(244,180,155,.16) 0%, rgba(244,180,155,0) 60%), linear-gradient(180deg, #F4F9F6 0%, #FFFFFF 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
+<span class="eyebrow rv">Compare your options</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Stop overpaying for your finance team.</h2>
+<p class="body rv rv-d2">The same accuracy and reporting quality as an in-house team, at a fraction of the cost. Here is how the options compare.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<article class="rv rv-d2" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #266952; background: linear-gradient(180deg, #E6F0EC 0%, #F4F9F6 100%); box-shadow: 0 24px 48px -28px rgba(26,74,58,.5)"><div style="display: flex; align-items: center; justify-content: space-between"><h3 class="h3">MYF</h3><span class="tag" style="background: #266952; color: #FFFFFF">Our way</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #1A4A3A; font-weight: 700">One predictable monthly fee</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #1A4A3A; font-weight: 700">Yes, every week</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #1A4A3A; font-weight: 700">Growth plan and up</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #1A4A3A; font-weight: 700">On a set date, explained</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #1A4A3A; font-weight: 700">A team covers</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #1A4A3A; font-weight: 700">CFO-Lite plan</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #1A4A3A; font-weight: 700">We handle it</span></div></article>
+<article class="card rv rv-d3" style="padding: 24px; display: flex; flex-direction: column; gap: 12px"><h3 class="h3" style="color: #5D6670">In-house hire</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #5D6670; font-weight: 500"></span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #5D6670; font-weight: 500">Yes</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #5D6670; font-weight: 500">Depends on the hire</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #5D6670; font-weight: 500">When they have time</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #5D6670; font-weight: 500">Work pauses</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #5D6670; font-weight: 500">A second, senior hire</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #5D6670; font-weight: 500">Yours to do</span></div></article>
+<article class="card rv rv-d4" style="padding: 24px; display: flex; flex-direction: column; gap: 12px"><h3 class="h3" style="color: #5D6670">Freelance bookkeeper</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #5D6670; font-weight: 500"></span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #5D6670; font-weight: 500">Yes</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #5D6670; font-weight: 500">Not usually</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #5D6670; font-weight: 500">Basic, if agreed</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #5D6670; font-weight: 500">Work pauses</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #5D6670; font-weight: 500">Not included</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #5D6670; font-weight: 500">Yours to find and check</span></div></article>
+<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">See what MYF would cost you<span class="sr-only"> (opens in a new tab)</span></a>
+</div>
+</section>
+
+<section data-rv="6" class="rsec {{rv6}} on-dark" style="flex-shrink: 0; background: radial-gradient(90% 70% at 100% 0%, rgba(46,122,99,.55) 0%, rgba(46,122,99,0) 60%), linear-gradient(150deg, #1A4A3A 0%, #1F5A46 55%, #266952 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
+<span class="eyebrow rv">Pricing</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Know the cost before you book a call</h2>
+<p class="body rv rv-d2">Plans and prices are set by MYF; figures below are placeholders.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px">
+<article class="rv rv-d2 plan-feat" style="border-radius: 22px; padding: 32px 24px 24px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF; color: #231F20; position: relative">
+<span style="position: absolute; top: -14px; left: 24px; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border-radius: 999px; background: #B4502F; color: #FFFFFF; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase">Recommended</span>
+<h3 class="h3">Growth</h3>
+<div class="price-ph" style="color: #1A4A3A"><b style="font-size: 20px">Transparent monthly pricing</b></div>
+<ul style="display: flex; flex-direction: column; gap: 8px">
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Everything in Essentials</li>
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>AR management and 13-week cash forecast</li>
+</ul>
+<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+<article class="rv rv-d3 glass" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF">
+<h3 class="h3">Essentials</h3>
+<div class="price-ph" style="color: #F6C1AC"><b style="font-size: 20px">Transparent monthly pricing</b></div>
+<ul style="display: flex; flex-direction: column; gap: 8px">
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bookkeeping and reconciliations</li>
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Monthly report pack</li>
+</ul>
+<a class="btn btn-line-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+<article class="rv rv-d4 glass" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF">
+<h3 class="h3">CFO-Lite</h3>
+<div class="price-ph" style="color: #F6C1AC"><b style="font-size: 20px">Transparent monthly pricing</b></div>
+<ul style="display: flex; flex-direction: column; gap: 8px">
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Everything in Growth</li>
+<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Monthly strategy session</li>
+</ul>
+<a class="btn btn-line-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
+</article>
+</div>
+</section>
+
+<section data-rv="7" class="rsec {{rv7}}" style="flex-shrink: 0; background: #FFFFFF; padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px">
+<span class="eyebrow rv">Questions</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Got questions? We’ve got clarity.</h2>
+</div>
+<div style="border-top: 1px solid #ECE8D6">
+<sc-for list="{{faqs}}" as="q" hint-placeholder-count="9">
+<div class="acc rv rv-d2 {{q.cls}}">
+<h3 style="margin: 0"><button type="button" class="acc-btn" aria-expanded="{{q.exp}}" onClick="{{q.toggle}}" style="font-size: 16px; min-height: 72px; gap: 16px">{{q.q}}<span class="acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+<div class="acc-p"><div class="acc-in"><p style="padding: 0 0 20px; font-size: 15px">{{q.a}}</p></div></div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<section data-rv="8" id="contact" tabindex="-1" class="rsec {{rv8}} on-dark" style="flex-shrink: 0; background: radial-gradient(90% 70% at 100% 0%, rgba(46,122,99,.55) 0%, rgba(46,122,99,0) 60%), linear-gradient(150deg, #1A4A3A 0%, #1F5A46 55%, #266952 100%); padding: 64px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<span class="eyebrow rv">Get started</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Get on the fastest route to financial clarity.</h2>
+<p class="body rv rv-d2">Book a free 30-minute finance review. Tell us a little about your firm and we will come back with the two or three things worth fixing first.</p>
+</div>
+<div class="rv rv-d3" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 14px; font-weight: 700; color: #FFFFFF">What happens after you book</span>
+<ol style="display: flex; flex-direction: column; gap: 10px">
+<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">1</span><span><b style="display: block; font-size: 15px">A 30-minute call</b><span class="small">At a time that suits you.</span></span></li>
+<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">2</span><span><b style="display: block; font-size: 15px">A look at your numbers</b><span class="small">A quick snapshot of where you stand.</span></span></li>
+<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">3</span><span><b style="display: block; font-size: 15px">A short written plan</b><span class="small">The two or three things worth fixing first.</span></span></li>
+</ol>
+</div>
+<form class="rv rv-d2 card" onSubmit="{{submit}}" aria-label="Book a free review" style="margin-top: 28px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 0; color: #231F20">
+<label class="fld">Name<input class="inp" type="text" autocomplete="name" placeholder="Your name"></label>
+<label class="fld">Work email<input class="inp" type="email" autocomplete="email" placeholder="you@yourfirm.com"></label>
+<label class="fld">Firm size<select class="inp"><option>11–25 staff</option><option>26–100 staff</option><option>101–250 staff</option></select></label>
+<label class="fld">What do you need most?<select class="inp"><option>Bookkeeping &amp; accounting</option><option>Cash flow forecasting</option><option>Monthly reporting</option><option>CFO-lite support</option><option>Finance operations</option><option>Not sure yet</option></select></label>
+<button class="btn btn-block" type="submit">Book my free review</button>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}"><div role="status" style="border-radius: 12px; background: #E6F0EC; color: #1A4A3A; padding: 12px 14px; font-size: 14px; font-weight: 600">Design mockup: nothing was sent.</div></sc-if>
+<span class="small">We only use your details to reply to your enquiry.</span>
+</form>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
+<a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" class="ct-row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg><span><b>Calendly</b> · Book a 30-minute discovery call<span class="sr-only"> (opens in a new tab)</span></span></a>
+</div>
+<div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 14px; font-weight: 700; color: #FFFFFF">How we look after your data</span>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>Encrypted, secure platforms</div>
+<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Strict access controls</div>
+<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="M9 13l-2 8 5-3 5 3-2-8"></path></svg>Xero certified</div>
+<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="M9 13l-2 8 5-3 5 3-2-8"></path></svg>QuickBooks ProAdvisor</div>
+</div>
+</div>
+</section>
+
+<footer style="flex-grow: 1; background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 48px 20px 32px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="assets/logo-white.png" alt="Master Your Finance" width="80" height="35" style="width: 80px; height: 35px">
+<p style="font-size: 14px; line-height: 1.6">The extended finance team for professional service firms.</p>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
+<nav aria-label="Services" style="display: flex; flex-direction: column">
+<span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
+<a href="#services" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="#services" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="#services" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="#services" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column">
+<span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
+<a href="#about" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="#industries" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="#tools" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="#contact" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+</nav>
+</div>
+<div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #3A3637; font-size: 12px">
+<button type="button" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #4A4546; background: transparent; color: #FFFFFF; font-size: 13px; font-weight: 700; cursor: pointer">{{motionLabel}}</button>
+<span>© Master Your Finance · <a href="#">Privacy policy</a> · <a href="#">Terms</a></span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":18900}}'>
+class Component extends DCLogic {
+  _flipStart() {
+    let red = false;
+    try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (red) return;
+    this._flipT = setInterval(() => {
+      const s = this.state || {};
+      if (s.motionOff) return;
+      const i = s.fi || 0;
+      this.setState({ fi: (i + 1) % 4, fprev: i });
+    }, 2600);
+  }
+  _scroller() {
+    let p = this._root ? this._root.parentElement : null;
+    while (p && p !== document.body && p !== document.documentElement) {
+      const cs = getComputedStyle(p);
+      if (/(auto|scroll|overlay)/.test(cs.overflowY) && p.scrollHeight > p.clientHeight + 1) return p;
+      p = p.parentElement;
+    }
+    return document.scrollingElement || document.documentElement;
+  }
+  _isDoc(sc) { return sc === document.scrollingElement || sc === document.documentElement || sc === document.body; }
+  _scale() { const r = this._root; if (!r || !r.offsetWidth) return 1; return (r.getBoundingClientRect().width / r.offsetWidth) || 1; }
+  _reduced() {
+    if ((this.state || {}).motionOff) return true;
+    try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+  _jump(id) {
+    const root = this._root; if (!root) return;
+    const el = root.querySelector('#' + id); if (!el) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    sc.scrollTop = Math.max(0, sc.scrollTop + (el.getBoundingClientRect().top - viewTop) - (id === 'all-tools' ? 0 : 72 * k));
+    try { el.focus({ preventScroll: true }); } catch (e) {}
+  }
+  scrollToId(id) {
+    const root = this._root; if (!root) return;
+    const el = root.querySelector('#' + id); if (!el) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    const from = sc.scrollTop;
+    const to = id === 'top' ? 0 : Math.max(0, from + (el.getBoundingClientRect().top - viewTop) - (64) * k);
+    if (this._anim) cancelAnimationFrame(this._anim);
+    const done = () => { try { el.focus({ preventScroll: true }); } catch (e) {} this.setState({ active: id }); };
+    if (this._reduced() || Math.abs(to - from) < 2) { sc.scrollTop = to; done(); return; }
+    const dist = Math.abs(to - from);
+    const dur = Math.min(1100, Math.max(450, 300 + dist * 0.12));
+    const t0 = performance.now();
+    let aborted = false;
+    const abort = () => { aborted = true; };
+    window.addEventListener('wheel', abort, { once: true, passive: true });
+    window.addEventListener('touchstart', abort, { once: true, passive: true });
+    const step = (now) => {
+      if (aborted || this._dead) return;
+      const t = Math.min(1, (now - t0) / dur);
+      const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      sc.scrollTop = from + (to - from) * e;
+      if (t < 1) this._anim = requestAnimationFrame(step);
+      else { window.removeEventListener('wheel', abort); window.removeEventListener('touchstart', abort); done(); }
+    };
+    this._anim = requestAnimationFrame(step);
+  }
+  _spy() {
+    const root = this._root; if (!root) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    const scrolled = sc.scrollTop > 40;
+    let active = 'top';
+    ['top', 'proof', 'services', 'industries', 'about', 'tools', 'contact'].forEach((id) => {
+      const el = root.querySelector('#' + id);
+      if (el && el.getBoundingClientRect().top - viewTop <= (64 + 60) * k) active = id;
+    });
+    const s = this.state || {};
+    const upd = {};
+    if (s.scrolled !== scrolled) upd.scrolled = scrolled;
+    if (s.active !== active) upd.active = active;
+    const cards = root.querySelectorAll('.hw-card');
+    if (cards.length && sc.scrollHeight > sc.clientHeight + 1) {
+      const vh = this._isDoc(sc) ? window.innerHeight : sc.clientHeight;
+      let st = 0;
+      cards.forEach((c, i) => { if (c.getBoundingClientRect().top - viewTop < vh * 0.55) st = i; });
+      if ((s.step == null ? 0 : s.step) !== st) upd.step = st;
+    }
+    if (Object.keys(upd).length) this.setState(upd);
+  }
+  _reveal() {
+    const root = this._root; if (!root) return;
+    const secs = root.querySelectorAll('.rsec'); if (!secs.length) return;
+    const sc = this._scroller();
+    const scrollable = sc.scrollHeight > sc.clientHeight + 1;
+    const bottom = this._isDoc(sc) ? window.innerHeight : sc.getBoundingClientRect().bottom;
+    const cur = (this.state || {}).rvIn || {};
+    const next = Object.assign({}, cur);
+    let changed = false;
+    secs.forEach((el) => {
+      const k = el.getAttribute('data-rv');
+      if (next[k]) return;
+      if (!scrollable || el.getBoundingClientRect().top < bottom - 90) { next[k] = true; changed = true; }
+    });
+    if (changed) this.setState({ rvIn: next });
+  }
+  _initReveal() {
+    let red = false;
+    try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (!red) this.setState({ rvReady: true });
+    this._rvT = setTimeout(() => this._reveal(), 60);
+  }
+  _listen() {
+    this._onScroll = () => {
+      if (this._spyRaf) return;
+      this._spyRaf = requestAnimationFrame(() => { this._spyRaf = 0; this._spy(); this._reveal(); });
+    };
+    window.addEventListener('scroll', this._onScroll, { capture: true, passive: true });
+  }
+  _unlisten() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll, { capture: true });
+    if (this._anim) cancelAnimationFrame(this._anim);
+    if (this._spyRaf) cancelAnimationFrame(this._spyRaf);
+  }
+  componentDidMount() {
+    this._listen();
+    this._initReveal();
+    this._flipStart();
+    let reduced = false;
+    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduced) { this.setState({ statT: 1 }); return; }
+    const start = performance.now() + 500;
+    const dur = 1600;
+    const tick = (now) => {
+      if (this._dead) return;
+      const k = Math.min(1, Math.max(0, (now - start) / dur));
+      this.setState({ statT: 1 - Math.pow(1 - k, 3) });
+      if (k < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { clearInterval(this._flipT); this._dead = true; if (this._raf) cancelAnimationFrame(this._raf); this._unlisten(); if (this._rvT) clearTimeout(this._rvT); }
+  renderVals() {
+    const s = this.state || {};
+    const dkp = (i) => { const cur = s.tlI || 0; const pos = (i - cur + 4) % 4; return 'p' + pos + (s.tlPrev === i && pos === 3 ? ' out' : ''); };
+    const atf = s.atf || 'fa';
+    const motionOff = !!s.motionOff;
+    const t = motionOff ? 1 : (s.statT == null ? 0 : s.statT);
+    const step = s.step == null ? 0 : s.step;
+    const faqOpen = s.faq == null ? 0 : s.faq;
+    const ar = s.ar == null ? 120000 : s.ar;
+    const rev = s.rev == null ? 300000 : s.rev;
+    const hwData = [
+      ['Vehicle Check', 'Free scan', 'Free', 'A free Financial GPS snapshot of where your finances stand today.', 'Share read-only access to your accounting software.', 'Review your books, cash and receivables, and flag the gaps.'],
+      ['Cruise Control', 'Data collection', 'Days 1–14', 'We collect your data and set up clean, reconciled books.', 'Answer a short set of questions about how you bill and pay.', 'Clean up the books, reconcile accounts and connect your data.'],
+      ['Dashboard Metrics', 'Reports and KPIs', 'Every month', 'Monthly reports and KPIs you can read as easily as your car’s dashboard.', 'Read the monthly pack and ask us anything.', 'Close the month, report your KPIs and explain what changed.'],
+      ['Fuel Check', 'Cash flow forecast', 'Every month', 'A 13-week cash flow forecast, so you always know what is in the tank.', 'Flag big payments or hires coming up.', 'Update the forecast, track DSO and chase receivables.'],
+      ['Total Control', 'Control and growth', 'Ongoing', 'Total control of your numbers, with CFO-lite guidance on the next turn.', 'Make hiring, pricing and growth calls with confidence.', 'Flag risks early and suggest the next move.']
+    ];
+    const faqData = [
+      ['What industries does MYF serve?', "We primarily support professional service firms, including agencies, consultancies, law firms, IT services and other B2B service providers, with teams of 11–250 employees in the United States, United Kingdom and Australia."],
+      ['Why work with MYF as your finance partner?', "We deliver the results of a full finance department at a much lower cost. MYF handles everything from bookkeeping, reporting and forecasting to CFO-lite support, so you get clear, reliable numbers and financial direction without the overhead of an in-house team."],
+      ['What platforms does MYF use for reporting and accounting?', "We work in Zoho Books, Exact, NetSuite, Actionstep, QuickBooks (ProAdvisor), Xero (certified) and Wave, report through Power BI, Excel and web dashboards, and connect with common CRM, payroll and project tools. Rather than changing how you work, we adapt to your existing setup."],
+      ['Is my financial data secure?', "Yes. All client data is handled through encrypted, secure platforms with strict access controls, and we follow best practices for financial data confidentiality."],
+      ['How long does onboarding take?', "On average, 7–14 days. During onboarding we review your books of accounts, study your business and industry trends, and deliver your first reporting pack with tailored financial insights in under two weeks."],
+      ['How is pricing structured?', "Transparent monthly pricing based on team size, transaction volume and the services you select. Book a free call and we’ll give you an instant estimate."],
+      ['What kind of insights will I get?', "Along with clean books, you’ll get dashboards showing DSO, utilisation, realisation, AR ageing, cash flow runway and profitability trends, updated in near real time in the software of your choice."],
+      ['Do I need to be hands-on in daily finance tasks?', "No. We only loop you in for key approvals or exceptions. Our team takes care of day-to-day transactions, invoices, payments and reporting."],
+      ['Can I scale MYF services as my business grows?', "Yes. MYF is designed to grow with you. Start with core bookkeeping and reporting, then add AR/AP, cash flow forecasting and CFO-lite advisory as you need them."]
+    ];
+    const logos = [];
+    for (let r = 0; r < 2; r++) for (let i = 1; i <= 8; i++) logos.push({ label: 'Client logo ' + i, hidden: r === 1 ? 'true' : 'false' });
+    const num = (v) => { const n = parseFloat(v); return isNaN(n) || n < 0 ? 0 : n; };
+    const menu = !!s.menu;
+    const rvIn = s.rvIn || {};
+    const rvMap = {};
+    for (let i = 0; i < 12; i++) rvMap['rv' + i] = rvIn[i] ? 'in' : '';
+    const fwc = (k) => { const st = this.state || {}; const i = st.fi || 0; return k === i ? 'on' : (st.fprev === k ? 'out' : ''); };
+    const ind = s.ind == null ? 0 : s.ind;
+    return {
+      ...rvMap,
+      ind0: ind === 0, ind1: ind === 1, ind2: ind === 2, ind3: ind === 3, ind4: ind === 4,
+      indC0: ind === 0 ? 'on' : '', indC1: ind === 1 ? 'on' : '', indC2: ind === 2 ? 'on' : '', indC3: ind === 3 ? 'on' : '', indC4: ind === 4 ? 'on' : '',
+      indS0: ind === 0 ? 'true' : 'false', indS1: ind === 1 ? 'true' : 'false', indS2: ind === 2 ? 'true' : 'false', indS3: ind === 3 ? 'true' : 'false', indS4: ind === 4 ? 'true' : 'false',
+      indT0: ind === 0 ? '0' : '-1', indT1: ind === 1 ? '0' : '-1', indT2: ind === 2 ? '0' : '-1', indT3: ind === 3 ? '0' : '-1', indT4: ind === 4 ? '0' : '-1',
+      indPick0: () => this.setState({ ind: 0 }), indPick1: () => this.setState({ ind: 1 }), indPick2: () => this.setState({ ind: 2 }), indPick3: () => this.setState({ ind: 3 }), indPick4: () => this.setState({ ind: 4 }),
+      inkX: ind === 0 ? '0px' : 'calc(' + (ind * 100) + '% + ' + (ind * 8) + 'px)',
+      indKey: (e) => {
+        const k = e.key; let n = ind;
+        if (k === 'ArrowRight') n = (ind + 1) % 5; else if (k === 'ArrowLeft') n = (ind + 4) % 5; else if (k === 'Home') n = 0; else if (k === 'End') n = 4; else return;
+        e.preventDefault(); this.setState({ ind: n });
+        const root = e.currentTarget.closest('[role="tablist"]'); const t = root && root.querySelector('#ind-t' + n); if (t) t.focus();
+      },
+      baOld: (s.baSide || 'old') === 'old', baNew: s.baSide === 'new',
+      baOldCls: (s.baSide || 'old') === 'old' ? 'on-old' : '', baNewCls: s.baSide === 'new' ? 'on-new' : '',
+      baOldP: (s.baSide || 'old') === 'old' ? 'true' : 'false', baNewP: s.baSide === 'new' ? 'true' : 'false',
+      showOld: () => this.setState({ baSide: 'old' }), showNew: () => this.setState({ baSide: 'new' }),
+      fw0: fwc(0), fw1: fwc(1), fw2: fwc(2), fw3: fwc(3),
+      tlPos: (s.tlI || 0) + 1,
+      tlName: ['Health check for law firms', 'Utilisation, realisation & DSO self-diagnostic', 'Cash flow runway estimator', '30-day finance improvement sprint planner'][s.tlI || 0],
+      tlNext: () => this.setState({ tlI: ((s.tlI || 0) + 1) % 4, tlPrev: s.tlI || 0 }),
+      dkClick: (e) => { if (e.currentTarget.classList.contains('p0')) return; this.setState({ tlI: ((s.tlI || 0) + 1) % 4, tlPrev: s.tlI || 0 }); },
+      dkP1: dkp(0), dkP2: dkp(1), dkP3: dkp(2), dkP4: dkp(3),
+      dkH1: (s.tlI || 0) === 0 ? 'false' : 'true', dkH2: (s.tlI || 0) === 1 ? 'false' : 'true', dkH3: (s.tlI || 0) === 2 ? 'false' : 'true', dkH4: (s.tlI || 0) === 3 ? 'false' : 'true',
+      tlD1: (s.tlI || 0) === 0 ? 'on' : '', tlD2: (s.tlI || 0) === 1 ? 'on' : '', tlD3: (s.tlI || 0) === 2 ? 'on' : '', tlD4: (s.tlI || 0) === 3 ? 'on' : '',
+      tlA1: (s.tlI || 0) === 0 ? 'true' : 'false', tlA2: (s.tlI || 0) === 1 ? 'true' : 'false', tlA3: (s.tlI || 0) === 2 ? 'true' : 'false', tlA4: (s.tlI || 0) === 3 ? 'true' : 'false',
+      tlGo1: () => this.setState({ tlI: 0, tlPrev: -1 }), tlGo2: () => this.setState({ tlI: 1, tlPrev: -1 }), tlGo3: () => this.setState({ tlI: 2, tlPrev: -1 }), tlGo4: () => this.setState({ tlI: 3, tlPrev: -1 }),
+      allOn: !!s.allTools, allCls: s.allTools ? 'show-all' : '',
+      openAll: () => { this.setState({ allTools: true, menu: false }); setTimeout(() => this._jump('all-tools'), 30); },
+      closeAll: () => { this.setState({ allTools: false }); setTimeout(() => this._jump('tools'), 30); },
+      atSh1: atf === 'fa' || atf === 'fb', atSh2: atf === 'fa' || atf === 'fb', atSh3: atf === 'fa' || atf === 'fb', atSh4: atf === 'fa' || atf === 'fc', atSh5: atf === 'fa' || atf === 'fr', atSh6: atf === 'fa' || atf === 'fr',
+      atFaC: atf === 'fa' ? 'on' : '', atFbC: atf === 'fb' ? 'on' : '', atFcC: atf === 'fc' ? 'on' : '', atFrC: atf === 'fr' ? 'on' : '',
+      atFaP: atf === 'fa' ? 'true' : 'false', atFbP: atf === 'fb' ? 'true' : 'false', atFcP: atf === 'fc' ? 'true' : 'false', atFrP: atf === 'fr' ? 'true' : 'false',
+      atFaGo: () => this.setState({ atf: 'fa' }), atFbGo: () => this.setState({ atf: 'fb' }), atFcGo: () => this.setState({ atf: 'fc' }), atFrGo: () => this.setState({ atf: 'fr' }),
+      tqCls: s.tqPaused ? 'paused' : '', tqPausedStr: s.tqPaused ? 'true' : 'false', tqLabel: s.tqPaused ? 'Play testimonials' : 'Pause testimonials',
+      tqToggle: () => this.setState({ tqPaused: !s.tqPaused }),
+      vidOn: !!s.vid, vidOff: !s.vid,
+      playVid: (e) => { const pv = e.currentTarget.querySelector('.vd-prev'); this._vt = pv && pv.currentTime ? pv.currentTime : 0; if (pv) pv.pause(); this.setState({ vid: true }); },
+      prevOn: (e) => { let red = false; try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (x) {} if (red || (this.state || {}).motionOff) return; const b = e.currentTarget; const pv = b.querySelector('.vd-prev'); if (!pv) return; b.classList.add('is-prev'); pv.muted = true; const pr = pv.play(); if (pr && pr.catch) pr.catch(() => b.classList.remove('is-prev')); },
+      prevOff: (e) => { const b = e.currentTarget; b.classList.remove('is-prev'); const pv = b.querySelector('.vd-prev'); if (pv) pv.pause(); },
+      setVidRef: (el) => { if (!el || el._init) return; el._init = true; if (this._vt) { try { el.currentTime = this._vt; } catch (x) {} } el.muted = false; const pr = el.play(); if (pr && pr.catch) pr.catch(() => {}); },
+      imgErr: (e) => { e.currentTarget.style.display = 'none'; },
+      rvReadyCls: s.rvReady && !motionOff ? 'rv-ready' : '',
+      setRoot: (el) => { this._root = el; },
+      onLinkClick: (e) => {
+        const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!a || !this._root) return;
+        const id = (a.getAttribute('href') || '').slice(1);
+        if (!id || !this._root.querySelector('#' + id)) return;
+        e.preventDefault();
+        if ((this.state || {}).menu) this.setState({ menu: false });
+        this.scrollToId(id);
+      },
+      hdrCls: s.scrolled ? 'is-scrolled' : '',
+      motionCls: motionOff ? 'motion-off' : '',
+      motionLabel: motionOff ? 'Turn animations on' : 'Reduce motion',
+      motionPressed: motionOff ? 'true' : 'false',
+      toggleMotion: () => this.setState({ motionOff: !motionOff, mqPaused: !motionOff }),
+      menuOpen: menu, menuClosed: !menu, menuExp: menu ? 'true' : 'false',
+      menuAria: menu ? 'Close menu' : 'Open menu',
+      toggleMenu: () => this.setState({ menu: !menu }),
+      s24: Math.round(24 * t), s15: Math.round(15 * t), s3: Math.round(3 * t),
+      logos,
+      mqCls: s.mqPaused ? 'mq-paused' : '',
+      mqLabel: s.mqPaused ? 'Play logos' : 'Pause logos',
+      mqPressed: s.mqPaused ? 'true' : 'false',
+      toggleMq: () => this.setState({ mqPaused: !s.mqPaused }),
+      hw: hwData.map((d, i) => ({ id: 'hw-' + (i + 1), n: i + 1, title: d[0], sub: d[1], time: d[2], text: d[3], you: d[4], we: d[5], cls: i === step ? 'on' : '', current: i === step ? 'step' : 'false', pick: () => { this.setState({ step: i }); this.scrollToId('hw-' + (i + 1)); } })),
+      stepNo: step + 1, stepName: hwData[step][0], pct: [6, 30, 55, 80, 100][step],
+      mapAria: 'Route map with five stops. You are at stop ' + (step + 1) + ', ' + hwData[step][0] + '. The final destination is clarity and growth.',
+      seg1: step >= 1 ? 0 : 700, seg2: step >= 2 ? 0 : 700, seg3: step >= 3 ? 0 : 700, seg4: step >= 4 ? 0 : 700,
+      sf1: '#266952', sf2: step >= 1 ? '#266952' : '#FFFFFF', sf3: step >= 2 ? '#266952' : '#FFFFFF', sf4: step >= 3 ? '#266952' : '#FFFFFF',
+      st1: '#FFFFFF', st2: step >= 1 ? '#FFFFFF' : '#266952', st3: step >= 2 ? '#FFFFFF' : '#266952', st4: step >= 3 ? '#FFFFFF' : '#266952',
+      destFill: step >= 4 ? '#E6F0EC' : '#FFFFFF', needle: step >= 4 ? 0 : -130,
+      mx: [60, 380, 60, 380, 220][step], my: [40, 150, 270, 390, 510][step], mOp: step >= 4 ? 0 : 1,
+      faqs: faqData.map((d, i) => ({ q: d[0], a: d[1], cls: i === faqOpen ? 'open' : '', exp: i === faqOpen ? 'true' : 'false', toggle: () => this.setState({ faq: i === faqOpen ? -1 : i }) })),
+      ar, rev,
+      setAr: (e) => this.setState({ ar: e.target.value }),
+      setRev: (e) => this.setState({ rev: e.target.value }),
+      dsoOut: num(rev) > 0 ? Math.round(num(ar) / num(rev) * 90) : '–',
+      sent: !!s.sent,
+      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

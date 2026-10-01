@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Law Firm Revenue Health Check | Master Your Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Free revenue health check for law firms by Master Your Finance. See how much revenue your firm loses to utilisation, realisation, collections and slow billing.">
+<meta name="theme-color" content="#266952">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root{
+  --bg:#FDFCF5;--surface:#ffffff;--border:#ECE8D6;--border-mid:#DCD7C0;
+  --text:#231F20;--text-mid:#5D6670;--text-muted:#7A8188;
+  --accent:#266952;--accent-deep:#1A4A3A;--accent-light:#E6F0EC;
+  --orange:#D1674A;--orange-light:#F4B49B;--orange-text:#F6C1AC;
+  --red:#B4502F;--red-bg:#FBEEE8;--amber:#9A5A0B;--amber-bg:#FDF3E3;
+  --green:#266952;--green-bg:#E6F0EC;--radius:14px;--radius-lg:24px;
+  --grad-green:linear-gradient(135deg,#2E7A63 0%,#266952 45%,#1A4A3A 100%);
+  --shadow:0 1px 2px rgba(35,31,32,.04),0 16px 36px -24px rgba(26,74,58,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',system-ui,sans-serif;background:
+  radial-gradient(60% 40% at 90% 0%,rgba(38,105,82,.10) 0%,rgba(38,105,82,0) 70%),
+  radial-gradient(45% 35% at 0% 8%,rgba(209,103,74,.08) 0%,rgba(209,103,74,0) 70%),
+  linear-gradient(180deg,#FDFCF5 0%,#FFFFFF 40%,#F2F7F3 100%);
+  color:var(--text);font-size:15px;line-height:1.6;min-height:100vh}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--text);outline-offset:2px}
+
+/* HEADER — green glass, matches homepage */
+.site-nav{position:sticky;top:0;z-index:50;background:linear-gradient(120deg,rgba(26,74,58,.92) 0%,rgba(38,105,82,.88) 60%,rgba(46,122,99,.86) 100%);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 10px 30px -20px rgba(26,74,58,.6)}
+.topnav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 1.5rem;height:72px;max-width:1040px;margin:0 auto}
+.topnav-logo{display:flex;align-items:center;min-height:44px}
+.topnav-logo img{height:38px;width:auto;display:block}
+.topnav-links{display:flex;align-items:center;gap:24px}
+.topnav-links a{font-size:14px;font-weight:600;color:rgba(255,255,255,.86);text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.topnav-links a:hover{color:#fff}
+.topnav-links a.topnav-cta{background:#fff;color:var(--accent-deep);padding:0 18px;min-height:40px;border-radius:999px;font-weight:700;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);transition:transform .2s}
+.topnav-links a.topnav-cta:hover{transform:translateY(-1px);color:var(--accent-deep)}
+
+.page{max-width:880px;margin:0 auto;padding:3rem 1.5rem 5rem}
+
+.return-banner{background:var(--accent-light);border:1px solid rgba(38,105,82,.25);border-radius:var(--radius);padding:12px 16px;font-size:14px;color:var(--accent-deep);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.return-banner a{color:var(--accent-deep);font-weight:700}
+.return-close{cursor:pointer;color:var(--text-mid);font-size:22px;line-height:1;background:none;border:none;padding:0 4px;font-family:inherit;min-width:32px;min-height:32px}
+
+/* HERO */
+.masthead{text-align:center}
+.masthead-label{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 14px;margin-bottom:1.1rem}
+.masthead-label::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--orange)}
+.masthead h1{font-size:2.9rem;font-weight:800;letter-spacing:-.025em;line-height:1.12;color:var(--text);margin-bottom:1rem}
+.masthead h1 .hl{background:var(--grad-green);-webkit-background-clip:text;background-clip:text;color:transparent}
+.masthead p{font-size:17px;color:var(--text-mid);max-width:580px;margin:0 auto;line-height:1.65}
+
+.stats-bar{display:flex;justify-content:center;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.25rem 0;margin:2rem 0 1rem}
+.stat-item{text-align:center;flex:1;border-right:1px solid var(--border);padding:0 1rem}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;background:var(--grad-green);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat-label{font-size:12px;font-weight:600;color:var(--text-mid);margin-top:2px}
+
+.section-label{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:2rem 0 .9rem}
+
+/* INPUT CARD */
+.input-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.5rem 1.5rem 1.75rem}
+.input-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.input-grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:6px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;font-weight:700;color:var(--text)}
+.field input{padding:11px 14px;min-height:46px;border:1.5px solid var(--border-mid);border-radius:12px;font-size:15px;font-weight:600;font-family:inherit;color:var(--text);background:#FDFCF5;width:100%;transition:border-color .15s,box-shadow .15s,background .15s}
+.field input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(38,105,82,.14)}
+.field .hint{font-size:12px;color:var(--text-mid)}
+
+.primary-btn{width:100%;min-height:54px;padding:14px;margin-top:1.25rem;background:var(--grad-green);color:#fff;border:none;border-radius:999px;font-size:16px;font-family:inherit;font-weight:700;cursor:pointer;letter-spacing:.01em;box-shadow:0 14px 30px -14px rgba(26,74,58,.7);transition:transform .2s,box-shadow .2s}
+.primary-btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px -14px rgba(26,74,58,.75)}
+
+.divider{border:none;border-top:1px solid var(--border);margin:2rem 0}
+
+/* RESULT: SHOCK */
+.shock-banner{border-radius:var(--radius-lg);padding:2rem;margin:2rem 0 1.5rem;background:radial-gradient(70% 90% at 100% 0%,rgba(244,180,155,.45) 0%,rgba(244,180,155,0) 60%),linear-gradient(135deg,#FFF6F2 0%,#FBEEE8 100%);border:1px solid rgba(209,103,74,.3);text-align:center;box-shadow:0 20px 44px -28px rgba(180,80,47,.45)}
+.shock-warning{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+.shock-amount{font-size:3.4rem;font-weight:800;letter-spacing:-.03em;color:var(--red);line-height:1;margin-bottom:.5rem}
+.shock-sub{font-size:16px;font-weight:500;color:var(--text);margin-bottom:1rem}
+.shock-monthly{display:inline-block;background:#fff;border:1px solid rgba(209,103,74,.3);border-radius:999px;padding:7px 18px;font-size:14px;font-weight:700;color:var(--red)}
+
+.ceo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:1rem 0}
+.ceo-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.1rem 1.2rem;box-shadow:var(--shadow)}
+.ceo-label{font-size:12px;color:var(--text-mid);margin-bottom:6px}
+.ceo-val{font-size:22px;font-weight:800;color:var(--text)}
+.ceo-val.red{color:var(--red)}
+.ceo-val.green{color:var(--green)}
+.ceo-sub{font-size:12px;color:var(--text-mid);margin-top:4px;line-height:1.4}
+
+.expand-toggle{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:700;color:var(--accent);margin:1rem 0 .5rem;user-select:none;min-height:44px}
+.expand-toggle:hover{color:var(--accent-deep)}
+.toggle-arrow{font-size:10px;transition:transform .2s;display:inline-block}
+.toggle-arrow.open{transform:rotate(90deg)}
+.finance-view{display:none;margin-top:.5rem}
+
+.bench-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;margin:1rem 0;background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.bench-table th{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--grad-green);padding:12px;text-align:left}
+.bench-table td{padding:12px;border-top:1px solid var(--border);color:var(--text-mid)}
+.bench-table td:first-child{color:var(--text);font-weight:600}
+.bench-table td.you{font-weight:800;color:var(--text)}
+.bench-table td.good{color:var(--green);font-weight:700}
+.gap-bad{color:var(--red);font-size:12px;font-weight:700}
+.gap-ok{color:var(--green);font-size:12px;font-weight:700}
+.gap-warn{color:var(--amber);font-size:12px;font-weight:700}
+
+.diagnosis-card{border:1px solid var(--border);border-left:4px solid var(--orange);border-radius:18px;padding:1.25rem 1.5rem;margin:1rem 0;background:#fff;box-shadow:var(--shadow)}
+.diagnosis-title{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:.6rem}
+.diagnosis-text{font-size:15px;color:var(--text-mid);line-height:1.75}
+.diagnosis-text strong{color:var(--text);font-weight:700}
+
+/* SCENARIOS */
+.scenario-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:1.25rem}
+.scenario-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.2rem 1.25rem;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
+.scenario-card:hover{transform:translateY(-2px);box-shadow:0 22px 40px -26px rgba(26,74,58,.45)}
+.sc-title{font-size:15px;font-weight:800;color:var(--accent-deep);margin-bottom:2px}
+.sc-sub{font-size:12px;color:var(--text-mid);margin-bottom:10px}
+.sc-badge{display:inline-block;font-size:11px;padding:3px 10px;border-radius:999px;font-weight:700;margin-bottom:10px}
+.badge-bad{background:var(--red-bg);color:var(--red)}
+.badge-warn{background:var(--amber-bg);color:var(--amber)}
+.badge-ok{background:var(--green-bg);color:var(--green)}
+.slider-row{display:flex;align-items:center;gap:10px;margin:6px 0 10px}
+.slider-row label{font-size:12px;color:var(--text-mid);min-width:68px}
+.slider-val{font-size:13px;font-weight:700;color:var(--text);min-width:40px;text-align:right}
+.impact-both{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px}
+.impact-lose{background:var(--red-bg);border-radius:var(--radius);padding:8px 10px}
+.impact-gain{background:var(--green-bg);border-radius:var(--radius);padding:8px 10px}
+.impact-lose-label,.impact-gain-label{font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.impact-lose-label{color:var(--red)}
+.impact-gain-label{color:var(--green)}
+.impact-lose-val{font-size:15px;font-weight:700;color:var(--red)}
+.impact-gain-val{font-size:15px;font-weight:700;color:var(--green)}
+.impact-detail{font-size:12px;color:var(--text-mid);line-height:1.45;margin-top:6px}
+
+.bleed-box{background:var(--red-bg);border:1px solid rgba(209,103,74,.25);border-radius:var(--radius-lg);padding:1.3rem 1.5rem;margin:1rem 0}
+.bleed-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.bleed-label.red{color:var(--red)}
+.bleed-label.green{color:var(--green)}
+.bleed-amount{font-size:32px;font-weight:800;letter-spacing:-.02em;color:var(--red)}
+.bleed-sub{font-size:14px;color:var(--text-mid);margin-top:5px;line-height:1.55}
+.recover-box{background:radial-gradient(70% 90% at 100% 0%,rgba(38,105,82,.14) 0%,rgba(38,105,82,0) 60%),linear-gradient(135deg,#F4F9F6 0%,#E6F0EC 100%);border:1px solid rgba(38,105,82,.25);border-radius:var(--radius-lg);padding:1.3rem 1.5rem;margin:1rem 0}
+.recover-amount{font-size:32px;font-weight:800;letter-spacing:-.02em;color:var(--green)}
+
+.chart-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem;box-shadow:var(--shadow)}
+.chart-wrap{position:relative;width:100%;height:280px;margin:.5rem 0}
+.chart-legend{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:10px;font-size:13px;color:var(--text-mid)}
+.chart-legend span{display:flex;align-items:center;gap:6px}
+.chart-legend i{width:12px;height:12px;border-radius:4px;display:inline-block;flex-shrink:0}
+
+/* FIX PLAN GATE */
+.fixes-gate{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:1rem 0;box-shadow:var(--shadow)}
+.fixes-header{padding:1.1rem 1.25rem;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.fixes-header h3{font-size:16px;font-weight:800;color:var(--text)}
+.fixes-header span{font-size:13px;color:var(--green);font-weight:700;white-space:nowrap}
+.fixes-locked{padding:1.5rem 1.25rem;background:linear-gradient(180deg,#FDFCF5 0%,#F2F7F3 100%);text-align:center;border-top:1px solid var(--border)}
+.fixes-locked p{font-size:14px;color:var(--text-mid);margin:0 auto .9rem;max-width:520px}
+.fixes-unlock-btn{background:var(--grad-green);color:#fff;border:none;border-radius:999px;min-height:46px;padding:0 24px;font-size:14px;font-family:inherit;font-weight:700;cursor:pointer;box-shadow:0 12px 26px -14px rgba(26,74,58,.7)}
+.fixes-content{display:none;padding:1.25rem;border-top:1px solid var(--border);background:#fff}
+.fix-row{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)}
+.fix-row:last-child{border-bottom:none}
+.fix-num{width:28px;height:28px;border-radius:50%;background:var(--grad-green);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.fix-body{flex:1}
+.fix-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px}
+.fix-detail{font-size:13px;color:var(--text-mid);line-height:1.55}
+.fix-gain{font-size:13px;font-weight:700;color:var(--green);margin-top:4px}
+
+/* TESTIMONIAL */
+.testimonial-block{position:relative;margin:1.75rem 0;padding:1.75rem 1.75rem 1.5rem;background:radial-gradient(60% 80% at 100% 0%,rgba(244,180,155,.18) 0%,rgba(244,180,155,0) 60%),#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.testimonial-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:1rem}
+.testimonial-stars{display:inline-flex;gap:3px}
+.testimonial-stars svg{width:18px;height:18px;fill:var(--orange)}
+.testimonial-mark{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:14px;background:var(--red-bg)}
+.testimonial-mark svg{width:24px;height:20px;display:block}
+.testimonial-quote{margin:0 0 1.25rem;font-size:16px;color:var(--text);line-height:1.7;font-weight:500}
+.testimonial-author{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--border)}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:var(--grad-green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.testimonial-name{font-size:14px;font-weight:800;color:var(--accent-deep)}
+.testimonial-role{font-size:12px;color:var(--text-mid)}
+
+/* CTA */
+.cta-block{text-align:center;background:radial-gradient(80% 90% at 100% 0%,rgba(209,103,74,.22) 0%,rgba(209,103,74,0) 60%),var(--grad-green);border-radius:28px;padding:2.25rem 1.75rem;margin:1.75rem 0;box-shadow:0 26px 50px -30px rgba(26,74,58,.8)}
+.cta-block h3{font-size:1.7rem;font-weight:800;letter-spacing:-.02em;color:#fff;margin-bottom:.6rem}
+.cta-block p{font-size:15px;color:#DCEBE4;margin:0 auto 1.25rem;max-width:540px}
+.cta-block a{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--accent-deep);min-height:50px;padding:0 28px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none;box-shadow:0 12px 26px -12px rgba(0,0,0,.45);transition:transform .2s}
+.cta-block a:hover{transform:translateY(-2px)}
+
+.service-pills{display:flex;flex-wrap:wrap;gap:8px;margin:.75rem 0 1.5rem}
+.pill{font-size:13px;font-weight:600;padding:7px 14px;border:1px solid rgba(38,105,82,.25);border-radius:999px;color:var(--accent-deep);background:var(--accent-light)}
+
+.action-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:52px;padding:12px 1.25rem;margin-top:10px;background:#fff;color:var(--text);border:1.5px solid var(--accent);border-radius:999px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;text-align:left;transition:background .15s}
+.action-btn:hover{background:var(--accent-light)}
+.ab-arrow{color:var(--accent)}
+
+.about-strip{display:flex;align-items:flex-start;gap:1.25rem;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.25rem 1.5rem;margin-top:1.75rem;box-shadow:var(--shadow)}
+.about-avatar{width:64px;height:64px;border-radius:18px;background:var(--grad-green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;font-weight:800;flex-shrink:0}
+.about-kicker{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:2px}
+.about-name{font-size:16px;font-weight:800;color:var(--text);margin-bottom:4px}
+.about-bio{font-size:14px;color:var(--text-mid);line-height:1.6}
+.about-links{display:flex;gap:16px;margin-top:10px;flex-wrap:wrap}
+.about-links a{font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;border-bottom:1.5px solid rgba(38,105,82,.3)}
+.about-links a:hover{border-bottom-color:var(--accent)}
+
+/* FOOTER */
+.site-footer{background:radial-gradient(70% 60% at 0% 0%,rgba(38,105,82,.35) 0%,rgba(38,105,82,0) 60%),#231F20;color:#D5D8DA}
+.footer-inner{max-width:880px;margin:0 auto;padding:2.5rem 1.5rem;text-align:center;font-size:13px;line-height:1.8}
+.footer-inner img{height:36px;width:auto;margin-bottom:.75rem}
+.footer-inner a{color:#fff;text-decoration:none;font-weight:600}
+.footer-inner a:hover{color:var(--orange-text)}
+.footer-links{margin-top:1rem}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(26,74,58,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:1.5rem}
+.modal-overlay.active{display:flex}
+.modal{background:#fff;border-radius:var(--radius-lg);padding:2rem;max-width:460px;width:100%;animation:modalIn .25s ease;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+@keyframes modalIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.modal h2{font-size:1.4rem;font-weight:800;letter-spacing:-.01em;margin-bottom:.5rem}
+.modal p{font-size:14px;color:var(--text-mid);margin-bottom:1.25rem;line-height:1.6}
+.modal-field{margin-bottom:12px}
+.modal-field label{display:block;font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px}
+.modal-field input{width:100%;min-height:46px;padding:10px 14px;border:1.5px solid var(--border-mid);border-radius:12px;font-size:15px;font-family:inherit;color:var(--text);background:#FDFCF5}
+.modal-field input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(38,105,82,.14)}
+.modal-submit{width:100%;min-height:50px;padding:12px;margin-top:.75rem;background:var(--grad-green);color:#fff;border:none;border-radius:999px;font-size:15px;font-family:inherit;font-weight:700;cursor:pointer}
+.modal-error{font-size:13px;color:var(--red);margin-top:6px;display:none}
+.modal-success{font-size:14px;font-weight:600;color:var(--green);text-align:center;padding:.5rem 0;display:none}
+
+/* TOOLTIPS */
+.field-label-wrap{display:flex;align-items:center;gap:6px}
+.field-label-wrap label{font-size:13px;font-weight:700;color:var(--text)}
+.tooltip-wrap{position:relative;display:inline-flex;align-items:center}
+.tooltip-icon{width:18px;height:18px;border-radius:50%;background:var(--accent-light);color:var(--accent);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;cursor:help;flex-shrink:0;line-height:1;font-family:inherit;border:none;padding:0}
+.tooltip-icon:hover,.tooltip-icon:focus{background:var(--accent);color:#fff}
+.tooltip-box{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--accent-deep);color:#fff;font-size:12px;line-height:1.5;padding:10px 12px;border-radius:12px;width:240px;z-index:100;pointer-events:none;font-family:inherit;font-weight:500;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+.tooltip-box::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--accent-deep)}
+.tooltip-wrap:hover .tooltip-box,.tooltip-icon:focus + .tooltip-box{display:block}
+.tooltip-chip{display:inline-block;background:var(--orange-light);color:var(--text);border-radius:999px;padding:1px 8px;font-size:11px;font-weight:700;margin-bottom:4px}
+
+.sc-entered{font-size:12px;color:var(--text-mid);margin-bottom:8px}
+.sc-entered span{font-weight:700;color:var(--text)}
+.sc-effective-row{display:flex;align-items:baseline;gap:8px;margin-bottom:10px}
+.sc-effective-label{font-size:12px;color:var(--text-mid)}
+.sc-effective{font-size:22px;font-weight:800;color:var(--text)}
+.sc-base{color:var(--text)}
+.sc-delta-pos{color:var(--green);font-size:16px;font-weight:700}
+.sc-delta-neg{color:var(--red);font-size:16px;font-weight:700}
+
+.slider-wrap{margin:8px 0 6px}
+.slider-track-wrap{position:relative;margin-bottom:6px}
+.slider-track-wrap input[type=range]{width:100%;height:6px;appearance:none;-webkit-appearance:none;background:linear-gradient(to right,#F4B49B 0%,#ECE8D6 50%,#B7D4C6 100%);border-radius:999px;cursor:pointer}
+.slider-track-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--grad-green);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(26,74,58,.4)}
+.slider-track-wrap input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#266952;cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(26,74,58,.4)}
+.top-firm-tick{display:none}
+.slider-ends{display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:var(--text-mid)}
+.top-firm-text{font-size:11px;color:var(--green);font-weight:700;margin-top:3px}
+
+.sc-impact-single{margin-top:8px;font-size:15px;font-weight:800}
+.impact-neutral{color:var(--text-mid)}
+.impact-pos{color:var(--green)}
+.impact-neg{color:var(--red)}
+
+/* LEAKAGE BREAKDOWN */
+.leakage-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:.5rem 1.5rem 1.25rem;box-shadow:var(--shadow)}
+.leakage-intro{font-size:14px;color:var(--text-mid);margin-bottom:1rem;line-height:1.6}
+.leakage-row{display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:start;padding:16px 0;border-bottom:1px solid var(--border)}
+.leakage-row:last-of-type{border-bottom:none}
+.leakage-row-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px}
+.leakage-factor{font-size:15px;font-weight:800;color:var(--text)}
+.leakage-amount{font-size:19px;font-weight:800;color:var(--red);white-space:nowrap}
+.leakage-amount.zero{color:var(--green)}
+.leakage-meta{font-size:13px;color:var(--text-mid);margin-bottom:8px}
+.leakage-meta strong{color:var(--text);font-weight:700}
+.leakage-bar-track{height:8px;background:#F3F0E3;border-radius:999px;margin-bottom:4px;overflow:hidden}
+.leakage-bar-fill{height:8px;border-radius:999px;transition:width .6s ease}
+.leakage-bar-fill.red{background:linear-gradient(90deg,#F4B49B 0%,#D1674A 60%,#B4502F 100%)}
+.leakage-bar-fill.green{background:var(--grad-green)}
+.leakage-pct{font-size:12px;color:var(--text-mid)}
+.leakage-zero-badge{display:inline-block;background:var(--green-bg);color:var(--green);font-size:12px;padding:3px 10px;border-radius:999px;font-weight:700}
+.leakage-total-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0 0;margin-top:4px;border-top:1.5px solid var(--border-mid)}
+.leakage-total-label{font-size:14px;font-weight:800;color:var(--text)}
+.leakage-total-amount{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--red)}
+
+.three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:14px}
+.two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:1.25rem}
+
+@media(max-width:700px){
+  .input-grid{grid-template-columns:1fr 1fr}
+  .three-col{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .scenario-grid{grid-template-columns:1fr}
+  .ceo-grid{grid-template-columns:1fr 1fr}
+  .masthead h1{font-size:2rem}
+  .shock-amount{font-size:2.5rem}
+  .topnav-links .hide-mob{display:none}
+  .about-strip{flex-direction:column}
+  .impact-both{grid-template-columns:1fr}
+  .stats-bar{flex-direction:column;gap:12px}
+  .stat-item{border-right:none;border-bottom:1px solid var(--border);padding-bottom:12px}
+  .stat-item:last-child{border-bottom:none;padding-bottom:0}
+}
+@media(max-width:420px){
+  .input-grid,.input-grid-2{grid-template-columns:1fr}
+  .page{padding:2rem 1rem 4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <nav class="topnav" aria-label="Main">
+    <a class="topnav-logo" href="index.html" aria-label="Master Your Finance, home">
+      <img src="data:image/png;base64,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" alt="Master Your Finance" width="94" height="41">
+    </a>
+    <div class="topnav-links">
+      <a href="https://masteryourfinance.org/services/" class="hide-mob">Services</a>
+      <a href="https://masteryourfinance.org/tools-resources/" class="hide-mob">Tools &amp; Resources</a>
+      <a href="https://masteryourfinance.org/about-us/" class="hide-mob">About Us</a>
+      <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" class="topnav-cta">Book a free review</a>
+    </div>
+  </nav>
+</header>
+
+<div class="page">
+
+  <div id="return-banner" class="return-banner" style="display:none">
+    <span id="return-msg">Welcome back. Your details are remembered. <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review</a> or run the tool again below.</span>
+    <button class="return-close" onclick="document.getElementById('return-banner').style.display='none'">&times;</button>
+  </div>
+
+  <div class="masthead">
+    <div class="masthead-label">Health check for law firms · Free</div>
+    <h1>How much money is your firm <span class="hl">leaving on the table?</span></h1>
+    <p>Most law firms lose 15 to 25% of potential revenue to billing delays, slow collections, and write-downs. Most do not know it. Find out in 60 seconds.</p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-num">24+</div><div class="stat-label">years of finance experience</div></div>
+    <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">years in finance leadership</div></div>
+    <div class="stat-item"><div class="stat-num">US · UK · AU</div><div class="stat-label">for firms of 11–250 staff</div></div>
+  </div>
+  <div class="section-label">Your firm's numbers · enter actuals or adjust the defaults</div>
+
+  <div class="input-card">
+  <div class="input-grid">
+    <div class="field">
+      <label>Fee earners (lawyers)</label>
+      <input type="number" id="lawyers" value="15" min="1" max="500">
+      <div class="hint">Billing lawyers only</div>
+    </div>
+    <div class="field">
+      <label>Avg billing rate ($/hr)</label>
+      <input type="number" id="rate" value="350" min="50" max="2000">
+    </div>
+    <div class="field">
+      <label>Billable hrs / lawyer / yr</label>
+      <input type="number" id="hrsPerLawyer" value="1400" min="500" max="2500">
+      <div class="hint">Typical for most firms: ~1,400</div>
+    </div>
+  </div>
+
+  <div class="input-grid">
+    <div class="field">
+      <div class="field-label-wrap"><label>Utilisation rate (%)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: 98%+</div><br>Share of available lawyer hours actually billed. Hours not captured or written off before billing silently reduce this.</div></div></div>
+      <input type="number" id="util" value="75" min="10" max="100">
+      <div class="hint">Billed hours / available hours</div>
+    </div>
+    <div class="field">
+      <div class="field-label-wrap"><label>Realisation rate (%)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: 98%+</div><br>Of every dollar at standard rates, how much reaches the invoice. Write-downs and partner discounts erode this month by month.</div></div></div>
+      <input type="number" id="real" value="88" min="10" max="100">
+      <div class="hint">Billed value / standard rate value</div>
+    </div>
+    <div class="field">
+      <div class="field-label-wrap"><label>Collection rate (%)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: 98%+</div><br>Of every dollar invoiced, how much lands in your bank. Unpaid invoices and post-billing write-offs reduce this.</div></div></div>
+      <input type="number" id="coll" value="92" min="10" max="100">
+      <div class="hint">Cash collected / total invoiced</div>
+    </div>
+  </div>
+
+  <div class="input-grid-2">
+    <div class="field">
+      <div class="field-label-wrap"><label>WIP DSO (days)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: under 14 days</div><br>Days from work completed to invoice raised. Longer WIP locks cash and increases client dispute risk on older matters.</div></div></div>
+      <input type="number" id="wipDso" value="35" min="0" max="180">
+      <div class="hint">Work done to invoice raised. Best practice: under 21 days</div>
+    </div>
+    <div class="field">
+      <div class="field-label-wrap"><label>AR DSO (days)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: under 21 days</div><br>Days from invoice raised to cash received. Every extra day is an interest-free loan extended to your client.</div></div></div>
+      <input type="number" id="arDso" value="42" min="0" max="180">
+      <div class="hint">Invoice raised to cash received. Best practice: under 30 days</div>
+    </div>
+  </div>
+
+  <button class="primary-btn" onclick="runAndShow()">Calculate my revenue leakage <span aria-hidden="true">↓</span></button>
+  </div>
+
+  <div id="results" style="display:none">
+
+    <div class="shock-banner">
+      <div class="shock-warning">Your firm is losing</div>
+      <div class="shock-amount" id="shock-amount">$0</div>
+      <div class="shock-sub">every year. Money you already earned but never collected.</div>
+      <div class="shock-monthly" id="shock-monthly">$0 per month not reaching your bank</div>
+    </div>
+
+    <div class="section-label">What is hurting your firm, ranked by impact</div>
+
+    <div class="leakage-card"><div id="leakage-breakdown"></div></div>
+
+    <div class="diagnosis-card" style="margin:1rem 0">
+      <div class="diagnosis-title">Your firm's diagnosis</div>
+      <div class="diagnosis-text" id="diagnosis-text">Running analysis...</div>
+    </div>
+
+    <div class="ceo-grid" style="display:none">
+      <div class="ceo-card">
+        <div class="ceo-label">Cash in your bank (annual)</div>
+        <div class="ceo-val green" id="ceo-collected">$0</div>
+        <div class="ceo-sub">What you actually received</div>
+      </div>
+      <div class="ceo-card">
+        <div class="ceo-label">Stuck in your system right now</div>
+        <div class="ceo-val red" id="ceo-stuck">$0</div>
+        <div class="ceo-sub" id="ceo-stuck-sub">Sitting in WIP and unpaid invoices</div>
+      </div>
+      <div class="ceo-card">
+        <div class="ceo-label">You earned this but never received it</div>
+        <div class="ceo-val red" id="ceo-lost">$0</div>
+        <div class="ceo-sub" id="ceo-lost-sub">Written off or never billed</div>
+      </div>
+    </div>
+
+    <div class="expand-toggle" onclick="toggleFinance()" style="margin-top:0">
+      <span class="toggle-arrow" id="toggle-arrow2">&#9658;</span>
+      <span>See benchmark comparison vs top firms</span>
+    </div>
+
+    <div class="finance-view" id="finance-view" style="display:none">
+      <div class="section-label" style="margin-top:0.5rem">How you compare to top firms</div>
+      <table class="bench-table">
+        <thead><tr><th>Metric</th><th>Your firm</th><th>Top quartile</th><th>Median firm</th><th>Gap</th></tr></thead>
+        <tbody id="bench-tbody"></tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+    <div class="section-label">What-if scenarios · drag from your number to explore</div>
+
+    <div class="three-col">
+      <div class="scenario-card">
+        <div class="sc-title">Utilisation</div>
+        <div class="sc-entered">You entered: <span id="util-entered">75%</span></div>
+        <div class="sc-effective-row">
+          <span class="sc-effective-label">Effective rate</span>
+          <span class="sc-effective" id="util-effective"><span class="sc-base">75%</span></span>
+        </div>
+        <div class="slider-wrap">
+          <div class="slider-track-wrap">
+            <input type="range" min="-30" max="30" value="0" step="1" id="utilSlider" oninput="updateScenario('util')">
+          </div>
+          <div class="slider-ends"><span>-30%</span><span id="util-centre-label">75% (yours)</span><span>+30%</span></div>
+        </div>
+        <div class="sc-impact-single" id="util-impact-single">
+          <span id="util-impact-val" class="impact-neutral">No change</span>
+        </div>
+        <div class="impact-detail" id="util-detail">Adjust the slider to see the revenue impact</div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="sc-title">Realisation</div>
+        <div class="sc-entered">You entered: <span id="real-entered">88%</span></div>
+        <div class="sc-effective-row">
+          <span class="sc-effective-label">Effective rate</span>
+          <span class="sc-effective" id="real-effective"><span class="sc-base">88%</span></span>
+        </div>
+        <div class="slider-wrap">
+          <div class="slider-track-wrap">
+            <input type="range" min="-30" max="30" value="0" step="1" id="realSlider" oninput="updateScenario('real')">
+          </div>
+          <div class="slider-ends"><span>-30%</span><span id="real-centre-label">88% (yours)</span><span>+30%</span></div>
+        </div>
+        <div class="sc-impact-single" id="real-impact-single">
+          <span id="real-impact-val" class="impact-neutral">No change</span>
+        </div>
+        <div class="impact-detail" id="real-detail">Adjust the slider to see the revenue impact</div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="sc-title">Collection rate</div>
+        <div class="sc-entered">You entered: <span id="coll-entered">92%</span></div>
+        <div class="sc-effective-row">
+          <span class="sc-effective-label">Effective rate</span>
+          <span class="sc-effective" id="coll-effective"><span class="sc-base">92%</span></span>
+        </div>
+        <div class="slider-wrap">
+          <div class="slider-track-wrap">
+            <input type="range" min="-30" max="8" value="0" step="1" id="collSlider" oninput="updateScenario('coll')">
+          </div>
+          <div class="slider-ends"><span>-30%</span><span id="coll-centre-label">92% (yours)</span><span id="coll-max-end">+8%</span></div>
+        </div>
+        <div class="sc-impact-single" id="coll-impact-single">
+          <span id="coll-impact-val" class="impact-neutral">No change</span>
+        </div>
+        <div class="impact-detail" id="coll-detail">Slide right to improve collections, left to see decline impact</div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="scenario-card">
+        <div class="sc-title">WIP DSO</div>
+        <div class="sc-entered">You entered: <span id="wip-entered">35d</span></div>
+        <div class="sc-effective-row">
+          <span class="sc-effective-label">Effective DSO</span>
+          <span class="sc-effective" id="wip-effective"><span class="sc-base">35d</span></span>
+        </div>
+        <div class="slider-wrap">
+          <div class="slider-track-wrap">
+            <input type="range" min="-60" max="60" value="0" step="1" id="wipSlider" oninput="updateScenario('wip')">
+          </div>
+          <div class="slider-ends"><span>-60d</span><span>0</span><span>+60d</span></div>
+        </div>
+        <div class="sc-impact-single" id="wip-impact-single">
+          <span id="wip-impact-val" class="impact-neutral">No change</span>
+        </div>
+        <div class="impact-detail" id="wip-detail">Minimum DSO enforced at 5 days</div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="sc-title">AR DSO</div>
+        <div class="sc-entered">You entered: <span id="ar-entered">42d</span></div>
+        <div class="sc-effective-row">
+          <span class="sc-effective-label">Effective DSO</span>
+          <span class="sc-effective" id="ar-effective"><span class="sc-base">42d</span></span>
+        </div>
+        <div class="slider-wrap">
+          <div class="slider-track-wrap">
+            <input type="range" min="-60" max="60" value="0" step="1" id="arSlider" oninput="updateScenario('ar')">
+          </div>
+          <div class="slider-ends"><span>-60d</span><span>0</span><span>+60d</span></div>
+        </div>
+        <div class="sc-impact-single" id="ar-impact-single">
+          <span id="ar-impact-val" class="impact-neutral">No change</span>
+        </div>
+        <div class="impact-detail" id="ar-detail">Minimum DSO enforced at 5 days</div>
+      </div>
+    </div>
+
+    <div class="bleed-box" id="scenario-summary-box">
+      <div class="bleed-label red" id="summary-label">Combined scenario impact</div>
+      <div class="bleed-amount" id="total-bleed">$0</div>
+      <div class="bleed-sub" id="total-bleed-sub">Move any slider to see the combined impact</div>
+    </div>
+
+    <div class="recover-box">
+      <div class="bleed-label green">Maximum recoverable if you reach top firm levels</div>
+      <div class="recover-amount" id="recover-amount">$0</div>
+      <div class="bleed-sub" id="recover-sub">Loading...</div>
+    </div>
+
+    <div class="section-label">Where your money is going (%)</div>
+    <div class="chart-card">
+      <div class="chart-wrap"><canvas id="donutChart" role="img" aria-label="Doughnut chart of where your revenue leakage comes from"></canvas></div>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="fixes-gate" id="fixes-gate">
+      <div class="fixes-header">
+        <h3>Your top 3 fixes, personalised to your numbers</h3>
+        <span id="fixes-potential">Calculating...</span>
+      </div>
+      <div class="fixes-locked" id="fixes-locked">
+        <p>Enter your email to unlock your firm's personalised action plan. The three moves that will recover the most cash, fastest.</p>
+        <button class="fixes-unlock-btn" onclick="gateAction('fixes')">Unlock my fix plan</button>
+      </div>
+      <div class="fixes-content" id="fixes-content">
+        <div id="fixes-list"></div>
+      </div>
+    </div>
+
+    <figure class="testimonial-block">
+      <div class="testimonial-top"><div class="testimonial-mark" aria-hidden="true"><svg viewBox="0 0 40 32"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg></div><span class="testimonial-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div>
+      <blockquote class="testimonial-quote">Joel Schenk and his team have been game-changers for us. His strategic clarity, deep empathy, and hands-on approach helped us transform complexity into clear, actionable steps. He became an extension of our team from day one. He brought structure, focus, and peace of mind.</blockquote>
+      <figcaption class="testimonial-author">
+        <div class="testimonial-avatar">NH</div>
+        <div>
+          <div class="testimonial-name">N. Hepple, Director</div>
+          <div class="testimonial-role">HBA Legal, Law firm client</div>
+        </div>
+      </figcaption>
+    </figure>
+
+    <div class="cta-block">
+      <h3 id="cta-headline">Ready to recover your lost revenue?</h3>
+      <p>Book a free 30-minute finance review. We’ll go through your firm’s numbers, find the biggest lever and show you what to fix first.</p>
+      <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank">Book a free 30-min finance review <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="section-label">What MYF does for law firms</div>
+    <div class="service-pills">
+      <div class="pill">Bookkeeping and accounts</div>
+      <div class="pill">WIP and billing management</div>
+      <div class="pill">AR collections and DSO reduction</div>
+      <div class="pill">Monthly reporting packs</div>
+      <div class="pill">Utilisation and realisation dashboards</div>
+      <div class="pill">Cash flow forecasting</div>
+      <div class="pill">CFO-lite advisory</div>
+      <div class="pill">Month-end close</div>
+    </div>
+
+    <button class="action-btn" onclick="gateAction('reporting')">See a sample monthly law firm reporting pack <span class="ab-arrow">↗</span></button>
+
+    <div class="about-strip">
+      <div class="about-avatar" aria-hidden="true">HS</div>
+      <div>
+        <div class="about-kicker">Your finance partner</div>
+        <div class="about-name">Himanshu Sachdeva · CFO · Chartered Accountant (CA)</div>
+        <div class="about-bio">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Master Your Finance is your extended finance team for complete financial clarity, for professional service firms in the US, UK and Australia.</div>
+        <div class="about-links">
+          <a href="https://masteryourfinance.org/about-us/" target="_blank" rel="noopener">About MYF</a>
+          <a href="https://masteryourfinance.org/services/" target="_blank" rel="noopener">Services</a>
+          <a href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener">More free tools</a>
+          <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review</a>
+          <a href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+  </div>
+
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="data:image/png;base64,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" alt="Master Your Finance" width="94" height="41"><br>
+    Built by <a href="https://masteryourfinance.org">Master Your Finance</a>, your extended finance team for professional service firms in the US, UK and Australia.<br>
+    Results are indicative estimates based on your inputs and published industry benchmarks. Not financial advice.
+    <div class="footer-links">
+      <a href="https://masteryourfinance.org/services/">Services</a> &nbsp;·&nbsp;
+      <a href="https://masteryourfinance.org/tools-resources/">Tools &amp; Resources</a> &nbsp;·&nbsp;
+      <a href="https://masteryourfinance.org/contact-us/">Contact us</a> &nbsp;·&nbsp;
+      <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review</a> &nbsp;·&nbsp;
+      <a href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <h2 id="modal-title">Get your personalised insights</h2>
+    <p id="modal-body">Enter your details below. Master Your Finance may follow up with relevant guidance for your firm. No spam, and you can unsubscribe at any time.</p>
+    <div class="modal-field">
+      <label>Your name</label>
+      <input type="text" id="modal-name" placeholder="e.g. Sarah Patel" autocomplete="name">
+    </div>
+    <div class="modal-field">
+      <label>Work email</label>
+      <input type="email" id="modal-email" placeholder="you@yourfirm.com" autocomplete="email">
+    </div>
+    <div class="modal-error" id="modal-error">Please enter a valid name and email.</div>
+    <div class="modal-success" id="modal-success">Got it. Opening your resource now.</div>
+    <button class="modal-submit" id="modal-submit-btn" onclick="submitGate()">Continue</button>
+  </div>
+</div>
+
+<script>
+if(window.Chart){Chart.defaults.font.family="Montserrat, system-ui, sans-serif";Chart.defaults.color="#5D6670";}
+var AIRTABLE_BASE  = 'appnvzj2hl731uVhc';
+var AIRTABLE_TABLE = 'tblGuSpwMsEiDHjrC';
+var AIRTABLE_TOKEN = 'patJOESxrXXH416fd.8e2a4cd5cf000e805b53b1c90363d1a168e1695a9d29b4a824a1e74725686ca6';
+var FIELD_NAME     = 'fldQyJFfRPPAQpmRE';
+var FIELD_EMAIL    = 'flde5cGK654cdAtqe';
+
+var emailCaptured = false;
+var pendingAction = null;
+var donutChart    = null;
+
+function g(id){ return parseFloat(document.getElementById(id).value) || 0; }
+function set(id, html){ var el=document.getElementById(id); if(el) el.innerHTML=html; }
+function fmtK(n){
+  var abs=Math.abs(n);
+  if(abs>=1000000) return '$'+(Math.round(abs/100000)/10).toFixed(1)+'M';
+  if(abs>=1000)    return '$'+Math.round(abs/1000).toLocaleString()+'K';
+  return '$'+Math.round(abs).toLocaleString();
+}
+function setBadge(id,val,lo,hi){
+  var el=document.getElementById(id); if(!el) return;
+  if(val===0){el.className='sc-badge badge-ok';el.textContent='No change';}
+  else if(val<=lo){el.className='sc-badge badge-warn';el.textContent='Watch this';}
+  else if(val<=hi){el.className='sc-badge badge-warn';el.textContent='Caution';}
+  else{el.className='sc-badge badge-bad';el.textContent='High impact';}
+}
+
+function toggleFinance(){
+  var fv=document.getElementById('finance-view'), arr=document.getElementById('toggle-arrow2');
+  if(fv.style.display==='block'){fv.style.display='none';arr.classList.remove('open');}
+  else{fv.style.display='block';arr.classList.add('open');}
+}
+
+function recalc(){
+  var lawyers=g('lawyers'),rate=g('rate'),hrs=g('hrsPerLawyer');
+  var util=g('util')/100,real=g('real')/100,coll=g('coll')/100;
+  var wipDso=g('wipDso'),arDso=g('arDso');
+
+  var totalHrs=lawyers*hrs, billedHrs=totalHrs*util;
+  var standardValue=billedHrs*rate, invoiced=standardValue*real;
+  var collected=invoiced*coll, dailyInvoiced=invoiced/365;
+
+  // BENCHMARK GAP LEAKAGE (not gap from perfection)
+  var BENCH_UTIL=0.98, BENCH_REAL=0.98, BENCH_COLL=0.98;
+  var BENCH_WIP=14, BENCH_AR=21;
+
+  // Utilisation: only a problem if below benchmark
+  var utilGap = Math.max(0, BENCH_UTIL - util);
+  var utilLeak = utilGap > 0 ? (totalHrs * utilGap * rate * real * coll) : 0;
+
+  // Realisation gap cost
+  var realGap = Math.max(0, BENCH_REAL - real);
+  var realLeak = billedHrs * rate * realGap * coll;
+
+  // Collection gap cost
+  var collGap = Math.max(0, BENCH_COLL - coll);
+  var collLeak = invoiced * collGap;
+
+  // WIP cash locked above benchmark
+  var wipExtraDays = Math.max(0, wipDso - BENCH_WIP);
+  var wipLeak = invoiced * (wipExtraDays / 365);
+
+  // AR cash locked above benchmark
+  var arExtraDays = Math.max(0, arDso - BENCH_AR);
+  var arLeak = invoiced * (arExtraDays / 365);
+
+  var totalLeakage = utilLeak + realLeak + collLeak + wipLeak + arLeak;
+
+  // Shock banner
+  set('shock-amount', fmtK(totalLeakage));
+  set('shock-monthly', fmtK(totalLeakage/12)+' per month not reaching your bank');
+
+  // Set diagnosis directly here as failsafe
+  var _util=g('util'),_real=g('real'),_coll=g('coll'),_wip=g('wipDso');
+  var _gaps=[
+    {m:'utilisation at '+_util+'%', gap:Math.max(0,98-_util), fix:'time capture and billing discipline'},
+    {m:'realisation at '+_real+'%', gap:Math.max(0,98-_real), fix:'billing rate discipline and scope management'},
+    {m:'collection at '+_coll+'%',  gap:Math.max(0,98-_coll), fix:'AR follow-up and invoice dispute resolution'},
+    {m:'WIP DSO at '+_wip+'d',      gap:Math.max(0,_wip-14),  fix:'billing cycle frequency and WIP review cadence'}
+  ];
+  _gaps.sort(function(a,b){return b.gap-a.gap;});
+  var _w=_gaps[0];
+  var _diagEl=document.getElementById('diagnosis-text');
+  if(_diagEl){
+    if(_gaps.some(function(gp){return gp.gap>0;})){
+      _diagEl.textContent='This firm collects '+fmtK(collected)+' per year, leaving '+fmtK(totalLeakage)+' recoverable. The biggest drag is '+_w.m+' vs top firm target (98% or 14 days). Root cause: '+_w.fix+'.';
+    } else {
+      _diagEl.textContent='This firm is at or above top firm benchmarks on all metrics. Revenue leakage is minimal.';
+    }
+  }
+
+  var ctaEl=document.getElementById('cta-headline');
+  if(ctaEl) ctaEl.textContent='Ready to recover your '+fmtK(totalLeakage)+'?';
+
+  buildDiagnosis(g('util'),g('real'),g('coll'),wipDso,collected,totalLeakage,standardValue);
+  buildBenchTable(g('util'),g('real'),g('coll'),wipDso,arDso);
+  try{buildLeakageBreakdown(util,real,coll,wipDso,arDso,utilLeak,realLeak,collLeak,wipLeak,arLeak,totalLeakage,invoiced);}catch(err){console.error('leakage breakdown error:',err);}
+
+  // Update entered values display
+  set('util-entered', g('util')+'%');
+  set('real-entered', g('real')+'%');
+  set('wip-entered',  g('wipDso')+'d');
+  set('ar-entered',   g('arDso')+'d');
+  set('coll-entered', g('coll')+'%');
+  // Update centre labels to show current entered value
+  var _ulbl=document.getElementById('util-centre-label'); if(_ulbl) _ulbl.textContent=g('util')+'% (yours)';
+  var _rlbl=document.getElementById('real-centre-label'); if(_rlbl) _rlbl.textContent=g('real')+'% (yours)';
+  var _clbl=document.getElementById('coll-centre-label'); if(_clbl) _clbl.textContent=g('coll')+'% (yours)';
+  var _wlbl=document.getElementById('wip-centre-label');  if(_wlbl) _wlbl.textContent=g('wipDso')+'d (yours)';
+  var _albl=document.getElementById('ar-centre-label');   if(_albl) _albl.textContent=g('arDso')+'d (yours)';
+
+  // Reset sliders to 0 when main inputs change
+  ['utilSlider','realSlider','wipSlider','arSlider'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el) el.value=0;
+  });
+  updateScenario('util',true);
+  updateScenario('real',true);
+  updateScenario('wip',true);
+  updateScenario('ar',true);
+  updateScenario('coll',true);
+
+  // Set dynamic slider ranges
+  setDynamicSliderRange('realSlider', g('real'), false);
+  setDynamicSliderRange('collSlider', g('coll'), false);
+  setDynamicSliderRange('wipSlider',  g('wipDso'), true);
+  setDynamicSliderRange('arSlider',   g('arDso'),  true);
+
+  // Max recoverable = closing all benchmark gaps
+  set('recover-amount', fmtK(totalLeakage)+' back in your bank');
+  set('recover-sub',
+    (utilLeak>0?'Utilisation: '+fmtK(utilLeak)+' · ':'Top utilisation ')+
+    'Realisation: '+fmtK(realLeak)+' · Collection: '+fmtK(collLeak)+
+    ' · WIP: '+fmtK(wipLeak)+' · AR: '+fmtK(arLeak)+
+    '. No new clients needed.'
+  );
+
+  buildFixes(wipLeak,arLeak,utilLeak,realLeak+collLeak);
+  set('fixes-potential','Up to '+fmtK(totalLeakage)+' recoverable');
+  buildDonut(utilLeak,realLeak,collLeak,wipLeak,arLeak);
+}
+
+function setDynamicSliderRange(sliderId, baseVal, isDso){
+  // For pct sliders, cap max at 100-baseVal
+  if(!isDso){
+    var slider=document.getElementById(sliderId);
+    if(!slider) return;
+    var maxUp=Math.min(30, 100-baseVal);
+    slider.max=maxUp;
+    return;
+  }
+  var slider = document.getElementById(sliderId);
+  if(!slider) return;
+  if(isDso){
+    // Min left: cannot go below 5 days, so max improvement = baseVal - 5
+    var maxImprove = Math.max(0, baseVal - 5);
+    slider.min = -maxImprove;
+    slider.max = 60;
+    // Clamp current value
+    var cur = parseInt(slider.value)||0;
+    slider.value = Math.max(-maxImprove, cur);
+    // Update end labels
+    var wrap = slider.closest('.slider-wrap');
+    if(wrap){
+      var ends = wrap.querySelectorAll('.slider-ends span');
+      if(ends.length>=1) ends[0].textContent = '-'+maxImprove+'d';
+      if(ends.length>=3) ends[2].textContent = '+60d';
+    }
+  }
+}
+
+function updateScenario(metric, silent){
+  var lawyers=g('lawyers'),rate=g('rate'),hrs=g('hrsPerLawyer');
+  var util=g('util')/100, real=g('real')/100, coll=g('coll')/100;
+  var wipDso=g('wipDso'), arDso=g('arDso');
+  var totalHrs=lawyers*hrs, billedHrs=totalHrs*util;
+  var standardValue=billedHrs*rate, invoiced=standardValue*real;
+  var collected=invoiced*coll, dailyInvoiced=invoiced/365;
+
+  var delta=0, effectiveVal=0, impactVal=0;
+  var isDso=(metric==='wip'||metric==='ar');
+
+  if(metric==='util'){
+    delta=parseInt(document.getElementById('utilSlider').value)||0;
+    var baseVal=g('util');
+    effectiveVal=Math.max(0,baseVal+delta);
+    var baseCollected=(totalHrs*(baseVal/100))*rate*real*coll;
+    var newCollected=(totalHrs*(effectiveVal/100))*rate*real*coll;
+    impactVal=newCollected-baseCollected;
+    var deltaStr=delta===0?'':(delta>0?'<span class="sc-delta-pos"> +'+delta+'%</span>':'<span class="sc-delta-neg"> '+delta+'%</span>');
+    set('util-effective','<span class="sc-base">'+baseVal+'%</span>'+deltaStr);
+    setImpact('util-impact-val', impactVal, silent);
+    set('util-detail', delta===0?'Slide right to improve, left to see impact of decline':
+      (delta>0?'+'+delta+'% more billed hours = '+fmtK(Math.abs(impactVal))+' extra revenue per year':
+      Math.abs(delta)+'% fewer billed hours = '+fmtK(Math.abs(impactVal))+' less revenue per year'));
+  }
+  else if(metric==='real'){
+    delta=parseInt(document.getElementById('realSlider').value)||0;
+    var baseVal=g('real');
+    var maxDelta=Math.min(30, 100-baseVal);
+    delta=Math.min(delta, maxDelta);
+    document.getElementById('realSlider').value=delta;
+    effectiveVal=Math.min(100,Math.max(0,baseVal+delta));
+    var baseInv=billedHrs*rate*(baseVal/100);
+    var newInv=billedHrs*rate*(effectiveVal/100);
+    var newColl=newInv*coll;
+    var baseColl=baseInv*coll;
+    impactVal=newColl-baseColl;
+    var deltaStr=delta===0?'':(delta>0?'<span class="sc-delta-pos"> +'+delta+'%</span>':'<span class="sc-delta-neg"> '+delta+'%</span>');
+    set('real-effective','<span class="sc-base">'+baseVal+'%</span>'+deltaStr);
+    setImpact('real-impact-val', impactVal, silent);
+    set('real-detail', delta===0?'Slide right to improve, left to see decline impact':
+      (delta>0?'+'+delta+'% realisation = '+fmtK(Math.abs(impactVal))+' more collected per year':
+      Math.abs(delta)+'% write-down increase = '+fmtK(Math.abs(impactVal))+' written away per year'));
+  }
+  else if(metric==='wip'){
+    delta=parseInt(document.getElementById('wipSlider').value)||0;
+    var baseVal=g('wipDso');
+    var newWip=Math.max(5, baseVal+delta);
+    var actualDelta=newWip-baseVal;
+    var oldCash=invoiced*(baseVal/365);
+    var newCash=invoiced*(newWip/365);
+    impactVal=oldCash-newCash; // positive = cash freed
+    var displayDelta=actualDelta===0?'':(actualDelta>0?'<span class="sc-delta-neg"> +'+actualDelta+'d</span>':'<span class="sc-delta-pos"> '+actualDelta+'d</span>');
+    set('wip-effective','<span class="sc-base">'+baseVal+'d</span>'+displayDelta);
+    setImpact('wip-impact-val', impactVal, silent);
+    set('wip-detail', delta===0?'Slide right = longer WIP (worse), left = faster billing (better)':
+      (actualDelta<0?'Billing '+Math.abs(actualDelta)+'d faster frees '+fmtK(Math.abs(impactVal))+' of cash':
+      actualDelta+'d slower billing locks '+fmtK(Math.abs(impactVal))+' more cash'+(newWip<=5?' (minimum 5d enforced)':'')));
+  }
+  else if(metric==='ar'){
+    delta=parseInt(document.getElementById('arSlider').value)||0;
+    var baseVal=g('arDso');
+    var newAr=Math.max(5, baseVal+delta);
+    var actualDelta=newAr-baseVal;
+    var oldCash=invoiced*(baseVal/365);
+    var newCash=invoiced*(newAr/365);
+    impactVal=oldCash-newCash;
+    var displayDelta=actualDelta===0?'':(actualDelta>0?'<span class="sc-delta-neg"> +'+actualDelta+'d</span>':'<span class="sc-delta-pos"> '+actualDelta+'d</span>');
+    set('ar-effective','<span class="sc-base">'+baseVal+'d</span>'+displayDelta);
+    setImpact('ar-impact-val', impactVal, silent);
+    set('ar-detail', delta===0?'Slide right = clients paying slower (worse), left = faster collections (better)':
+      (actualDelta<0?'Collecting '+Math.abs(actualDelta)+'d faster frees '+fmtK(Math.abs(impactVal))+' of cash':
+      actualDelta+'d slower collections locks '+fmtK(Math.abs(impactVal))+' more cash'+(newAr<=5?' (minimum 5d enforced)':'')));
+  }
+
+  else if(metric==='coll'){
+    delta=parseInt(document.getElementById('collSlider').value)||0;
+    var baseVal=g('coll');
+    var maxDelta=Math.min(30,100-baseVal);
+    delta=Math.min(delta,maxDelta);
+    document.getElementById('collSlider').value=delta;
+    effectiveVal=Math.min(100,Math.max(0,baseVal+delta));
+    var baseCollected=invoiced*(baseVal/100);
+    var newCollected=invoiced*(effectiveVal/100);
+    impactVal=newCollected-baseCollected;
+    var deltaStr=delta===0?'':(delta>0?'<span class="sc-delta-pos"> +'+delta+'%</span>':'<span class="sc-delta-neg"> '+delta+'%</span>');
+    set('coll-effective','<span class="sc-base">'+baseVal+'%</span>'+deltaStr);
+    set('coll-entered', baseVal+'%');
+    setImpact('coll-impact-val', impactVal, silent);
+    set('coll-detail', delta===0?'Slide right to improve collections, left to see decline impact':
+      (delta>0?'+'+delta+'% collection = '+fmtK(Math.abs(impactVal))+' more cash collected per year':
+      Math.abs(delta)+'% drop = '+fmtK(Math.abs(impactVal))+' less collected per year'));
+  }
+
+  // Update combined summary
+  updateCombinedSummary();
+}
+
+function setImpact(elId, val, silent){
+  var el=document.getElementById(elId); if(!el) return;
+  if(silent||val===0){el.className='impact-neutral';el.textContent='No change';return;}
+  if(val>0){el.className='impact-pos';el.textContent='+'+fmtK(val)+' per year';}
+  else{el.className='impact-neg';el.textContent='-'+fmtK(Math.abs(val))+' per year';}
+}
+
+function updateCombinedSummary(){
+  var lawyers=g('lawyers'),rate=g('rate'),hrs=g('hrsPerLawyer');
+  var util=g('util')/100, real=g('real')/100, coll=g('coll')/100;
+  var wipDso=g('wipDso'), arDso=g('arDso');
+  var totalHrs=lawyers*hrs, billedHrs=totalHrs*util;
+  var standardValue=billedHrs*rate, invoiced=standardValue*real;
+  var collected=invoiced*coll;
+  var dailyInvoiced=invoiced/365;
+
+  var ud=parseInt(document.getElementById('utilSlider').value)||0;
+  var rd=parseInt(document.getElementById('realSlider').value)||0;
+  var wd=parseInt(document.getElementById('wipSlider').value)||0;
+  var ad=parseInt(document.getElementById('arSlider').value)||0;
+  var cd=parseInt((document.getElementById('collSlider')||{value:'0'}).value)||0;
+
+  if(ud===0&&rd===0&&wd===0&&ad===0&&cd===0){
+    set('total-bleed','$0');
+    set('total-bleed-sub','Move any slider to see the combined impact across all metrics');
+    document.getElementById('scenario-summary-box').className='bleed-box';
+    set('summary-label','Combined scenario impact');
+    document.querySelector('#scenario-summary-box .bleed-amount').style.color='var(--text-muted)';
+    return;
+  }
+
+  // Independent calculations, each metric on its own base (no compounding)
+  var newUtil=Math.max(0,g('util')+ud)/100;
+  var utilDiff=(totalHrs*newUtil)*rate*real*coll - collected;
+
+  var maxRd=Math.min(30,100-g('real'));
+  var newReal=Math.min(100,Math.max(0,g('real')+Math.min(rd,maxRd)))/100;
+  var realDiff=billedHrs*rate*newReal*coll - collected;
+
+  var maxCd=Math.min(30,100-g('coll'));
+  var newColl=Math.min(100,Math.max(0,g('coll')+Math.min(cd,maxCd)))/100;
+  var collDiff=invoiced*newColl - collected;
+
+  var wipDiff=dailyInvoiced*(wipDso-Math.max(5,wipDso+wd));
+  var arDiff=dailyInvoiced*(arDso-Math.max(5,arDso+ad));
+
+  var total=utilDiff+realDiff+collDiff+wipDiff+arDiff;
+
+  var box=document.getElementById('scenario-summary-box');
+  var amtEl=document.querySelector('#scenario-summary-box .bleed-amount');
+  if(total>=0){
+    box.style.background='var(--green-bg)';
+    box.style.border='1px solid rgba(38,105,82,.25)';
+    set('summary-label','Combined improvement across all sliders');
+    amtEl.style.color='var(--green)';
+    set('total-bleed','+'+fmtK(total)+' per year');
+  } else {
+    box.style.background='var(--red-bg)';
+    box.style.border='1px solid rgba(209,103,74,.25)';
+    set('summary-label','Combined cost of all scenario drifts');
+    amtEl.style.color='var(--red)';
+    set('total-bleed','-'+fmtK(Math.abs(total))+' per year');
+  }
+  var parts=[];
+  if(ud!==0) parts.push('Utilisation: '+(utilDiff>=0?'+':'')+fmtK(utilDiff));
+  if(rd!==0) parts.push('Realisation: '+(realDiff>=0?'+':'')+fmtK(realDiff));
+  if(cd!==0) parts.push('Collection: '+(collDiff>=0?'+':'')+fmtK(collDiff));
+  if(wd!==0) parts.push('WIP: '+(wipDiff>=0?'+':'')+fmtK(wipDiff));
+  if(ad!==0) parts.push('AR: '+(arDiff>=0?'+':'')+fmtK(arDiff));
+  set('total-bleed-sub', parts.join(' · '));
+}
+
+function buildLeakageBreakdown(util,real,coll,wip,ar,utilLeak,realLeak,collLeak,wipLeak,arLeak,total,invoiced){
+  var factors = [
+    {
+      name:'Realisation gap',
+      yours: Math.round(real*100)+'%',
+      bench: '98%',
+      problem: real < 0.98,
+      amount: realLeak,
+      detail: 'You bill at '+Math.round(real*100)+'% of standard rates. Top firms reach 98%. The '+(Math.round((0.98-real)*100))+'% gap means revenue is written off before the invoice is even raised.'
+    },
+    {
+      name:'Collection gap',
+      yours: Math.round(coll*100)+'%',
+      bench: '98%',
+      problem: coll < 0.98,
+      amount: collLeak,
+      detail: 'You collect '+Math.round(coll*100)+'% of what you invoice. Top firms collect 98%. The '+(Math.round((0.98-coll)*100))+'% gap means invoiced revenue is being lost to unpaid debts or write-offs.'
+    },
+    {
+      name:'WIP cash locked',
+      yours: wip+'d',
+      bench: '14d',
+      problem: wip > 14,
+      amount: wipLeak,
+      detail: 'Work sits '+(wip-14)+' extra days before being invoiced. Every day of WIP locks '+fmtK(invoiced/365)+' of cash. Top firms invoice within 14 days of completion.'
+    },
+    {
+      name:'AR cash locked',
+      yours: ar+'d',
+      bench: '21d',
+      problem: ar > 21,
+      amount: arLeak,
+      detail: 'Clients take '+(ar-21)+' extra days beyond best practice to pay. Top firms collect within 21 days. Each extra day is an interest-free loan to your client.'
+    },
+    {
+      name:'Utilisation gap',
+      yours: Math.round(util*100)+'%',
+      bench: '98%',
+      problem: util < 0.98,
+      amount: utilLeak,
+      detail: 'Your utilisation is '+Math.round(util*100)+'% against a top firm target of 98%. Hours are being worked but not all reaching invoices. Common causes: poor time capture, write-off culture, or underpricing fixed-fee matters.'
+    }
+  ];
+
+  // Sort by amount descending, then filter to only show problems
+  factors.sort(function(a,b){return b.amount-a.amount;});
+
+  var container = document.getElementById('leakage-breakdown');
+  if(!container) return;
+
+  var html = '';
+  factors.forEach(function(f){
+    var pct = total > 0 ? Math.round((f.amount/total)*100) : 0;
+    var barWidth = total > 0 ? Math.min(100, Math.round((f.amount/total)*100)) : 0;
+
+    if(!f.problem || f.amount < 1){
+      html += '<div class="leakage-row">' +
+        '<div>' +
+          '<div class="leakage-row-top"><span class="leakage-factor">'+f.name+'</span>' +
+          '<span class="leakage-zero-badge">On track: '+f.yours+'</span></div>' +
+          '<div class="leakage-meta">Your '+f.name.toLowerCase()+' meets the top firm target of '+f.bench+'. No leakage from this metric.</div>' +
+        '</div>' +
+        '</div>';
+    } else {
+      html += '<div class="leakage-row">' +
+        '<div style="width:100%">' +
+          '<div class="leakage-row-top">' +
+            '<span class="leakage-factor">'+f.name+'</span>' +
+            '<span class="leakage-amount">'+fmtK(f.amount)+' / yr</span>' +
+          '</div>' +
+          '<div class="leakage-meta">Your firm: <strong>'+f.yours+'</strong> · Top firms: <strong>'+f.bench+'</strong> · '+pct+'% of your total gap</div>' +
+          '<div class="leakage-bar-track"><div class="leakage-bar-fill red" style="width:'+barWidth+'%"></div></div>' +
+          '<div class="leakage-meta" style="margin-top:4px">'+f.detail+'</div>' +
+        '</div>' +
+        '</div>';
+    }
+  });
+
+  html += '<div class="leakage-total-row"><span class="leakage-total-label">Total recoverable leakage</span><span class="leakage-total-amount">'+fmtK(total)+' per year</span></div>';
+  container.innerHTML = html;
+}
+
+function buildBenchTable(util,real,coll,wip,ar){
+  var rows=[
+    {label:'Utilisation',    you:util+'%',top:'98%',median:'78%',yourNum:util,topNum:98, higher:true},
+    {label:'Realisation',    you:real+'%',top:'98%',median:'88%',yourNum:real,topNum:98, higher:true},
+    {label:'Collection rate',you:coll+'%',top:'98%',median:'92%',yourNum:coll,topNum:98, higher:true},
+    {label:'WIP DSO',        you:wip+'d', top:'14d', median:'35d',yourNum:wip, topNum:14, higher:false},
+    {label:'AR DSO',         you:ar+'d',  top:'21d', median:'42d',yourNum:ar,  topNum:21, higher:false},
+  ];
+  var tbody=document.getElementById('bench-tbody'); if(!tbody) return;
+  tbody.innerHTML=rows.map(function(r){
+    var gapNum=r.higher?(r.topNum-r.yourNum):(r.yourNum-r.topNum);
+    var gapStr=gapNum<=0
+      ?'<span class="gap-ok">Top quartile</span>'
+      :'<span class="'+(gapNum>10?'gap-bad':'gap-warn')+'">'+(r.higher?'-':'+')+Math.abs(gapNum)+(r.label.includes('DSO')?'d':'%')+' vs top</span>';
+    return '<tr><td>'+r.label+'</td><td class="you">'+r.you+'</td><td class="good">'+r.top+'</td><td>'+r.median+'</td><td>'+gapStr+'</td></tr>';
+  }).join('');
+}
+
+function buildDiagnosis(util,real,coll,wip,collected,leakage,standardValue){
+  var items=[
+    {metric:'utilisation at '+util+'%',    score:util,benchmark:98,higher:true, fix:'time capture discipline and write-off culture'},
+    {metric:'realisation at '+real+'%',    score:real,benchmark:98,higher:true, fix:'billing rate discipline and scope management'},
+    {metric:'collection rate at '+coll+'%',score:coll,benchmark:98,higher:true, fix:'AR follow-up and invoice dispute resolution'},
+    {metric:'WIP DSO at '+wip+' days',     score:wip, benchmark:14,higher:false,fix:'billing cycle frequency and WIP review cadence'},
+  ];
+  var worst=items.slice().sort(function(a,b){
+    return (b.higher?b.benchmark-b.score:b.score-b.benchmark)-(a.higher?a.benchmark-a.score:a.score-a.benchmark);
+  })[0];
+  var el=document.getElementById('diagnosis-text'); if(!el) return;
+  var potentialStr=leakage>0?', leaving <strong>'+fmtK(leakage)+'</strong> recoverable':'';
+  el.innerHTML='This firm collects <strong>'+fmtK(collected)+' per year</strong>'+potentialStr+'. The biggest drag is <strong>'+worst.metric+'</strong> vs top firm target. The root cause is usually '+worst.fix+'. Fixing this one lever alone could recover a significant portion of the gap.';
+}
+
+
+function buildFixes(wip,ar,util,real){
+  var fixes=[
+    {title:'Tighten your WIP billing cycle',detail:'Raise invoices within 7 days of matter completion. Set calendar triggers and billing review checkpoints, not ad-hoc billing runs.',gain:wip},
+    {title:'Implement structured AR collections',detail:'Introduce a 14-day chase cycle: automated reminder at 7 days, personal call at 14 days, escalation at 21 days. No more awkward partner follow-ups.',gain:ar},
+    {title:'Fix billing discipline and rate integrity',detail:'Set a firm write-down approval process. Every discount over 5% needs partner sign-off. Track realisation by fee earner monthly so patterns become visible.',gain:util+real},
+  ].sort(function(a,b){return b.gain-a.gain;});
+  var list=document.getElementById('fixes-list'); if(!list) return;
+  list.innerHTML=fixes.map(function(f,i){
+    return '<div class="fix-row"><div class="fix-num">'+(i+1)+'</div><div class="fix-body"><div class="fix-title">'+f.title+'</div><div class="fix-detail">'+f.detail+'</div><div class="fix-gain">Estimated recovery: '+fmtK(f.gain)+' per year</div></div></div>';
+  }).join('');
+}
+
+function buildDonut(util,real,coll,wip,ar){
+  if(!window.Chart) return;
+  var ctx=document.getElementById('donutChart').getContext('2d');
+  if(donutChart) donutChart.destroy();
+  var total=util+real+coll+wip+ar||1;
+  var labels=['Utilisation gap','Realisation gap','Collection gap','WIP locked','AR locked'];
+  var rawData=[Math.round(util),Math.round(real),Math.round(coll),Math.round(wip),Math.round(ar)];
+  var pcts=rawData.map(function(v){return Math.round((v/total)*100);});
+  var colors=['#B4502F','#D1674A','#E8936F','#266952','#1A4A3A'];
+
+  donutChart=new Chart(ctx,{
+    type:'doughnut',
+    data:{labels:labels,datasets:[{data:rawData,backgroundColor:colors,borderWidth:2,borderColor:'#FFFFFF',hoverOffset:6}]},
+    options:{
+      responsive:true,maintainAspectRatio:false,cutout:'60%',
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:function(c){return c.label+': '+fmtK(c.raw)+' ('+pcts[c.dataIndex]+'%)';}}}
+      }
+    },
+    plugins:[{
+      id:'centerText',
+      beforeDraw:function(chart){
+        var a=chart.chartArea,cx=(a.left+a.right)/2,cy=(a.top+a.bottom)/2;
+        chart.ctx.save();
+        chart.ctx.textAlign='center';chart.ctx.textBaseline='middle';
+        chart.ctx.fillStyle='#5D6670';chart.ctx.font='700 11px Montserrat';
+        chart.ctx.fillText('TOTAL LEAKAGE',cx,cy-12);
+        chart.ctx.fillStyle='#231F20';chart.ctx.font='800 22px Montserrat';
+        chart.ctx.fillText(fmtK(rawData.reduce(function(a,b){return a+b;},0)),cx,cy+12);
+        chart.ctx.restore();
+      }
+    },{
+      id:'pctLabels',
+      afterDatasetDraw:function(chart){
+        var meta=chart.getDatasetMeta(0);
+        meta.data.forEach(function(arc,i){
+          if(pcts[i]<8) return;
+          var angle=(arc.startAngle+arc.endAngle)/2;
+          var r=(arc.innerRadius+arc.outerRadius)/2;
+          var x=arc.x+Math.cos(angle)*r, y=arc.y+Math.sin(angle)*r;
+          chart.ctx.save();
+          chart.ctx.fillStyle='#fff';chart.ctx.font='700 12px Montserrat';
+          chart.ctx.textAlign='center';chart.ctx.textBaseline='middle';
+          chart.ctx.fillText(pcts[i]+'%',x,y);
+          chart.ctx.restore();
+        });
+      }
+    }]
+  });
+
+  var legend=document.getElementById('chart-legend');
+  legend.innerHTML=labels.map(function(l,i){
+    return '<span><i style="background:'+colors[i]+'"></i>'+l+': '+fmtK(rawData[i])+' ('+pcts[i]+'%)</span>';
+  }).join('');
+}
+
+function runAndShow(){
+  recalc();
+  var results=document.getElementById('results');
+  results.style.display='block';
+  setTimeout(function(){results.scrollIntoView({behavior:'smooth',block:'start'});},80);
+}
+
+function gateAction(action){
+  if(emailCaptured){fireAction(action);return;}
+  pendingAction=action;
+  if(action==='fixes'){
+    set('modal-title','Unlock your personalised fix plan');
+    set('modal-body','Enter your details to see the top 3 moves that will recover the most cash from your firm. No spam.');
+  } else {
+    set('modal-title','Get your personalised insights');
+    set('modal-body','Enter your details below. Master Your Finance may follow up with relevant guidance. No spam, unsubscribe any time.');
+  }
+  document.getElementById('modal').classList.add('active');
+  setTimeout(function(){document.getElementById('modal-name').focus();},100);
+}
+
+function fireAction(action){
+  if(action==='fixes'){
+    document.getElementById('fixes-locked').style.display='none';
+    document.getElementById('fixes-content').style.display='block';
+    document.getElementById('fixes-gate').scrollIntoView({behavior:'smooth'});
+  } else {
+    window.open('https://masteryourfinance.org/tools-resources/','_blank');
+  }
+}
+
+function closeModal(){
+  document.getElementById('modal').classList.remove('active');
+  var btn=document.getElementById('modal-submit-btn');
+  btn.textContent='Continue';btn.disabled=false;
+  document.getElementById('modal-error').style.display='none';
+  document.getElementById('modal-success').style.display='none';
+}
+
+document.getElementById('modal').addEventListener('click',function(e){
+  if(e.target===this) closeModal();
+});
+
+async function submitGate(){
+  var name=document.getElementById('modal-name').value.trim();
+  var email=document.getElementById('modal-email').value.trim();
+  var errEl=document.getElementById('modal-error');
+  var sucEl=document.getElementById('modal-success');
+  var btnEl=document.getElementById('modal-submit-btn');
+  errEl.style.display='none';sucEl.style.display='none';
+  if(!name||!email||!email.includes('@')){errEl.style.display='block';return;}
+  btnEl.textContent='Saving...';btnEl.disabled=true;
+  try{
+    await fetch('https://api.airtable.com/v0/'+AIRTABLE_BASE+'/'+AIRTABLE_TABLE,{
+      method:'POST',
+      headers:{'Authorization':'Bearer '+AIRTABLE_TOKEN,'Content-Type':'application/json'},
+      body:JSON.stringify({records:[{fields:{[FIELD_NAME]:name,[FIELD_EMAIL]:email}}]})
+    });
+  }catch(e){}
+  try{localStorage.setItem('myf_lead',JSON.stringify({name:name,email:email,ts:Date.now()}));}catch(e){}
+  emailCaptured=true;
+  sucEl.style.display='block';btnEl.style.display='none';
+  setTimeout(function(){
+    closeModal();btnEl.style.display='block';
+    if(pendingAction) fireAction(pendingAction);
+  },1200);
+}
+
+// RETURNING VISITOR
+(function(){
+  try{
+    var saved=localStorage.getItem('myf_lead');
+    if(!saved) return;
+    var data=JSON.parse(saved);
+    if(!data||!data.email) return;
+    emailCaptured=true;
+    var banner=document.getElementById('return-banner');
+    var msg=document.getElementById('return-msg');
+    if(banner&&msg){
+      var first=data.name?data.name.split(' ')[0]:'there';
+      msg.innerHTML='Welcome back, <strong>'+first+'</strong>. Your details are remembered. <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review</a> or run the simulator again below.';
+      banner.style.display='flex';
+    }
+  }catch(e){}
+})();
+
+recalc();
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+</script>
+</body>
+</html>

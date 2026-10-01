@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Financial GPS</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./myf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="{{rootCls}}" style="position: relative; width: 560px; height: 560px; font-family: 'Montserrat', system-ui, sans-serif; color: #231F20" role="group" aria-label="Financial GPS: a compass pointing to Clarity, with example cards for cash on hand, receivables, DSO, a 13-week cash forecast and receivables by age. All figures are example data." onMouseMove="{{onMove}}" onMouseLeave="{{onLeave}}">
+<div class="gps-stage" style="position: absolute; inset: 0; transform: rotateX({{rx}}deg) rotateY({{ry}}deg)">
+<div class="gps-glow" style="opacity: {{glowOp}}"></div>
+
+<div class="gps-compass" style="position: absolute; left: 130px; top: 130px; width: 300px; height: 300px; opacity: {{cOp}}; scale: {{cScale}}">
+<div class="cp-depth cp-d2"></div>
+<div class="cp-depth cp-d1"></div>
+<div class="cp-bezel"></div>
+<div class="cp-face"></div>
+<div class="cp-ticks"></div>
+<div class="cp-ticks2"></div>
+<div class="cp-ring"></div>
+<span class="cp-l" style="left: 150px; top: 76px">N</span>
+<span class="cp-l" style="left: 224px; top: 150px">E</span>
+<span class="cp-l" style="left: 150px; top: 224px">S</span>
+<span class="cp-l" style="left: 76px; top: 150px">W</span>
+<div class="cp-nz">
+<div class="{{sweepCls}}" style="position: absolute; inset: 0">
+<div class="{{needleCls}}" style="position: absolute; inset: 0; transform: rotate({{angle}}deg)">
+<svg width="300" height="300" viewBox="0 0 300 300" aria-hidden="true" style="display: block">
+<polygon points="150,48 164,150 136,150" fill="#D1674A"></polygon>
+<polygon points="150,48 150,150 136,150" fill="#E3876B"></polygon>
+<polygon points="150,252 164,150 136,150" fill="#1A4A3A"></polygon>
+<polygon points="150,252 150,150 164,150" fill="#266952"></polygon>
+</svg>
+</div>
+</div>
+</div>
+<div class="cp-cap"></div>
+<div class="cp-gloss"></div>
+</div>
+
+<button type="button" class="gpt {{nOn}}" style="left: 280px; top: 90px" aria-pressed="{{nP}}" onMouseEnter="{{hN}}" onFocus="{{hN}}" onClick="{{hN}}" onMouseLeave="{{hOff}}" onBlur="{{hOff}}"><span class="gpt-d"></span>Clarity<span class="gpt-k">N</span></button>
+<button type="button" class="gpt {{wOn}}" style="left: 86px; top: 280px" aria-pressed="{{wP}}" onMouseEnter="{{hW}}" onFocus="{{hW}}" onClick="{{hW}}" onMouseLeave="{{hOff}}" onBlur="{{hOff}}"><span class="gpt-d"></span>Growth<span class="gpt-k">W</span></button>
+<button type="button" class="gpt {{eOn}}" style="left: 474px; top: 280px" aria-pressed="{{eP}}" onMouseEnter="{{hE}}" onFocus="{{hE}}" onClick="{{hE}}" onMouseLeave="{{hOff}}" onBlur="{{hOff}}"><span class="gpt-d"></span>Efficiency<span class="gpt-k">E</span></button>
+<button type="button" class="gpt {{sOn}}" style="left: 280px; top: 470px" aria-pressed="{{sP}}" onMouseEnter="{{hS}}" onFocus="{{hS}}" onClick="{{hS}}" onMouseLeave="{{hOff}}" onBlur="{{hOff}}"><span class="gpt-d"></span>Stability<span class="gpt-k">S</span></button>
+
+<div class="gcard gc1 {{nOn}}" style="left: 6px; top: 6px; width: 216px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
+<div class="gc-l">13-week cash forecast</div>
+<svg width="188" height="60" viewBox="0 0 188 60" aria-hidden="true" style="display: block; margin-top: 8px">
+<line x1="0" y1="14" x2="188" y2="14" stroke="rgba(93,102,112,.18)" stroke-width="1"></line>
+<line x1="0" y1="34" x2="188" y2="34" stroke="rgba(93,102,112,.18)" stroke-width="1"></line>
+<line x1="0" y1="54" x2="188" y2="54" stroke="rgba(93,102,112,.18)" stroke-width="1"></line>
+<path d="M2 48 C18 46 28 36 44 37 S72 47 90 35 S124 18 142 22 S172 12 184 8 L184 60 L2 60 Z" fill="rgba(38,105,82,.12)"></path>
+<path class="spark" d="M2 48 C18 46 28 36 44 37 S72 47 90 35 S124 18 142 22 S172 12 184 8" fill="none" stroke="#266952" stroke-width="2.5" stroke-linecap="round" style="stroke-dashoffset: {{sparkOff}}"></path>
+<circle cx="184" cy="8" r="4" fill="#D1674A"></circle>
+</svg>
+<div class="gc-ex">Example data</div>
+</div>
+
+<div class="gcard gc2 {{sOn}}" style="left: 358px; top: 22px; width: 186px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
+<div class="gc-l">Cash on hand</div>
+<div class="gc-v">{{cash}}</div>
+<div class="gc-d">▲ 6.2% vs last month</div>
+<div class="gc-ex">Example data</div>
+</div>
+
+<div class="gcard gc3 {{wOn}}" style="left: 0px; top: 334px; width: 172px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
+<div class="gc-l">Receivables</div>
+<div class="gc-v">{{recv}}</div>
+<div class="gc-d gc-dn"><i>▼</i> 3.1% owed vs last month</div>
+<div class="gc-ex">Example data</div>
+</div>
+
+<div class="gcard gc4 {{eOn}}" style="left: 396px; top: 332px; width: 156px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
+<div class="gc-l">DSO</div>
+<div class="gc-v">{{dso}} days</div>
+<div class="gc-d">4 days faster</div>
+<div class="gc-ex">Example data</div>
+</div>
+
+<div class="gcard gc5" style="left: 22px; top: 446px; width: 226px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
+<div class="gc-l">Receivables by age</div>
+<div class="bar-row"><span>0–30 days</span><span class="bar"><span style="width: {{a1}}%; background: #266952"></span></span><span>{{p1}}%</span></div>
+<div class="bar-row"><span>31–60 days</span><span class="bar"><span style="width: {{a2}}%; background: #F4B49B"></span></span><span>{{p2}}%</span></div>
+<div class="bar-row"><span>60+ days</span><span class="bar"><span style="width: {{a3}}%; background: #D1674A"></span></span><span>{{p3}}%</span></div>
+<div class="gc-ex">Example data</div>
+</div>
+</div>
+
+<div class="gps-ctl">
+<span class="ex">Example data</span>
+<sc-if value="{{showPause}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="gps-pause" aria-pressed="{{pausedStr}}" onClick="{{togglePause}}">
+<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"></path></svg></sc-if>
+<sc-if value="{{playing}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="2.5" y="1.5" width="3" height="11" rx="1"></rect><rect x="8.5" y="1.5" width="3" height="11" rx="1"></rect></svg></sc-if>
+{{pauseLabel}}
+</button>
+</sc-if>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mode":{"editor":"enum","options":["live","phone","static"],"default":"live"},"dark":{"editor":"boolean","default":false},"frame":{"editor":"int","min":-1,"max":5,"default":-1},"focusPoint":{"editor":"enum","options":["","N","W","E","S"],"default":""},"tiltX":{"editor":null},"tiltY":{"editor":null},"$preview":{"width":560,"height":560}}'>
+class Component extends DCLogic {
+  isLive() {
+    const m = this.props.mode || 'live';
+    const f = Number(this.props.frame == null || this.props.frame === '' ? -1 : this.props.frame);
+    return m !== 'static' && !(f >= 0);
+  }
+  componentDidMount() {
+    let reduced = false;
+    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduced) { this.setState({ reduced: true, t: 1 }); return; }
+    if (!this.isLive()) return;
+    const start = performance.now() + 1600;
+    const dur = 1400;
+    const tick = (now) => {
+      if (this._dead) return;
+      const s = this.state || {};
+      if (s.paused) { this.setState({ t: 1 }); return; }
+      const k = Math.min(1, Math.max(0, (now - start) / dur));
+      this.setState({ t: 1 - Math.pow(1 - k, 3) });
+      if (k < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+    this._cyc = setTimeout(() => {
+      const step = () => {
+        if (this._dead) return;
+        const st = this.state || {};
+        if (!st.paused && !st.hover) this.setState({ step: (st.step || 0) + 1 });
+      };
+      step();
+      this._cyc = setInterval(step, 6000);
+    }, 6000 + 1600);
+  }
+  componentWillUnmount() {
+    this._dead = true;
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._mv) cancelAnimationFrame(this._mv);
+    clearTimeout(this._cyc); clearInterval(this._cyc);
+  }
+  renderVals() {
+    const s = this.state || {};
+    const FR = [
+      { glow: 0.35, c: 0.2, cs: 0.88, angle: -160, cards: 0, shift: 30, t: 0, spark: 400, n: false },
+      { glow: 1, c: 1, cs: 1, angle: -100, cards: 0, shift: 30, t: 0, spark: 400, n: false },
+      { glow: 1, c: 1, cs: 1, angle: 22, cards: 0, shift: 30, t: 0, spark: 400, n: false },
+      { glow: 1, c: 1, cs: 1, angle: 0, cards: 0, shift: 30, t: 0, spark: 400, n: true },
+      { glow: 1, c: 1, cs: 1, angle: 0, cards: 0.55, shift: 14, t: 0.35, spark: 230, n: true },
+      { glow: 1, c: 1, cs: 1, angle: 0, cards: 1, shift: 0, t: 1, spark: 0, n: false }
+    ];
+    const mode = this.props.mode || 'live';
+    const fRaw = this.props.frame;
+    const frame = Number(fRaw == null || fRaw === '' ? -1 : fRaw);
+    const F = frame >= 0 ? FR[Math.min(5, frame)] : null;
+    const dark = this.props.dark === true || this.props.dark === 'true';
+    const phone = mode === 'phone';
+    const still = mode === 'static' || !!F || !!s.reduced || !!s.paused;
+    const t = F ? F.t : (still ? 1 : (s.t == null ? 0 : s.t));
+    const cruising = !F && mode !== 'static' && !s.reduced && !this.props.focusPoint;
+    const cum = cruising ? (s.step || 0) * 90 : 0;
+    const autoKey = cruising && s.step ? ['N', 'E', 'S', 'W'][(s.step || 0) % 4] : '';
+    const active = s.hover || this.props.focusPoint || (F && F.n ? 'N' : '') || autoKey;
+    const ang = { N: 0, E: 90, S: 180, W: 270 };
+    let angle = 0;
+    if (F) angle = F.angle;
+    else if (ang[active] != null) { const d = ((ang[active] - cum) % 360 + 540) % 360 - 180; angle = cum + d; }
+    else angle = cum;
+    let rx = s.rx == null ? 6 : s.rx;
+    let ry = s.ry == null ? -10 : s.ry;
+    if (this.props.tiltX != null && this.props.tiltX !== '') rx = Number(this.props.tiltX);
+    if (this.props.tiltY != null && this.props.tiltY !== '') ry = Number(this.props.tiltY);
+    const interactive = !F && mode !== 'static';
+    const setH = (k) => () => { if (interactive) this.setState({ hover: k }); };
+    const fmt = (n) => '$' + Math.round(n).toLocaleString('en-US');
+    const on = (k) => (active === k ? 'on' : '');
+    const pr = (k) => (active === k ? 'true' : 'false');
+    return {
+      rootCls: ['gps', still ? 'still' : 'live', phone ? 'phone' : '', dark ? 'dark' : ''].join(' '),
+      sweepCls: 'sweep',
+      needleCls: s.hover ? 'needle' : 'needle cruise',
+      rx: rx.toFixed(2), ry: ry.toFixed(2),
+      glowOp: F ? F.glow : 1, cOp: F ? F.c : 1, cScale: F ? F.cs : 1,
+      cardOp: F ? F.cards : 1, cardShift: F ? F.shift : 0, sparkOff: F ? F.spark : 0,
+      angle,
+      nOn: on('N'), wOn: on('W'), eOn: on('E'), sOn: on('S'),
+      nP: pr('N'), wP: pr('W'), eP: pr('E'), sP: pr('S'),
+      hN: setH('N'), hW: setH('W'), hE: setH('E'), hS: setH('S'), hOff: setH(''),
+      cash: fmt(248400 * t), recv: fmt(131900 * t), dso: Math.round(38 * t),
+      a1: (62 * t).toFixed(1), a2: (24 * t).toFixed(1), a3: (14 * t).toFixed(1),
+      p1: Math.round(62 * t), p2: Math.round(24 * t), p3: Math.round(14 * t),
+      showPause: interactive && !s.reduced,
+      paused: !!s.paused, playing: !s.paused,
+      pausedStr: s.paused ? 'true' : 'false',
+      pauseLabel: s.paused ? 'Play motion' : 'Pause motion',
+      togglePause: () => this.setState({ paused: !s.paused, t: 1 }),
+      onMove: (e) => {
+        if (still || phone || !interactive) return;
+        const r = e.currentTarget.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width;
+        const y = (e.clientY - r.top) / r.height;
+        if (this._mv) return;
+        this._mv = requestAnimationFrame(() => {
+          this._mv = 0;
+          this.setState({ rx: 6 + (0.5 - y) * 10, ry: -10 + (x - 0.5) * 20 });
+        });
+      },
+      onLeave: () => { if (interactive) this.setState({ rx: 6, ry: -10, hover: '' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
