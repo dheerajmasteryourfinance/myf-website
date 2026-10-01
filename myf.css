@@ -44,7 +44,7 @@
 .on-dark :focus-visible{outline-color:#F6C1AC}
 
 /* ---------- header ---------- */
-.hdr{color:#FFFFFF;background:linear-gradient(110deg,rgba(38,105,82,.82) 0%,rgba(26,74,58,.80) 55%,rgba(38,105,82,.72) 100%);-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid rgba(251,248,229,.18);box-shadow:inset 0 1px 0 rgba(251,248,229,.22),0 12px 32px -20px rgba(26,74,58,.7)}
+.hdr{color:#FFFFFF;background:linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.02) 55%,rgba(255,255,255,0) 100%),linear-gradient(110deg,rgba(37,92,73,.97) 0%,rgba(28,66,53,.97) 55%,rgba(37,84,68,.97) 100%);-webkit-backdrop-filter:blur(20px) saturate(1.5);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid rgba(251,248,229,.14);box-shadow:inset 0 1px 0 rgba(251,248,229,.20),inset 0 -1px 0 rgba(0,0,0,.18),0 14px 34px -22px rgba(26,74,58,.75)}
 .hdr .nav-a{color:#FFFFFF}
 .hdr .nav-a::after{background:#F4B49B}
 .hdr :focus-visible{outline-color:#F6C1AC}
@@ -556,3 +556,31 @@ select.inp{background-image:linear-gradient(45deg,transparent 50%,#266952 50%),l
   .myf.rv-ready .rsec .rv{opacity:1!important}
   .myf *,.myf *::before,.myf *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+/* Tools & services cards: white by default, brand green on hover or keyboard focus */
+.card.hv{position:relative;isolation:isolate;overflow:hidden;transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s cubic-bezier(.2,.7,.2,1),border-color .4s}
+.card.hv::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(80% 90% at 100% 0%,rgba(209,103,74,.14) 0%,rgba(209,103,74,0) 60%),linear-gradient(135deg,#2E7A63 0%,#266952 45%,#1A4A3A 100%);clip-path:circle(0% at 12% 100%);transition:clip-path .45s cubic-bezier(.55,0,.2,1);z-index:-1;pointer-events:none}
+.card.hv :is(.hv-h,.hv-s,.ico,.more,.tl-chips li,.dk-chips li,.btn){transition:color .3s ease,background .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+.card.hv .tl-chips li{color:#1A4A3A;border-color:#CFE0D8}
+.card.hv:is(:hover,:focus-within){border-color:#266952;box-shadow:0 30px 52px -26px rgba(26,74,58,.55)}
+.card.hv:is(:hover,:focus-within)::before{clip-path:circle(160% at 12% 100%);transition:clip-path .7s cubic-bezier(.3,.6,.2,1) .12s}
+.card.hv:is(:hover,:focus-within) :is(.hv-h,.hv-s,.ico,.more,.tl-chips li,.dk-chips li,.btn){transition-delay:.18s}
+.card.hv:is(:hover,:focus-within) .ico{background:rgba(255,255,255,.14);color:#F6C1AC;box-shadow:none;transform:translateY(-2px)}
+.card.hv:is(:hover,:focus-within) .hv-h{color:#FFFFFF !important}
+.card.hv:is(:hover,:focus-within) .hv-s{color:#DCEBE4 !important}
+.card.hv:is(:hover,:focus-within) .more{color:#F6C1AC}
+.card.hv:is(:hover,:focus-within) .tl-chips li{color:#FFFFFF;border-color:rgba(255,255,255,.3)}
+.card.hv:is(:hover,:focus-within) .dk-chips li{background:rgba(255,255,255,.14);color:#FFFFFF}
+.card.hv:is(:hover,:focus-within) .btn{background:linear-gradient(180deg,#FFFFFF 0%,#FDFCF5 100%);border-color:#FFFFFF;color:#1A4A3A}
+.card.hv:is(:hover,:focus-within) .btn:hover{background:linear-gradient(180deg,#FFFFFF 0%,#F2F7F3 100%);border-color:#F6C1AC;color:#1A4A3A}
+.card.hv:is(:hover,:focus-within) :focus-visible{outline-color:#F6C1AC}
+@media (prefers-reduced-motion: reduce){.card.hv,.card.hv::before,.card.hv:is(:hover,:focus-within)::before,.card.hv *{transition-duration:.01s !important;transition-delay:0s !important}}
+/* Software wall: grey by default, each tool's own brand colour on hover */
+.sw-tile{transition:color .3s,border-color .3s,background-color .3s,filter .3s,transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.sw-lw{position:relative;display:block;width:26px;height:26px;flex-shrink:0}
+.sw-lw .sw-logo{position:absolute;inset:0;transition:opacity .3s}
+.sw-lw .sw-logo-c{opacity:0}
+.sw-tile:hover{filter:none;color:#231F20;border-color:var(--brand,#231F20);background:color-mix(in srgb,var(--brand,#FFFFFF) 6%,#FFFFFF);box-shadow:0 14px 26px -16px color-mix(in srgb,var(--brand,#231F20) 55%,transparent)}
+.sw-tile:hover .sw-lw .sw-logo{opacity:0}
+.sw-tile:hover .sw-lw .sw-logo-c{opacity:1}
+.sw-tile:hover .sw-mark{color:var(--brand,#231F20)}
+@media (prefers-reduced-motion: reduce){.sw-tile,.sw-lw .sw-logo{transition:none}}

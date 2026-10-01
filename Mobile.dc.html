@@ -21,7 +21,7 @@ body{margin:0;background:#FFFFFF}
 <div class="at-page" role="region" aria-label="All tools page">
 <header class="hdr" style="position: sticky; top: 0; z-index: 30; height: 64px">
 <div style="height: 64px; padding: 0 20px; display: flex; align-items: center; gap: 16px">
-<img src="assets/logo-white.png" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px">
+<img src="assets/logo-white.svg" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px">
 <button type="button" class="btn btn-light btn-sm" onClick="{{closeAll}}" style="margin-left: auto"><svg class="arr" viewBox="0 0 24 24" aria-hidden="true" style="transform: scaleX(-1)"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>Back to homepage</button>
 </div>
 </header>
@@ -51,51 +51,51 @@ body{margin:0;background:#FFFFFF}
 </div>
 <div role="list" aria-label="Tools" style="display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: stretch">
 <sc-if value="{{atSh1}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card card-green" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></div><span class="tl-new">Law firms</span></div>
-<h2 class="h3" style="color: #FFFFFF">Health check for law firms</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Calculates your firm’s annual revenue leakage from billing rates, utilisation, realisation, collections, WIP DSO and AR DSO.</p>
+<h2 class="h3 hv-h">Health check for law firms</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Calculates your firm’s annual revenue leakage from billing rates, utilisation, realisation, collections, WIP DSO and AR DSO.</p>
 <ul class="tl-chips" aria-label="What it checks"><li>Billing rates</li><li>Utilisation</li><li>Realisation</li><li>Collections</li><li>WIP DSO</li><li>AR DSO</li></ul>
-<a class="btn btn-light btn-sm" href="health-check.html" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="btn btn-sm" href="health-check.html" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
 <sc-if value="{{atSh2}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card tilt hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a8 8 0 1 1 16 0"></path><path d="M12 18l4-6"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Diagnostics</span></div>
-<h2 class="h3" style="">Utilisation, realisation &amp; DSO self-diagnostic</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Benchmark your firm’s performance like a CFO. Turn time into revenue.</p>
+<h2 class="h3 hv-h" style="">Utilisation, realisation &amp; DSO self-diagnostic</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Benchmark your firm’s performance like a CFO. Turn time into revenue.</p>
 <a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
 <sc-if value="{{atSh3}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card tilt hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 10h18M9 4v16"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Diagnostics</span></div>
-<h2 class="h3" style="">Self-check table: last 30-day actuals</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Track last month’s performance against targets to uncover patterns and improvement areas.</p>
+<h2 class="h3 hv-h" style="">Self-check table: last 30-day actuals</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Track last month’s performance against targets to uncover patterns and improvement areas.</p>
 <a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
 <sc-if value="{{atSh4}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card tilt hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16l4-8 4 5 4-9"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Cash flow</span></div>
-<h2 class="h3" style="">Cash flow runway estimator</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Find out how long your current cash will last. Estimate your runway in minutes and see if your business is built to sustain growth.</p>
+<h2 class="h3 hv-h" style="">Cash flow runway estimator</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Find out how long your current cash will last. Estimate your runway in minutes and see if your business is built to sustain growth.</p>
 <a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
 <sc-if value="{{atSh5}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card tilt hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M8 15l2 2 4-4"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Planning</span></div>
-<h2 class="h3" style="">30-day finance improvement sprint planner</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
+<h2 class="h3 hv-h" style="">30-day finance improvement sprint planner</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
 <a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
 <sc-if value="{{atSh6}}" hint-placeholder-val="{{ true }}">
-<article role="listitem" class="card tilt" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
+<article role="listitem" class="card tilt hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; min-height: 0">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V12M10 20V6M16 20v-9M2 20h20"></path></svg></div><span class="tl-new" style="background: #E6F0EC; color: #1A4A3A">Planning</span></div>
-<h2 class="h3" style="">Turn your sprint plan into a scalable system</h2>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Turn your 30-day finance sprint into a repeatable system, with the key KPIs to track progress and scale performance.</p>
+<h2 class="h3 hv-h" style="">Turn your sprint plan into a scalable system</h2>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.6; color: #5D6670">Turn your 30-day finance sprint into a repeatable system, with the key KPIs to track progress and scale performance.</p>
 <a class="btn btn-ghost btn-sm" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="align-self: flex-start; margin-top: auto">Know more<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </sc-if>
@@ -111,14 +111,14 @@ body{margin:0;background:#FFFFFF}
 </div>
 </section>
 <footer style="background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 36px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 40px">
-<div style="display: flex; flex-direction: column; gap: 14px"><img src="assets/logo-white.png" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px"><p style="margin: 0; font-size: 14px">The extended finance team for professional service firms.</p></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="94" height="41" style="width: 94px; height: 41px"><p style="margin: 0; font-size: 14px">The extended finance team for professional service firms.</p></div>
 <p style="margin: 0; font-size: 13px; max-width: 420px; text-align: left">Tool results are indicative estimates based on your inputs. Not financial advice. © Master Your Finance</p>
 </footer>
 </div>
 </sc-if>
 <header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
 <div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
-<a href="#top" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.png" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<a href="#top" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
 <div style="display: flex; align-items: center; gap: 8px">
 <a class="btn btn-light btn-sm" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="padding: 0 16px">Book<span class="sr-only"> (opens in a new tab)</span></a>
 <button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
@@ -177,7 +177,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 <div class="rv rv-d4" style="margin-top: 24px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap"><span style="font-size: 14px; font-weight: 800; color: #231F20">Tools we work in every day</span><span class="small">Accounting, ERP, practice management and reporting</span></div>
-<div class="sw-grid" role="list" aria-label="Software we use" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Zoho Books"><img class="sw-logo" src="assets/zoho.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Zoho Books</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Exact"><img class="sw-logo" src="assets/exact.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Exact</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="NetSuite"><img class="sw-logo" src="assets/netsuite.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">NetSuite</span><span class="sw-kind">ERP</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Actionstep"><img class="sw-logo" src="assets/actionstep.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Actionstep</span><span class="sw-kind">Practice mgmt</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="QuickBooks"><img class="sw-logo" src="assets/quickbooks.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">QuickBooks</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Xero"><img class="sw-logo" src="assets/xero.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Xero</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Wave"><img class="sw-logo" src="assets/wave-accounting.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Wave</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Power BI"><img class="sw-logo" src="assets/powerbi.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Power BI</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Excel"><img class="sw-logo" src="assets/microsoftexcel.svg" alt="" width="26" height="26"><span><span class="sw-name" style="font-size: 14px">Excel</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Web reporting"><span class="sw-mark" aria-hidden="true">W</span><span><span class="sw-name" style="font-size: 14px">Web reporting</span><span class="sw-kind">Dashboards</span></span></div></div>
+<div class="sw-grid" role="list" aria-label="Software we use" style="grid-template-columns: repeat(2, minmax(0, 1fr))"><div role="listitem" class="sw-tile" style="--brand: #E42527; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Zoho Books"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/zoho.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/zoho.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Zoho Books</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #E1141D; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Exact"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/exact.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/exact.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Exact</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #BE4529; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="NetSuite"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/netsuite.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/netsuite.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">NetSuite</span><span class="sw-kind">ERP</span></span></div><div role="listitem" class="sw-tile" style="--brand: #FED141; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Actionstep"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/actionstep.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/actionstep.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Actionstep</span><span class="sw-kind">Practice mgmt</span></span></div><div role="listitem" class="sw-tile" style="--brand: #2CA01C; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="QuickBooks"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/quickbooks.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/quickbooks.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">QuickBooks</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #13B5EA; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Xero"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/xero.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/xero.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Xero</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #328FF8; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Wave"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/wave-accounting.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/wave-accounting.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Wave</span><span class="sw-kind">Accounting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #E3A810; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Power BI"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/powerbi.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/powerbi.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Power BI</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #107C41; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Excel"><span class="sw-lw" aria-hidden="true"><img class="sw-logo" src="assets/microsoftexcel.svg" alt="" width="26" height="26"><img class="sw-logo sw-logo-c" src="assets/brand/microsoftexcel.svg" alt="" width="26" height="26"></span><span><span class="sw-name" style="font-size: 14px">Excel</span><span class="sw-kind">Reporting</span></span></div><div role="listitem" class="sw-tile" style="--brand: #266952; min-height: 56px; padding: 8px 10px; justify-content: flex-start" aria-label="Web reporting"><span class="sw-mark" aria-hidden="true">W</span><span><span class="sw-name" style="font-size: 14px">Web reporting</span><span class="sw-kind">Dashboards</span></span></div></div>
 </div>
 </section>
 
@@ -491,20 +491,20 @@ body{margin:0;background:#FFFFFF}
 <div class="rv rv-d2">
 <div class="dk-deck" role="list" aria-label="Free tools, stacked like a deck of cards">
 <div role="listitem" class="dk {{dkP1}}" aria-hidden="{{dkH1}}" onClick="{{dkClick}}">
-<article class="card card-green dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<article class="card dk-in hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-5 4 10 2-5h6"></path></svg></div><span class="tl-new">New · Law firms</span></div>
-<h3 class="h3" style="color: #FFFFFF">Health check for law firms</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #DCEBE4">How much money is your firm leaving on the table? Find out in 60 seconds.</p>
+<h3 class="h3 hv-h">Health check for law firms</h3>
+<p class="hv-s" style="margin: 0; font-size: 15px; line-height: 1.55; color: #5D6670">How much money is your firm leaving on the table? Find out in 60 seconds.</p>
 <ul class="tl-chips" aria-label="What it checks"><li>Utilisation</li><li>Realisation</li><li>Collection rate</li><li>WIP DSO</li><li>AR DSO</li></ul>
-<p class="small" style="color: #CFE0D8">Enter your actuals or adjust the defaults. Results are indicative estimates.</p>
-<a class="btn btn-light btn-block" href="health-check.html" target="_blank" rel="noopener" style="margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<p class="small hv-s" style="color: #5D6670">Enter your actuals or adjust the defaults. Results are indicative estimates.</p>
+<a class="btn btn-block" href="health-check.html" target="_blank" rel="noopener" style="margin-top: auto">Run the health check<span class="sr-only"> (opens in a new tab)</span><svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </article>
 </div>
 <div role="listitem" class="dk {{dkP2}}" aria-hidden="{{dkH2}}" onClick="{{dkClick}}">
-<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
-<div style="display: flex; align-items: center; gap: 12px"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><h3 class="h3">Utilisation, realisation &amp; DSO self-diagnostic</h3><p class="small" style="margin-top: 4px">Benchmark your firm like a CFO. Start with your debtor days:</p></div></div>
-<label class="fld">Money owed to you today<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{ar}}" onChange="{{setAr}}"></label>
-<label class="fld">Billed in the last 90 days<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{rev}}" onChange="{{setRev}}"></label>
+<article class="card dk-in hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<div style="display: flex; align-items: center; gap: 12px"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div><div><h3 class="h3 hv-h">Utilisation, realisation &amp; DSO self-diagnostic</h3><p class="small hv-s" style="margin-top: 4px">Benchmark your firm like a CFO. Start with your debtor days:</p></div></div>
+<label class="fld hv-s">Money owed to you today<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{ar}}" onChange="{{setAr}}"></label>
+<label class="fld hv-s">Billed in the last 90 days<input class="inp" type="number" min="0" step="1000" inputmode="numeric" value="{{rev}}" onChange="{{setRev}}"></label>
 <div role="status" style="margin-top: auto; border-radius: 16px; background: linear-gradient(135deg, #1A4A3A 0%, #266952 100%); color: #FFFFFF; padding: 16px 20px">
 <div style="font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #CFE0D8">Your DSO</div>
 <div style="font-size: 34px; font-weight: 800; letter-spacing: -.02em; line-height: 1.15">{{dsoOut}} <span style="font-size: 16px; font-weight: 700">days</span></div>
@@ -514,19 +514,19 @@ body{margin:0;background:#FFFFFF}
 </article>
 </div>
 <div role="listitem" class="dk {{dkP3}}" aria-hidden="{{dkH3}}" onClick="{{dkClick}}">
-<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<article class="card dk-in hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
 <div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18"></path><path d="M6 16l4-8 4 5 4-9"></path></svg></div>
-<h3 class="h3">Cash flow runway estimator</h3>
-<p class="body" style="font-size: 15px">Find out how long your current cash will last, and whether your business is built to sustain growth.</p>
+<h3 class="h3 hv-h">Cash flow runway estimator</h3>
+<p class="body hv-s" style="font-size: 15px">Find out how long your current cash will last, and whether your business is built to sustain growth.</p>
 <div style="border-radius: 14px; background: #FDFCF5; border: 1px solid #ECE8D6; padding: 14px 16px; font-size: 13px; font-weight: 600; color: #231F20">Cash on hand ÷ average monthly spend</div>
 <a class="btn btn-ghost btn-block" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="margin-top: auto">Estimate my runway<span class="sr-only"> (opens in a new tab)</span></a>
 </article>
 </div>
 <div role="listitem" class="dk {{dkP4}}" aria-hidden="{{dkH4}}" onClick="{{dkClick}}">
-<article class="card dk-in" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
+<article class="card dk-in hv" style="padding: 22px; display: flex; flex-direction: column; gap: 14px; height: 100%">
 <div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4M8 15l2 2 4-4"></path></svg></div>
-<h3 class="h3">30-day finance improvement sprint planner</h3>
-<p class="body" style="font-size: 15px">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
+<h3 class="h3 hv-h">30-day finance improvement sprint planner</h3>
+<p class="body hv-s" style="font-size: 15px">Your step-by-step roadmap to financial clarity: a 30-day action plan to tighten reporting, cash flow and forecasting accuracy.</p>
 <ul class="dk-chips" aria-label="What it covers"><li>Reporting</li><li>Cash flow</li><li>Forecasting</li></ul>
 <a class="btn btn-ghost btn-block" href="https://masteryourfinance.org/tools-resources/" target="_blank" rel="noopener" style="margin-top: auto">Get the sprint planner<span class="sr-only"> (opens in a new tab)</span></a>
 </article>
@@ -651,7 +651,7 @@ body{margin:0;background:#FFFFFF}
 
 <footer style="flex-grow: 1; background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 48px 20px 32px; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 14px">
-<img src="assets/logo-white.png" alt="Master Your Finance" width="80" height="35" style="width: 80px; height: 35px">
+<img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" style="width: 80px; height: 35px">
 <p style="font-size: 14px; line-height: 1.6">The extended finance team for professional service firms.</p>
 </div>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">

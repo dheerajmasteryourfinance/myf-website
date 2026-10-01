@@ -31,7 +31,7 @@ a{color:inherit}
 :focus-visible{outline:3px solid var(--text);outline-offset:2px}
 
 /* HEADER — green glass, matches homepage */
-.site-nav{position:sticky;top:0;z-index:50;background:linear-gradient(120deg,rgba(26,74,58,.92) 0%,rgba(38,105,82,.88) 60%,rgba(46,122,99,.86) 100%);-webkit-backdrop-filter:blur(14px) saturate(1.4);backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid rgba(255,255,255,.14);box-shadow:0 10px 30px -20px rgba(26,74,58,.6)}
+.site-nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.02) 55%,rgba(255,255,255,0) 100%),linear-gradient(110deg,rgba(37,92,73,.97) 0%,rgba(28,66,53,.97) 55%,rgba(37,84,68,.97) 100%);-webkit-backdrop-filter:blur(20px) saturate(1.5);backdrop-filter:blur(20px) saturate(1.5);border-bottom:1px solid rgba(251,248,229,.14);box-shadow:inset 0 1px 0 rgba(251,248,229,.20),inset 0 -1px 0 rgba(0,0,0,.18),0 14px 34px -22px rgba(26,74,58,.75)}
 .topnav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 1.5rem;height:72px;max-width:1040px;margin:0 auto}
 .topnav-logo{display:flex;align-items:center;min-height:44px}
 .topnav-logo img{height:38px;width:auto;display:block}
@@ -315,7 +315,7 @@ a{color:inherit}
 <header class="site-nav">
   <nav class="topnav" aria-label="Main">
     <a class="topnav-logo" href="index.html" aria-label="Master Your Finance, home">
-      <img src="data:image/png;base64,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" alt="Master Your Finance" width="94" height="41">
+      <img src="assets/logo-white.svg" alt="Master Your Finance" width="94" height="41">
     </a>
     <div class="topnav-links">
       <a href="https://masteryourfinance.org/services/" class="hide-mob">Services</a>
@@ -639,7 +639,7 @@ a{color:inherit}
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <img src="data:image/png;base64,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" alt="Master Your Finance" width="94" height="41"><br>
+    <img src="assets/logo-white.svg" alt="Master Your Finance" width="94" height="41"><br>
     Built by <a href="https://masteryourfinance.org">Master Your Finance</a>, your extended finance team for professional service firms in the US, UK and Australia.<br>
     Results are indicative estimates based on your inputs and published industry benchmarks. Not financial advice.
     <div class="footer-links">
@@ -675,7 +675,7 @@ a{color:inherit}
 if(window.Chart){Chart.defaults.font.family="Montserrat, system-ui, sans-serif";Chart.defaults.color="#5D6670";}
 var AIRTABLE_BASE  = 'appnvzj2hl731uVhc';
 var AIRTABLE_TABLE = 'tblGuSpwMsEiDHjrC';
-var AIRTABLE_TOKEN = 'patJOESxrXXH416fd.8e2a4cd5cf000e805b53b1c90363d1a168e1695a9d29b4a824a1e74725686ca6';
+var AIRTABLE_TOKEN = ''; // removed for the public preview: never put a live token in page code
 var FIELD_NAME     = 'fldQyJFfRPPAQpmRE';
 var FIELD_EMAIL    = 'flde5cGK654cdAtqe';
 
@@ -1251,7 +1251,7 @@ async function submitGate(){
   if(!name||!email||!email.includes('@')){errEl.style.display='block';return;}
   btnEl.textContent='Saving...';btnEl.disabled=true;
   try{
-    await fetch('https://api.airtable.com/v0/'+AIRTABLE_BASE+'/'+AIRTABLE_TABLE,{
+    if(AIRTABLE_TOKEN) await fetch('https://api.airtable.com/v0/'+AIRTABLE_BASE+'/'+AIRTABLE_TABLE,{
       method:'POST',
       headers:{'Authorization':'Bearer '+AIRTABLE_TOKEN,'Content-Type':'application/json'},
       body:JSON.stringify({records:[{fields:{[FIELD_NAME]:name,[FIELD_EMAIL]:email}}]})
