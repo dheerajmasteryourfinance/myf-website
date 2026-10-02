@@ -308,6 +308,20 @@ a{color:inherit}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
+
+/* Wider layout: use more of the screen, larger type, 2-column form (desktop and tablet) */
+@media (min-width:700px){
+.page{max-width:1200px;padding:3rem 2.5rem 5rem}
+.topnav{max-width:1280px}
+.footer-inner{max-width:1200px}
+.masthead h1{font-size:3.4rem}
+.masthead p{font-size:19px;max-width:760px}
+.section-label{font-size:13px}
+.input-card{padding:2rem 2.25rem 2.25rem}
+.field label{font-size:15px}
+.field input,.field select{font-size:17px;min-height:52px}
+.input-grid,.input-grid-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px;margin-bottom:18px}
+}
 </style>
 </head>
 <body>
@@ -339,11 +353,6 @@ a{color:inherit}
     <p>Most law firms lose 15 to 25% of potential revenue to billing delays, slow collections, and write-downs. Most do not know it. Find out in 60 seconds.</p>
   </div>
 
-  <div class="stats-bar">
-    <div class="stat-item"><div class="stat-num">24+</div><div class="stat-label">years of finance experience</div></div>
-    <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">years in finance leadership</div></div>
-    <div class="stat-item"><div class="stat-num">US · UK · AU</div><div class="stat-label">for firms of 11–250 staff</div></div>
-  </div>
   <div class="section-label">Your firm's numbers · enter actuals or adjust the defaults</div>
 
   <div class="input-card">
@@ -362,9 +371,6 @@ a{color:inherit}
       <input type="number" id="hrsPerLawyer" value="1400" min="500" max="2500">
       <div class="hint">Typical for most firms: ~1,400</div>
     </div>
-  </div>
-
-  <div class="input-grid">
     <div class="field">
       <div class="field-label-wrap"><label>Utilisation rate (%)</label><div class="tooltip-wrap"><button class="tooltip-icon" tabindex="0" aria-label="More info">?</button><div class="tooltip-box"><div class="tooltip-chip">Top firms: 98%+</div><br>Share of available lawyer hours actually billed. Hours not captured or written off before billing silently reduce this.</div></div></div>
       <input type="number" id="util" value="75" min="10" max="100">

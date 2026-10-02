@@ -14,6 +14,9 @@
 <style>
 html,body{margin:0;background:#231F20}
 #app{transform-origin:0 0}
+/* Wide screens: page spans the window; content sits in a centred 1320px container (never enlarged past design size) */
+#app[style*="--dw"] > .myf{width:var(--dw) !important}
+#app[style*="--dw"] > .myf :is(.myf > section,.myf > footer,.myf > main,.myf > header > div,.at-page > main,.at-page > section,.at-page > footer,.at-page > header > div){padding-left:max(80px,calc((100% - 1320px) / 2)) !important;padding-right:max(80px,calc((100% - 1320px) / 2)) !important}
 .boot{min-height:100vh;display:grid;place-items:center;font-family:Montserrat,system-ui,sans-serif;color:#266952;font-weight:700}
 </style>
 </head>
@@ -27,8 +30,17 @@ html,body{margin:0;background:#231F20}
   var app = document.getElementById('app');
   function pick() { return MOB && window.innerWidth < 700 ? MOB : DESK; }
   var cur = pick();
+  /* Desktop: scale the 1280px design to the screen. Height decides too, so the
+     hero fits the first screen; extra width becomes side margins, not bigger text. */
+  var HERO_H = 890, MIN_Z = 0.85, MAX_Z = 1.05;
   function fit() {
-    var w = window.innerWidth, z = cur === MOB ? w / cur.w : Math.min(1.5, w / cur.w);
+    var w = document.documentElement.clientWidth || window.innerWidth, h = window.innerHeight, z;
+    if (cur === MOB) { z = w / cur.w; app.style.removeProperty('--dw'); }
+    else {
+      /* Big screens (800px+ tall): 5% larger than design size. Shorter laptop screens: fit the hero to the height. */
+      z = Math.min(w / cur.w, h >= 800 ? MAX_Z : Math.max(MIN_Z, Math.min(MAX_Z, h / HERO_H)));
+      app.style.setProperty('--dw', Math.max(cur.w, Math.floor(w / z)) + 'px');
+    }
     app.style.zoom = z === 1 ? '' : String(z);
   }
   app.innerHTML = '';

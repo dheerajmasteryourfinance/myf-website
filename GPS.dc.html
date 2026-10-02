@@ -62,28 +62,24 @@ body{margin:0}
 <path class="spark" d="M2 48 C18 46 28 36 44 37 S72 47 90 35 S124 18 142 22 S172 12 184 8" fill="none" stroke="#266952" stroke-width="2.5" stroke-linecap="round" style="stroke-dashoffset: {{sparkOff}}"></path>
 <circle cx="184" cy="8" r="4" fill="#D1674A"></circle>
 </svg>
-<div class="gc-ex">Example data</div>
 </div>
 
 <div class="gcard gc2 {{sOn}}" style="left: 358px; top: 22px; width: 186px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
 <div class="gc-l">Cash on hand</div>
 <div class="gc-v">{{cash}}</div>
 <div class="gc-d">▲ 6.2% vs last month</div>
-<div class="gc-ex">Example data</div>
 </div>
 
 <div class="gcard gc3 {{wOn}}" style="left: 0px; top: 334px; width: 172px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
 <div class="gc-l">Receivables</div>
 <div class="gc-v">{{recv}}</div>
 <div class="gc-d gc-dn"><i>▼</i> 3.1% owed vs last month</div>
-<div class="gc-ex">Example data</div>
 </div>
 
 <div class="gcard gc4 {{eOn}}" style="left: 396px; top: 332px; width: 156px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
 <div class="gc-l">DSO</div>
 <div class="gc-v">{{dso}} days</div>
 <div class="gc-d">4 days faster</div>
-<div class="gc-ex">Example data</div>
 </div>
 
 <div class="gcard gc5" style="left: 22px; top: 446px; width: 226px; opacity: {{cardOp}}; translate: 0 {{cardShift}}px">
@@ -91,19 +87,11 @@ body{margin:0}
 <div class="bar-row"><span>0–30 days</span><span class="bar"><span style="width: {{a1}}%; background: #266952"></span></span><span>{{p1}}%</span></div>
 <div class="bar-row"><span>31–60 days</span><span class="bar"><span style="width: {{a2}}%; background: #F4B49B"></span></span><span>{{p2}}%</span></div>
 <div class="bar-row"><span>60+ days</span><span class="bar"><span style="width: {{a3}}%; background: #D1674A"></span></span><span>{{p3}}%</span></div>
-<div class="gc-ex">Example data</div>
 </div>
 </div>
 
 <div class="gps-ctl">
-<span class="ex">Example data</span>
-<sc-if value="{{showPause}}" hint-placeholder-val="{{ true }}">
-<button type="button" class="gps-pause" aria-pressed="{{pausedStr}}" onClick="{{togglePause}}">
-<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M3 1.5v11l9-5.5z"></path></svg></sc-if>
-<sc-if value="{{playing}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="2.5" y="1.5" width="3" height="11" rx="1"></rect><rect x="8.5" y="1.5" width="3" height="11" rx="1"></rect></svg></sc-if>
-{{pauseLabel}}
-</button>
-</sc-if>
+
 </div>
 </div>
 </x-dc>
