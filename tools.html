@@ -26,8 +26,14 @@ html,body{margin:0;background:#231F20}
 <script src="dc-runtime.js"></script>
 <script>
 (function () {
-  var DESK = {name:'ToolsPage',w:1280}, MOB = null;
+  var DESK = {name:'ToolsPage',w:1280}, MOB = {name:'ToolsMobile',w:390};
   var app = document.getElementById('app');
+  /* Refresh always starts at the top: no scroll restore, and a #section left in the URL is ignored on reload */
+  try { history.scrollRestoration = 'manual'; } catch (e) {}
+  var navE = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  if (navE && navE.type === 'reload' && location.hash) history.replaceState(null, '', location.pathname + location.search);
+  window.scrollTo(0, 0);
+
   function pick() { return MOB && window.innerWidth < 700 ? MOB : DESK; }
   var cur = pick();
   /* Desktop: scale the 1280px design to the screen. Height decides too, so the
@@ -46,7 +52,7 @@ html,body{margin:0;background:#231F20}
   app.innerHTML = '';
   DCRuntime.mount(cur.name, app).ready.then(function () {
     fit();
-    if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function () { el.scrollIntoView(); }, 300); }
+    if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function () { el.scrollIntoView(); window.scrollBy(0, -90); }, 300); }
   });
   fit();
   window.addEventListener('resize', function () { if (pick() !== cur) location.reload(); else fit(); });

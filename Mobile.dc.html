@@ -120,7 +120,7 @@ body{margin:0;background:#FFFFFF}
 <div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
 <a href="#top" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
 <div style="display: flex; align-items: center; gap: 8px">
-<a class="btn btn-light btn-sm" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="padding: 0 16px">Book<span class="sr-only"> (opens in a new tab)</span></a>
+<a class="btn btn-light btn-sm" href="book.html" style="padding: 0 16px">Book a call</a>
 <button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
@@ -130,35 +130,35 @@ body{margin:0;background:#FFFFFF}
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
 <a href="#top" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">Home</a>
-<a href="#services" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
-<a href="#industries" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
-<a href="#tools" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
-<a href="#about" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
-<a href="#contact" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
-<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" style="margin-top: 16px">Book a free review<span class="sr-only"> (opens in a new tab)</span></a>
+<a href="services.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="industries.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
+<a href="tools.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="about.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
+<a href="book.html" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
+<a class="btn btn-block" href="book.html" style="margin-top: 16px">Book a call</a>
 </nav>
 </sc-if>
 </header>
 
 <section id="top" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(55% 65% at 88% 35%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), radial-gradient(40% 50% at 8% 0%, rgba(209,103,74,.10) 0%, rgba(209,103,74,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #FFFFFF 90%); padding: 32px 20px 48px; display: flex; flex-direction: column; gap: 22px">
 <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="tag"><span class="dot"></span>US · UK · Australia</span><span class="tag"><span class="dot"></span>Data secured in European servers</span></div>
-<h1 class="h1" style="font-size: 36px; line-height: 1.1"><span class="sr-only">Is your finance team keeping pace with your firm?</span><span aria-hidden="true">Is your finance team keeping pace with your</span><span class="flipbox" style="color: #D1674A" aria-hidden="true"><span class="fw {{fw0}}">growing firm?</span><span class="fw {{fw1}}">law firm?</span><span class="fw {{fw2}}">agency?</span><span class="fw {{fw3}}">consultancy?</span></span></h1>
-<p class="lede" style="font-size: 17px">Your extended finance team for complete financial clarity: bookkeeping, reporting, AR/AP, cash flow forecasting and CFO-lite support, tailored for professional service firms.</p>
+<h1 class="h1" style="font-size: 36px; line-height: 1.1"><span class="sr-only">Your outsourced finance team for professional service firms</span><span aria-hidden="true">Your outsourced finance team for</span><span class="flipbox" style="color: #D1674A" aria-hidden="true"><span class="fw {{fw0}}">growing firms</span><span class="fw {{fw1}}">law firms</span><span class="fw {{fw2}}">agencies</span><span class="fw {{fw3}}">consultancies</span></span></h1>
+<p class="lede" style="font-size: 17px">We combine AI and modern finance tech with skilled, affordable finance professionals. You get the quality of a full finance team at a fraction of the cost.</p>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free 30-min finance review<span class="sr-only"> (opens in a new tab)</span></a>
 <a class="btn btn-ghost btn-block" href="health-check.html" target="_blank" rel="noopener">Run free finance health check<span class="sr-only"> (opens in a new tab)</span></a>
 </div>
 <ul style="display: flex; flex-direction: column; gap: 10px">
-<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Costs less than an in-house team</li>
+<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>AI-powered, people-checked</li>
 <li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Reports on time, every month</li>
-<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Pricing shared upfront</li>
+<li class="chk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Costs less than an in-house team</li>
 </ul>
 <div style="width: 350px; height: 350px; align-self: center; margin-top: 8px">
 <div style="width: 560px; height: 560px; transform: scale(.625); transform-origin: 0 0"><dc-import name="GPS" mode="phone" hint-size="560px,560px"></dc-import></div>
 </div>
 </section>
 
-<section data-rv="0" class="rsec {{rv0}}" id="proof" tabindex="-1" aria-label="Experience and clients" style="flex-shrink: 0; background: radial-gradient(60% 90% at 100% 0%, rgba(244,180,155,.20) 0%, rgba(244,180,155,0) 60%), radial-gradient(50% 80% at 0% 100%, rgba(38,105,82,.10) 0%, rgba(38,105,82,0) 60%), linear-gradient(180deg, #FFFFFF 0%, #F2F7F3 100%); padding: 48px 20px; border-top: 1px solid #ECE8D6; border-bottom: 1px solid #ECE8D6">
+<section data-rv="0" class="rsec {{rv0}}" id="proof" tabindex="-1" aria-label="Experience and clients" style="flex-shrink: 0; background: radial-gradient(60% 90% at 100% 0%, rgba(209,103,74,0.12) 0%, rgba(209,103,74,0) 60%), radial-gradient(50% 80% at 0% 100%, rgba(38,105,82,.10) 0%, rgba(38,105,82,0) 60%), linear-gradient(180deg, #FFFFFF 0%, #F2F7F3 100%); padding: 48px 20px; border-top: 1px solid #ECE8D6; border-bottom: 1px solid #ECE8D6">
 <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; text-align: center">
 <div class="rv rv-d2" style="display: flex; flex-direction: column; align-items: center; gap: 8px"><div class="stat-n" style="font-size: 40px">{{s24}}<span class="plus">+</span></div><div class="small" style="font-weight: 600">years of finance experience</div></div>
 <div class="rv rv-d3" style="display: flex; flex-direction: column; align-items: center; gap: 8px; border-left: 1px solid #ECE8D6"><div class="stat-n" style="font-size: 40px">{{s15}}<span class="plus">+</span></div><div class="small" style="font-weight: 600">years in finance leadership</div></div>
@@ -183,51 +183,9 @@ body{margin:0;background:#FFFFFF}
 <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
 <span class="eyebrow rv">What we do</span>
 <h2 class="h2 rv rv-d1" style="font-size: 30px">We close your books. Then we open new opportunities.</h2>
-<p class="body rv rv-d2">Five services, one extended finance team behind you. Use them together or one at a time.</p>
 </div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<article class="rv rv-d2 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 3 8-9"></path><path d="M15 6h5v5"></path></svg></div>
-<h3 class="h3">Cash Flow Forecasting</h3>
-<p class="body" style="font-size: 15px">See what is coming in and going out over the next 13 weeks. Track DSO and chase receivables before they age.</p>
-<div style="border-radius: 16px; background: #FDFCF5; border: 1px solid #ECE8D6; padding: 14px; display: flex; flex-direction: column; gap: 10px">
-<div style="display: flex; justify-content: space-between; align-items: center"><span class="small" style="font-weight: 700; color: #231F20; font-size: 12px">Weekly cash, next 13 weeks</span></div>
-<div aria-hidden="true" style="height: 72px; display: flex; align-items: flex-end; gap: 4px">
-<span style="flex-grow: 1; height: 38%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 44%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 36%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 52%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 48%; border-radius: 3px; background: #CFE0D8"></span><span style="flex-grow: 1; height: 60%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 56%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 30%; border-radius: 3px; background: #D1674A"></span><span style="flex-grow: 1; height: 64%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 70%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 68%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 78%; border-radius: 3px; background: #266952"></span><span style="flex-grow: 1; height: 86%; border-radius: 3px; background: #266952"></span>
-</div>
-</div>
-<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</article>
-<article class="rv rv-d3 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></div>
-<h3 class="h3">Bookkeeping &amp; Accounting</h3>
-<p class="body" style="font-size: 15px">Clean books, reconciled accounts, and AR/AP handled every week.</p>
-<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</article>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
-<article class="rv rv-d4 card" style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
-<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16v-8"></path></svg></div>
-<h3 class="h3" style="font-size: 16px">Monthly Reporting</h3>
-<p class="small">Reports on schedule, explained in plain words.</p>
-</article>
-<article class="rv rv-d5 card" style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
-<div class="ico" style="width: 44px; height: 44px; border-radius: 14px"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></div>
-<h3 class="h3" style="font-size: 16px">CFO-Lite Support</h3>
-<p class="small">Hiring, pricing and growth calls, without a full-time CFO.</p>
-</article>
-</div>
-<article class="rv rv-d2 card" style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
-<div class="ico"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg></div>
-<h3 class="h3">Finance Operations</h3>
-<p class="body" style="font-size: 15px">We run receivables and reporting day to day so you can get back to clients.</p>
-<a class="more" href="#contact">Learn more<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</article>
-<article class="rv rv-d3 card card-green" style="padding: 28px 24px; display: flex; flex-direction: column; gap: 14px">
-<h3 class="h3" style="color: #FFFFFF; font-size: 22px">Not sure what you need?</h3>
-<p class="body" style="color: #DCEBE4; font-size: 15px">Book a free review and we will point out the two or three gaps worth fixing first.</p>
-<a class="btn btn-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free review<span class="sr-only"> (opens in a new tab)</span></a>
-</article>
-</div>
+<div role="list" style="display: flex; flex-direction: column; gap: 10px"><a role="listitem" class="rv rv-d2 card svc-ov" href="services.html#bookkeeping" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg></div><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Bookkeeping &amp; Accounting</b><span class="small" style="font-size: 13px">Clean, reconciled books every week.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d3 card svc-ov" href="services.html#cash-flow" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 3 8-9"></path><path d="M15 6h5v5"></path></svg></div><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Cash Flow Forecasting</b><span class="small" style="font-size: 13px">A 13-week view of cash in and out.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d4 card svc-ov" href="services.html#reporting" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16v-8"></path></svg></div><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Monthly Reporting</b><span class="small" style="font-size: 13px">Reports on a set date, in plain words.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d5 card svc-ov" href="services.html#cfo-lite" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></div><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">CFO-Lite Support</b><span class="small" style="font-size: 13px">Senior advice without a full-time CFO.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d5 card svc-ov" href="services.html#finance-ops" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><div class="ico" style="width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0"><svg class="draw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"></path><circle cx="16" cy="7" r="2"></circle><circle cx="8" cy="17" r="2"></circle></svg></div><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Finance Operations</b><span class="small" style="font-size: 13px">Receivables and admin run day to day.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<a class="btn btn-block rv rv-d3" href="services.html" style="margin-top: 20px">Explore our services</a>
 </section>
 
 <!-- Testimonials: moved up, right after What we do -->
@@ -256,8 +214,7 @@ body{margin:0;background:#FFFFFF}
 <section data-rv="2" class="rsec {{rv2}}" style="flex-shrink: 0; background: radial-gradient(50% 60% at 0% 0%, rgba(209,103,74,.09) 0%, rgba(209,103,74,0) 60%), radial-gradient(55% 70% at 100% 100%, rgba(38,105,82,.11) 0%, rgba(38,105,82,0) 65%), linear-gradient(135deg, #FFFFFF 0%, #FBF5EF 100%); padding: 48px 20px">
 <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px">
 <span class="eyebrow rv">Before and after</span>
-<h2 class="h2 rv rv-d1" style="font-size: 30px">Still waiting weeks for your monthly reports?</h2>
-<p class="body rv rv-d2">Tap to compare the old way with the MYF way.</p>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">Is your finance team keeping pace with your firm?</h2>
 </div>
 <div class="ba-toggle rv rv-d3" role="group" aria-label="Compare the old way with MYF">
 <button type="button" class="{{baOldCls}}" aria-pressed="{{baOldP}}" onClick="{{showOld}}">The old way</button>
@@ -270,8 +227,6 @@ body{margin:0;background:#FFFFFF}
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle><path d="M6 9v.01M18 15v.01"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Cash surprises you only spot when payroll is due</span></div>
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6M9 12h6"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Unpaid invoices noticed weeks too late</span></div>
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Owners doing the books at night</span></div>
-<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"></path><path d="M12 17v.01"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Revenue leaking through unbilled hours and missed invoices</span></div>
-<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-old"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M3 10h18M16 14h2"></path></svg></span><span class="ba-t"><span class="sr-only">Old way: </span>Spending drifts past budget and nobody notices until year-end</span></div>
 <button type="button" class="more" onClick="{{showNew}}" style="border: 0; background: transparent; cursor: pointer; font-family: inherit; padding: 0; align-self: flex-start">See the MYF way<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
 </div>
 </sc-if>
@@ -281,8 +236,6 @@ body{margin:0;background:#FFFFFF}
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l5-5 4 3 8-9"></path><path d="M15 6h5v5"></path></svg></span><span><span class="sr-only">With MYF: </span>A 13-week cash forecast you can read at a glance</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"></rect><path d="M8 12l3 3 5-6"></path></svg></span><span><span class="sr-only">With MYF: </span>Receivables tracked and chased before they age</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
 <div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"></path></svg></span><span><span class="sr-only">With MYF: </span>A finance team runs the books, so your evenings are yours</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
-<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span><span><span class="sr-only">With MYF: </span>Every billable hour invoiced and reconciled, so no revenue slips through</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
-<div role="listitem" style="padding: 14px 16px; gap: 12px; font-size: 15px" class="ba-cell ba-new"><span class="ba-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="4"></circle><path d="M12 12h.01"></path></svg></span><span><span class="sr-only">With MYF: </span>Expenses tracked against budget every month, with overspends flagged early</span><span class="ba-tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></div>
 </div>
 </sc-if>
 </div>
@@ -292,11 +245,6 @@ body{margin:0;background:#FFFFFF}
 <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px">
 <span class="eyebrow rv">How it works</span>
 <h2 class="h2 rv rv-d1" style="font-size: 30px">Your Financial GPS</h2>
-<p class="body rv rv-d2">Five stops from a free check-up to clarity and growth.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
-<span class="rv rv-d2" style="font-size: 15px; font-weight: 800; color: #1A4A3A">Four directions that drive every business forward</span>
-<div role="list" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px"><div role="listitem" class="dir-card n rv rv-d2" style="padding: 16px"><span class="dir-l" aria-hidden="true">N</span><b style="font-size: 15px; color: #1A4A3A">Financial Clarity</b><span class="small" style="font-size: 12px">Staying aligned with accurate numbers.</span></div><div role="listitem" class="dir-card  rv rv-d3" style="padding: 16px"><span class="dir-l" aria-hidden="true">W</span><b style="font-size: 15px; color: #1A4A3A">Growth</b><span class="small" style="font-size: 12px">Forward-looking insights and analysis that help you scale with confidence.</span></div><div role="listitem" class="dir-card  rv rv-d4" style="padding: 16px"><span class="dir-l" aria-hidden="true">E</span><b style="font-size: 15px; color: #1A4A3A">Efficiency</b><span class="small" style="font-size: 12px">Automating and streamlining processes to avoid wasted time and effort.</span></div><div role="listitem" class="dir-card  rv rv-d5" style="padding: 16px"><span class="dir-l" aria-hidden="true">S</span><b style="font-size: 15px; color: #1A4A3A">Stability</b><span class="small" style="font-size: 12px">Keeping books clean, preventing cash leaks, and ensuring compliance and security.</span></div></div>
 </div>
 <div class="rv rv-d2" style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px"><span class="tag" style="font-size: 12px">Stop {{stepNo}} of 5 · {{stepName}}</span><span style="flex-grow: 1; height: 6px; border-radius: 99px; background: #E6F0EC; overflow: hidden"><span class="hw-bar" style="display: block; height: 100%; width: {{pct}}%; border-radius: 99px; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span></div>
 <div style="position: relative; display: flex; flex-direction: column; gap: 14px">
@@ -313,12 +261,6 @@ body{margin:0;background:#FFFFFF}
 </sc-for>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px">
-<div class="card-green rv rv-d2" style="border-radius: 20px; padding: 24px 20px; display: flex; flex-direction: column; gap: 12px; color: #FFFFFF">
-<span style="font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #F6C1AC">Start with the Vehicle Check</span>
-<b style="font-size: 20px">Get your free Financial GPS snapshot</b>
-<span style="font-size: 14px; color: #DCEBE4">See where your finances stand today, before you commit to anything.</span>
-<a class="btn btn-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Get my Financial GPS<span class="sr-only"> (opens in a new tab)</span></a>
-</div>
 </div>
 </section>
 
@@ -326,176 +268,24 @@ body{margin:0;background:#FFFFFF}
 <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px">
 <span class="eyebrow rv">Industries</span>
 <h2 class="h2 rv rv-d1" style="font-size: 30px">Built for firms that sell expertise</h2>
-<p class="body rv rv-d2">Pick your industry to see where cash gets stuck, how we fix it, and what we track.</p>
 </div>
-<div class="rv rv-d3">
-<div class="ind-scroll" role="tablist" aria-label="Industries">
-<button type="button" role="tab" id="ind-t0" class="ind-pill {{indC0}}" aria-selected="{{indS0}}" aria-controls="ind-p0" tabindex="{{indT0}}" onClick="{{indPick0}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span>Law firms</button><button type="button" role="tab" id="ind-t1" class="ind-pill {{indC1}}" aria-selected="{{indS1}}" aria-controls="ind-p1" tabindex="{{indT1}}" onClick="{{indPick1}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"></path></svg></span>Agencies</button><button type="button" role="tab" id="ind-t2" class="ind-pill {{indC2}}" aria-selected="{{indS2}}" aria-controls="ind-p2" tabindex="{{indT2}}" onClick="{{indPick2}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></span>IT &amp; consulting firms</button><button type="button" role="tab" id="ind-t3" class="ind-pill {{indC3}}" aria-selected="{{indS3}}" aria-controls="ind-p3" tabindex="{{indT3}}" onClick="{{indPick3}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg></span>Other services</button><button type="button" role="tab" id="ind-t4" class="ind-pill {{indC4}}" aria-selected="{{indS4}}" aria-controls="ind-p4" tabindex="{{indT4}}" onClick="{{indPick4}}" onKeyDown="{{indKey}}"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"></path><path d="M9 15l-3-3c1-4 4-8 10-9 0 6-4 9-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></span>Startups</button>
-</div>
-<sc-if value="{{ind0}}" hint-placeholder-val="{{ true }}">
-<div class="ind-panel" role="tabpanel" id="ind-p0" aria-labelledby="ind-t0" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h3" style="font-size: 18px">For law firms</h3>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Work done but not yet billed sits for weeks</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Clients pay late, so lock-up keeps stretching</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Partner drawings planned without a clear view of cash</span></li></ul></div>
-<div style="height: 1px; background: #ECE8D6"></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Monthly reviews of unbilled work and unpaid invoices, with named follow-ups</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A 13-week cash forecast that includes partner drawings</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Billing and collections reports partners will actually read</span></li></ul></div>
-</div>
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for law firms</span></div>
-<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Lock-up days</span><b>112 days</b><span class="bar"><span style="width: 68%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Unbilled work + debtor days</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Realisation rate</span><b>88%</b><span class="bar"><span style="width: 88%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Billed ÷ recorded time</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>54 days</b><span class="bar"><span style="width: 54%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<figure class="card" style="margin: 0; padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div>
-<blockquote style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 500; color: #231F20">“Joel’s strategic clarity, deep empathy, and hands-on approach helped us transform complexity into clear, actionable steps… A true partner in purposeful growth, helping us all “sleep better at night”.”</blockquote>
-<figcaption style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 14px; color: #1A4A3A">N. Hepple</b><span class="small">Director, HBA Legal</span></figcaption>
-</figure>
-<a class="more" href="#">See how we work with law firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</div>
-</sc-if>
-<sc-if value="{{ind1}}" hint-placeholder-val="{{ false }}">
-<div class="ind-panel" role="tabpanel" id="ind-p1" aria-labelledby="ind-t1" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h3" style="font-size: 18px">For marketing and creative agencies</h3>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Projects run over scope before anyone sees the margin</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Retainer income swings from month to month</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Freelancers and media are paid before clients pay you</span></li></ul></div>
-<div style="height: 1px; background: #ECE8D6"></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Project margin tracked every month, job by job</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A forecast that separates retainers from one-off projects</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Supplier payments timed against client receipts</span></li></ul></div>
-
-</div>
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for agencies</span></div>
-<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Project margin</span><b>41%</b><span class="bar"><span style="width: 41%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Average across live jobs</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Retainer share</span><b>63%</b><span class="bar"><span style="width: 63%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Of monthly revenue</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Freelancer spend</span><b>18%</b><span class="bar"><span style="width: 18%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Of revenue</span></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<a class="more" href="#">See how we work with agencies<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</div>
-</sc-if>
-<sc-if value="{{ind2}}" hint-placeholder-val="{{ false }}">
-<div class="ind-panel" role="tabpanel" id="ind-p2" aria-labelledby="ind-t2" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h3" style="font-size: 18px">For IT and consulting firms</h3>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Billable hours slip as the team grows</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Renewals and recurring revenue are hard to see ahead</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Clients pay in different currencies</span></li></ul></div>
-<div style="height: 1px; background: #ECE8D6"></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Utilisation and billing reported every month</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Recurring revenue and renewals built into the cash forecast</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Receivables in every currency tracked in one view</span></li></ul></div>
-</div>
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for IT and consulting firms</span></div>
-<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Utilisation</span><b>74%</b><span class="bar"><span style="width: 74%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Billable ÷ available hours</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Recurring revenue</span><b>$86k / mo</b><span class="bar"><span style="width: 70%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Contracted monthly</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>47 days</b><span class="bar"><span style="width: 47%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<a class="more" href="#">See how we work with IT and consulting firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</div>
-</sc-if>
-<sc-if value="{{ind3}}" hint-placeholder-val="{{ false }}">
-<div class="ind-panel" role="tabpanel" id="ind-p3" aria-labelledby="ind-t3" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h3" style="font-size: 18px">For other professional service firms</h3>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Cash tied up in unpaid invoices</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Month-end reports arrive too late to act on</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Nobody owns finance day to day</span></li></ul></div>
-<div style="height: 1px; background: #ECE8D6"></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Receivables chased before they age</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A report pack on a set date, explained in plain words</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A finance team that owns the numbers</span></li></ul></div>
-
-</div>
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for professional service firms</span></div>
-<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">DSO</span><b>49 days</b><span class="bar"><span style="width: 49%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Days to get paid</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Cash runway</span><b>5.2 months</b><span class="bar"><span style="width: 52%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">At current spend</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Reports ready</span><b>Day [X]</b><span class="bar"><span style="width: 30%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">After month-end</span></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<figure class="card" style="margin: 0; padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div class="tq-top"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><path d="M0 32V18C0 8 6 2 16 0l2 5c-6 2-9 6-9 11h7v16zM22 32V18c0-10 6-16 16-18l2 5c-6 2-9 6-9 11h7v16z" fill="#D1674A"></path></svg><span class="tq-stars" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg><svg viewBox="0 0 24 24"><path d="M12 2.8l2.83 5.73 6.32.92-4.57 4.46 1.08 6.3L12 17.24l-5.66 2.97 1.08-6.3-4.57-4.46 6.32-.92z"></path></svg></span></div>
-<blockquote style="margin: 0; font-size: 15px; line-height: 1.6; font-weight: 500; color: #231F20">“He helped us identify opportunities to think about our business in a better way and then assist with the execution of a successful turnaround in one of our loss-making businesses.”</blockquote>
-<figcaption style="display: flex; flex-direction: column; gap: 2px"><b style="font-size: 14px; color: #1A4A3A">J. Blanco</b><span class="small">Former Global President, Crawford &amp; Company</span></figcaption>
-</figure>
-<a class="more" href="#">See how we work with professional service firms<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</div>
-</sc-if>
-<sc-if value="{{ind4}}" hint-placeholder-val="{{ false }}">
-<div class="ind-panel" role="tabpanel" id="ind-p4" aria-labelledby="ind-t4" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px">
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 16px">
-<h3 class="h3" style="font-size: 18px">For founder-led startups</h3>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #B4502F">Where cash gets stuck</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Burn creeping up without a clear runway number</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Investor and board updates pulled together at the last minute</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Founders doing the books between product and sales</span></li><li class="ind-li" style="font-size: 14px; color: #231F20"><span class="ind-dot ind-bad" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 6v7M12 18h.01"></path></svg></span><span>Raising money without investor-ready numbers or a pitch deck</span></li></ul></div>
-<div style="height: 1px; background: #ECE8D6"></div>
-<div style="display: flex; flex-direction: column; gap: 10px"><span class="ind-k" style="color: #266952">How we help</span><ul style="display: flex; flex-direction: column; gap: 8px"><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A monthly burn and runway view you can trust</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A board-ready reporting pack on a set date</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Cash flow forecasts that show your runway week by week</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>Investor pitch decks and financial models ready for fundraising</span></li><li class="ind-li" style="font-size: 14px; color: #1A4A3A; font-weight: 600"><span class="ind-dot ind-good" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span><span>A finance team from day one, without a full-time hire</span></li></ul></div>
-</div>
-<div class="card" style="padding: 20px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px"><span class="ind-k" style="color: #266952">What we track for startups</span></div>
-<div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Monthly burn</span><b>$42k</b><span class="bar"><span style="width: 60%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">Net cash out each month</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Runway</span><b>14 months</b><span class="bar"><span style="width: 70%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">At current burn</span></div><div class="ind-kpi"><span class="small" style="font-weight: 700; color: #231F20">Gross margin</span><b>58%</b><span class="bar"><span style="width: 58%; background: linear-gradient(90deg, #266952, #2E7A63)"></span></span><span class="small" style="font-size: 12px">On services revenue</span></div>
-</div>
-<div style="display: flex; flex-direction: column; gap: 16px">
-<a class="more" href="#">See how we work with startups<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</div>
-</sc-if>
-</div>
+<div role="list" style="display: flex; flex-direction: column; gap: 10px"><a role="listitem" class="rv rv-d2 card svc-ov" href="industries.html#law-firms" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><span class="ind-ico" aria-hidden="true" style="flex-shrink: 0"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Law firms</b><span class="small" style="font-size: 13px">Unbilled work, lock-up and partner drawings under control.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d3 card svc-ov" href="industries.html#agencies" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><span class="ind-ico" aria-hidden="true" style="flex-shrink: 0"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Marketing &amp; creative agencies</b><span class="small" style="font-size: 13px">Project margins and retainers tracked job by job.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d4 card svc-ov" href="industries.html#it-consulting" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><span class="ind-ico" aria-hidden="true" style="flex-shrink: 0"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">IT &amp; consulting firms</b><span class="small" style="font-size: 13px">Utilisation, renewals and multi-currency receivables in one view.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d5 card svc-ov" href="industries.html#professional-services" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><span class="ind-ico" aria-hidden="true" style="flex-shrink: 0"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Other professional services</b><span class="small" style="font-size: 13px">Receivables chased and a report pack on a set date.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><a role="listitem" class="rv rv-d5 card svc-ov" href="industries.html#startups" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit"><span class="ind-ico" aria-hidden="true" style="flex-shrink: 0"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"></path><path d="M9 15l-3-3c1-4 4-8 10-9 0 6-4 9-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></span><span style="display: flex; flex-direction: column; gap: 2px; flex-grow: 1"><b style="font-size: 16px; color: #1A4A3A">Startups</b><span class="small" style="font-size: 13px">Burn, runway and investor-ready reporting.</span></span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<a class="btn btn-block rv rv-d3" href="industries.html" style="margin-top: 20px">Explore industries</a>
 </section>
 
 
 
 <section data-rv="9" class="rsec {{rv9}}" id="about" tabindex="-1" style="flex-shrink: 0; background: #FFFFFF; padding: 48px 20px; border-top: 1px solid #ECE8D6">
-<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
-<span class="eyebrow rv">About us</span>
-<h2 class="h2 rv rv-d1" style="font-size: 30px">The people behind your numbers</h2>
-<p class="body rv rv-d2">Finance shouldn’t need your full attention… just your approval. 24+ years in finance and 15+ years of leadership, across the US, UK and Australia.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<article class="card rv rv-d2" style="padding: 12px; display: flex; flex-direction: column; gap: 16px">
-<sc-if value="{{vidOff}}" hint-placeholder-val="{{ true }}">
-<button type="button" class="yt-facade" onClick="{{playVid}}" onMouseEnter="{{prevOn}}" onMouseLeave="{{prevOff}}" aria-label="Play video with sound: Why MYF? (1 minute 51 seconds)">
-<img class="vd-bg" src="assets/video-thumb.jpg" alt="" aria-hidden="true">
-<video class="vd-prev" src="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
-<span class="vd-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"></path></svg>Click to play with sound</span>
-<span class="yt-chip vd-muted" style="left: 16px; top: 16px" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M17 9l5 6M22 9l-5 6"></path></svg>Muted preview</span>
-<span class="yt-chip" style="right: 16px; bottom: 16px">1:51</span>
-</button>
-</sc-if>
-<sc-if value="{{vidOn}}" hint-placeholder-val="{{ false }}">
-<video class="vd-player" src="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" controls autoplay playsinline preload="auto" poster="assets/video-thumb.jpg" aria-label="Why MYF? video" ref="{{setVidRef}}"></video>
-</sc-if>
-<div style="display: flex; flex-direction: column; gap: 10px; padding: 0 4px 4px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span class="hw-kicker">Watch · 2 min</span>
-<h3 class="h3" style="font-size: 17px">Why MYF?</h3>
-<span class="small">Your extended finance team: who we are, who we work with and how we bring clarity to your numbers.</span>
-</div>
-<a class="more" href="https://masteryourfinance.org/wp-content/uploads/2025/12/with-BG-Master-your-finance.mp4" target="_blank" rel="noopener" style="flex-shrink: 0">Open full screen<span class="sr-only"> (opens in a new tab)</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
-</div>
-</article>
-<article class="card tilt rv rv-d3" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
-<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
-<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CEO</span><h3 class="h3">Joel Schenk</h3><span class="small" style="font-weight: 700; color: #266952">Founder &amp; Chief Executive Officer</span></div>
-</div>
-<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">With 24 years in finance and over 15 years in leadership, Joel is the driving force behind Master Your Finance and Master Your Business. His vision is to make financial clarity accessible and actionable for business owners.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-</article>
-<article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
-<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
-<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">MD</span><h3 class="h3">Himanshu Sachdeva</h3><span class="small" style="font-weight: 700; color: #266952">Managing Director</span></div>
-</div>
-<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Himanshu combines analytical precision with a practical approach to help firms make confident financial decisions.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-</article>
-<article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
-<div style="display: flex; gap: 16px; align-items: center">
-<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
-<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">Finance team</span><h3 class="h3">Twisha Gajjar</h3><span class="small" style="font-weight: 700; color: #266952">Finance Analyst</span></div>
-</div>
-<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with 3 years as an Article Assistant and 3+ years in accounting, auditing and taxation. Twisha’s strong foundation in compliance and financial reporting keeps your numbers accurate, and her problem-solving mindset adds strategic value to every project.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/twishagajjar/" target="_blank" rel="noopener" aria-label="Twisha Gajjar on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-</article>
-<a class="btn btn-ghost btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Meet us on a free call<span class="sr-only"> (opens in a new tab)</span></a>
-</div>
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px"><span class="eyebrow rv">About us</span><h2 class="h2 rv rv-d1" style="font-size: 30px">The people behind your numbers</h2><p class="body rv rv-d2">Based in the Netherlands, serving professional service firms in the US, UK and Australia.</p></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="card rv rv-d2" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Joel Schenk</b><span class="small">Founder &amp; Chief Executive Officer</span></div></div><div class="card rv rv-d3" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Himanshu Sachdeva</b><span class="small">Managing Director</span></div></div><div class="card rv rv-d4" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Twisha Gajjar</b><span class="small">Finance Analyst</span></div></div></div>
+<a class="btn btn-block rv rv-d3" href="about.html" style="margin-top: 20px">More about us</a>
 </section>
 
 <section data-rv="5" class="rsec {{rv5}}" id="tools" tabindex="-1" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 48px 20px">
 <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
 <span class="eyebrow rv">Tools &amp; Resources</span>
 <h2 class="h2 rv rv-d1" style="font-size: 30px">If cash flow surprises you, you’re not in control.</h2>
-<p class="body rv rv-d2">Your numbers should be as easy to read as your car’s dashboard. Start with these free tools.</p>
+<p class="body rv rv-d2">Free tools, a few minutes each.</p>
 </div>
 <div class="rv rv-d2">
 <div class="dk-deck" role="list" aria-label="Free tools, stacked like a deck of cards">
@@ -548,61 +338,9 @@ body{margin:0;background:#FFFFFF}
 <button type="button" class="btn btn-sm" onClick="{{tlNext}}" style="margin-left: auto">Next tool<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px">
-<button type="button" class="btn btn-ghost btn-block" onClick="{{openAll}}">See all 6 tools</button>
+<a class="btn btn-ghost btn-block" href="tools.html">See all 6 tools</a>
 <a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Get your free Financial GPS snapshot<span class="sr-only"> (opens in a new tab)</span></a>
 </div>
-</div>
-</section>
-
-<section data-rv="10" class="rsec {{rv10}}" style="flex-shrink: 0; background: radial-gradient(60% 70% at 88% 8%, rgba(38,105,82,.13) 0%, rgba(38,105,82,0) 65%), radial-gradient(45% 55% at 0% 100%, rgba(244,180,155,.16) 0%, rgba(244,180,155,0) 60%), linear-gradient(180deg, #F4F9F6 0%, #FFFFFF 100%); padding: 48px 20px">
-<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
-<span class="eyebrow rv">Compare your options</span>
-<h2 class="h2 rv rv-d1" style="font-size: 30px">Stop overpaying for your finance team.</h2>
-<p class="body rv rv-d2">The same accuracy and reporting quality as an in-house team, at a fraction of the cost. Here is how the options compare.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 14px">
-<article class="rv rv-d2" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 12px; border: 2px solid #266952; background: linear-gradient(180deg, #E6F0EC 0%, #F4F9F6 100%); box-shadow: 0 24px 48px -28px rgba(26,74,58,.5)"><div style="display: flex; align-items: center; justify-content: space-between"><h3 class="h3">MYF</h3><span class="tag" style="background: #266952; color: #FFFFFF">Our way</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #1A4A3A; font-weight: 700">One predictable monthly fee</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #1A4A3A; font-weight: 700">Yes, every week</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #1A4A3A; font-weight: 700">Growth plan and up</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #1A4A3A; font-weight: 700">On a set date, explained</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #1A4A3A; font-weight: 700">A team covers</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #1A4A3A; font-weight: 700">CFO-Lite plan</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #CFE0D8; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #1A4A3A; font-weight: 700">We handle it</span></div></article>
-<article class="card rv rv-d3" style="padding: 24px; display: flex; flex-direction: column; gap: 12px"><h3 class="h3" style="color: #5D6670">In-house hire</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #5D6670; font-weight: 500"></span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #5D6670; font-weight: 500">Yes</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #5D6670; font-weight: 500">Depends on the hire</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #5D6670; font-weight: 500">When they have time</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #5D6670; font-weight: 500">Work pauses</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #5D6670; font-weight: 500">A second, senior hire</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #5D6670; font-weight: 500">Yours to do</span></div></article>
-<article class="card rv rv-d4" style="padding: 24px; display: flex; flex-direction: column; gap: 12px"><h3 class="h3" style="color: #5D6670">Freelance bookkeeper</h3><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly cost</span><span style="color: #5D6670; font-weight: 500"></span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Books and reconciliations</span><span style="color: #5D6670; font-weight: 500">Yes</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">13-week cash forecast</span><span style="color: #5D6670; font-weight: 500">Not usually</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Monthly report pack</span><span style="color: #5D6670; font-weight: 500">Basic, if agreed</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Cover for leave</span><span style="color: #5D6670; font-weight: 500">Work pauses</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">CFO-level advice</span><span style="color: #5D6670; font-weight: 500">Not included</span></div><div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid #ECE8D6; font-size: 14px"><span style="font-weight: 700; color: #1A4A3A">Recruiting and managing</span><span style="color: #5D6670; font-weight: 500">Yours to find and check</span></div></article>
-<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">See what MYF would cost you<span class="sr-only"> (opens in a new tab)</span></a>
-</div>
-</section>
-
-<section data-rv="6" class="rsec {{rv6}} on-dark" style="flex-shrink: 0; background: radial-gradient(90% 70% at 100% 0%, rgba(46,122,99,.55) 0%, rgba(46,122,99,0) 60%), linear-gradient(150deg, #1A4A3A 0%, #1F5A46 55%, #266952 100%); padding: 48px 20px">
-<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px">
-<span class="eyebrow rv">Pricing</span>
-<h2 class="h2 rv rv-d1" style="font-size: 30px">Know the cost before you book a call</h2>
-<p class="body rv rv-d2">Plans and prices are set by MYF; figures below are placeholders.</p>
-</div>
-<div style="display: flex; flex-direction: column; gap: 24px">
-<article class="rv rv-d2 plan-feat" style="border-radius: 22px; padding: 32px 24px 24px; display: flex; flex-direction: column; gap: 16px; background: #FFFFFF; color: #231F20; position: relative">
-<span style="position: absolute; top: -14px; left: 24px; display: inline-flex; align-items: center; min-height: 28px; padding: 0 14px; border-radius: 999px; background: #B4502F; color: #FFFFFF; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase">Recommended</span>
-<h3 class="h3">Growth</h3>
-<div class="price-ph" style="color: #1A4A3A"><b style="font-size: 20px">Transparent monthly pricing</b></div>
-<ul style="display: flex; flex-direction: column; gap: 8px">
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Everything in Essentials</li>
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>AR management and 13-week cash forecast</li>
-</ul>
-<a class="btn btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
-</article>
-<article class="rv rv-d3 glass" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF">
-<h3 class="h3">Essentials</h3>
-<div class="price-ph" style="color: #F6C1AC"><b style="font-size: 20px">Transparent monthly pricing</b></div>
-<ul style="display: flex; flex-direction: column; gap: 8px">
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Bookkeeping and reconciliations</li>
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Monthly report pack</li>
-</ul>
-<a class="btn btn-line-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
-</article>
-<article class="rv rv-d4 glass" style="border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF">
-<h3 class="h3">CFO-Lite</h3>
-<div class="price-ph" style="color: #F6C1AC"><b style="font-size: 20px">Transparent monthly pricing</b></div>
-<ul style="display: flex; flex-direction: column; gap: 8px">
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Everything in Growth</li>
-<li class="plan-li"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Monthly strategy session</li>
-</ul>
-<a class="btn btn-line-light btn-block" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a review<span class="sr-only"> (opens in a new tab)</span></a>
-</article>
 </div>
 </section>
 
@@ -612,50 +350,18 @@ body{margin:0;background:#FFFFFF}
 <h2 class="h2 rv rv-d1" style="font-size: 30px">Got questions? We’ve got clarity.</h2>
 </div>
 <div style="border-top: 1px solid #ECE8D6">
-<sc-for list="{{faqs}}" as="q" hint-placeholder-count="9">
+<sc-for list="{{faqs}}" as="q" hint-placeholder-count="4">
 <div class="acc rv rv-d2 {{q.cls}}">
 <h3 style="margin: 0"><button type="button" class="acc-btn" aria-expanded="{{q.exp}}" onClick="{{q.toggle}}" style="font-size: 16px; min-height: 72px; gap: 16px">{{q.q}}<span class="acc-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
 <div class="acc-p"><div class="acc-in"><p style="padding: 0 0 20px; font-size: 15px">{{q.a}}</p></div></div>
 </div>
 </sc-for>
 </div>
+<a class="more rv rv-d3" href="services.html#faq" style="margin-top: 20px; display: inline-flex">More FAQs on pricing and setup<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </section>
 
-<section data-rv="8" id="contact" tabindex="-1" class="rsec {{rv8}} on-dark" style="flex-shrink: 0; background: radial-gradient(90% 70% at 100% 0%, rgba(46,122,99,.55) 0%, rgba(46,122,99,0) 60%), linear-gradient(150deg, #1A4A3A 0%, #1F5A46 55%, #266952 100%); padding: 48px 20px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<span class="eyebrow rv">Get started</span>
-<h2 class="h2 rv rv-d1" style="font-size: 30px">Get on the fastest route to financial clarity.</h2>
-<p class="body rv rv-d2">Book a free 30-minute finance review. Tell us a little about your firm and we will come back with the two or three things worth fixing first.</p>
-</div>
-<div class="rv rv-d3" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 14px; font-weight: 700; color: #FFFFFF">What happens after you book</span>
-<ol style="display: flex; flex-direction: column; gap: 10px">
-<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">1</span><span><b style="display: block; font-size: 15px">A 30-minute call</b><span class="small">At a time that suits you.</span></span></li>
-<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">2</span><span><b style="display: block; font-size: 15px">A look at your numbers</b><span class="small">A quick snapshot of where you stand.</span></span></li>
-<li class="glass" style="border-radius: 16px; padding: 14px 16px; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; color: #FFFFFF"><span style="width: 36px; height: 36px; border-radius: 50%; background: #F4B49B; color: #231F20; display: grid; place-items: center; font-size: 14px; font-weight: 800">3</span><span><b style="display: block; font-size: 15px">A short written plan</b><span class="small">The two or three things worth fixing first.</span></span></li>
-</ol>
-</div>
-<form class="rv rv-d2 card" onSubmit="{{submit}}" aria-label="Book a free review" style="margin-top: 28px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 0; color: #231F20">
-<label class="fld">Name<input class="inp" type="text" autocomplete="name" placeholder="Your name"></label>
-<label class="fld">Work email<input class="inp" type="email" autocomplete="email" placeholder="you@yourfirm.com"></label>
-<label class="fld">Firm size<select class="inp"><option>11–25 staff</option><option>26–100 staff</option><option>101–250 staff</option></select></label>
-<label class="fld">What do you need most?<select class="inp"><option>Bookkeeping &amp; accounting</option><option>Cash flow forecasting</option><option>Monthly reporting</option><option>CFO-lite support</option><option>Finance operations</option><option>Not sure yet</option></select></label>
-<button class="btn btn-block" type="submit">Book my free review</button>
-<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}"><div role="status" style="border-radius: 12px; background: #E6F0EC; color: #1A4A3A; padding: 12px 14px; font-size: 14px; font-weight: 600">Design mockup: nothing was sent.</div></sc-if>
-<span class="small">We only use your details to reply to your enquiry.</span>
-</form>
-<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
-<a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" class="ct-row"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 10h16M9 3v4M15 3v4"></path></svg><span><b>Calendly</b> · Book a 30-minute discovery call<span class="sr-only"> (opens in a new tab)</span></span></a>
-</div>
-<div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.14); display: flex; flex-direction: column; gap: 12px">
-<span style="font-size: 14px; font-weight: 700; color: #FFFFFF">How we look after your data</span>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
-<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>Encrypted, secure platforms</div>
-<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Strict access controls</div>
-<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="M9 13l-2 8 5-3 5 3-2-8"></path></svg>Xero certified</div>
-<div class="trust-i" style="font-size: 12px; padding: 10px 12px"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5"></circle><path d="M9 13l-2 8 5-3 5 3-2-8"></path></svg>QuickBooks ProAdvisor</div>
-</div>
-</div>
+<section data-rv="8" id="contact" tabindex="-1" class="rsec {{rv8}}" style="flex-shrink: 0; background: #FFFFFF; padding: 48px 20px">
+<div class="card-green rv" style="border-radius: 24px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF"><span class="eyebrow" style="color: #D1674A">Get started</span><h2 class="h2" style="color: #FFFFFF; font-size: 26px">Get on the fastest route to financial clarity.</h2><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Book a free 30-minute finance review.</p><a class="btn btn-light btn-block" href="book.html">Book a call</a></div>
 </section>
 
 <footer style="flex-grow: 1; background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 48px 20px 32px; display: flex; flex-direction: column; gap: 32px">
@@ -666,17 +372,17 @@ body{margin:0;background:#FFFFFF}
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
 <nav aria-label="Services" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
-<a href="#services" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
-<a href="#services" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
-<a href="#services" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
-<a href="#services" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
 </nav>
 <nav aria-label="Company" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
-<a href="#about" style="min-height: 44px; display: flex; align-items: center">About Us</a>
-<a href="#industries" style="min-height: 44px; display: flex; align-items: center">Industries</a>
-<a href="#tools" style="min-height: 44px; display: flex; align-items: center">Tools</a>
-<a href="#contact" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+<a href="about.html" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="industries.html" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="tools.html" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="book.html" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
 </nav>
 </div>
 <div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>
@@ -845,13 +551,8 @@ class Component extends DCLogic {
     const faqData = [
       ['What industries does MYF serve?', "We primarily support professional service firms, including agencies, consultancies, law firms, IT services and other B2B service providers, with teams of 11–250 employees in the United States, United Kingdom and Australia."],
       ['Why work with MYF as your finance partner?', "We deliver the results of a full finance department at a much lower cost. MYF handles everything from bookkeeping, reporting and forecasting to CFO-lite support, so you get clear, reliable numbers and financial direction without the overhead of an in-house team."],
-      ['What platforms does MYF use for reporting and accounting?', "We work in Zoho Books, Exact, NetSuite, Actionstep, QuickBooks (ProAdvisor), Xero (certified) and Wave, report through Power BI, Excel and web dashboards, and connect with common CRM, payroll and project tools. Rather than changing how you work, we adapt to your existing setup."],
       ['Is my financial data secure?', "Yes. All client data is handled through encrypted, secure platforms with strict access controls, and we follow best practices for financial data confidentiality."],
-      ['How long does onboarding take?', "On average, 7–14 days. During onboarding we review your books of accounts, study your business and industry trends, and deliver your first reporting pack with tailored financial insights in under two weeks."],
-      ['How is pricing structured?', "Transparent monthly pricing based on team size, transaction volume and the services you select. Book a free call and we’ll give you an instant estimate."],
-      ['What kind of insights will I get?', "Along with clean books, you’ll get dashboards showing DSO, utilisation, realisation, AR ageing, cash flow runway and profitability trends, updated in near real time in the software of your choice."],
-      ['Do I need to be hands-on in daily finance tasks?', "No. We only loop you in for key approvals or exceptions. Our team takes care of day-to-day transactions, invoices, payments and reporting."],
-      ['Can I scale MYF services as my business grows?', "Yes. MYF is designed to grow with you. Start with core bookkeeping and reporting, then add AR/AP, cash flow forecasting and CFO-lite advisory as you need them."]
+      ['Do I need to be hands-on in daily finance tasks?', "No. We only loop you in for key approvals or exceptions. Our team takes care of day-to-day transactions, invoices, payments and reporting."]
     ];
     const logos = [];
     const clientLogos = [["KSB", "assets/ksb.svg"], ["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"]];

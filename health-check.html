@@ -14,7 +14,7 @@
   --bg:#FDFCF5;--surface:#ffffff;--border:#ECE8D6;--border-mid:#DCD7C0;
   --text:#231F20;--text-mid:#5D6670;--text-muted:#7A8188;
   --accent:#266952;--accent-deep:#1A4A3A;--accent-light:#E6F0EC;
-  --orange:#D1674A;--orange-light:#F4B49B;--orange-text:#F6C1AC;
+  --orange:#D1674A;--orange-light:#D1674A;--orange-text:#D1674A;
   --red:#B4502F;--red-bg:#FBEEE8;--amber:#9A5A0B;--amber-bg:#FDF3E3;
   --green:#266952;--green-bg:#E6F0EC;--radius:14px;--radius-lg:24px;
   --grad-green:linear-gradient(135deg,#2E7A63 0%,#266952 45%,#1A4A3A 100%);
@@ -79,7 +79,7 @@ a{color:inherit}
 .divider{border:none;border-top:1px solid var(--border);margin:2rem 0}
 
 /* RESULT: SHOCK */
-.shock-banner{border-radius:var(--radius-lg);padding:2rem;margin:2rem 0 1.5rem;background:radial-gradient(70% 90% at 100% 0%,rgba(244,180,155,.45) 0%,rgba(244,180,155,0) 60%),linear-gradient(135deg,#FFF6F2 0%,#FBEEE8 100%);border:1px solid rgba(209,103,74,.3);text-align:center;box-shadow:0 20px 44px -28px rgba(180,80,47,.45)}
+.shock-banner{border-radius:var(--radius-lg);padding:2rem;margin:2rem 0 1.5rem;background:radial-gradient(70% 90% at 100% 0%,rgba(209,103,74,0.27) 0%,rgba(209,103,74,0) 60%),linear-gradient(135deg,#FFF6F2 0%,#FBEEE8 100%);border:1px solid rgba(209,103,74,.3);text-align:center;box-shadow:0 20px 44px -28px rgba(180,80,47,.45)}
 .shock-warning{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
 .shock-amount{font-size:3.4rem;font-weight:800;letter-spacing:-.03em;color:var(--red);line-height:1;margin-bottom:.5rem}
 .shock-sub{font-size:16px;font-weight:500;color:var(--text);margin-bottom:1rem}
@@ -170,7 +170,7 @@ a{color:inherit}
 .fix-gain{font-size:13px;font-weight:700;color:var(--green);margin-top:4px}
 
 /* TESTIMONIAL */
-.testimonial-block{position:relative;margin:1.75rem 0;padding:1.75rem 1.75rem 1.5rem;background:radial-gradient(60% 80% at 100% 0%,rgba(244,180,155,.18) 0%,rgba(244,180,155,0) 60%),#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
+.testimonial-block{position:relative;margin:1.75rem 0;padding:1.75rem 1.75rem 1.5rem;background:radial-gradient(60% 80% at 100% 0%,rgba(209,103,74,0.11) 0%,rgba(209,103,74,0) 60%),#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow)}
 .testimonial-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:1rem}
 .testimonial-stars{display:inline-flex;gap:3px}
 .testimonial-stars svg{width:18px;height:18px;fill:var(--orange)}
@@ -250,7 +250,7 @@ a{color:inherit}
 
 .slider-wrap{margin:8px 0 6px}
 .slider-track-wrap{position:relative;margin-bottom:6px}
-.slider-track-wrap input[type=range]{width:100%;height:6px;appearance:none;-webkit-appearance:none;background:linear-gradient(to right,#F4B49B 0%,#ECE8D6 50%,#B7D4C6 100%);border-radius:999px;cursor:pointer}
+.slider-track-wrap input[type=range]{width:100%;height:6px;appearance:none;-webkit-appearance:none;background:linear-gradient(to right,#D1674A 0%,#ECE8D6 50%,#B7D4C6 100%);border-radius:999px;cursor:pointer}
 .slider-track-wrap input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--grad-green);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(26,74,58,.4)}
 .slider-track-wrap input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:#266952;cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(26,74,58,.4)}
 .top-firm-tick{display:none}
@@ -275,7 +275,7 @@ a{color:inherit}
 .leakage-meta strong{color:var(--text);font-weight:700}
 .leakage-bar-track{height:8px;background:#F3F0E3;border-radius:999px;margin-bottom:4px;overflow:hidden}
 .leakage-bar-fill{height:8px;border-radius:999px;transition:width .6s ease}
-.leakage-bar-fill.red{background:linear-gradient(90deg,#F4B49B 0%,#D1674A 60%,#B4502F 100%)}
+.leakage-bar-fill.red{background:linear-gradient(90deg,#D1674A 0%,#D1674A 60%,#B4502F 100%)}
 .leakage-bar-fill.green{background:var(--grad-green)}
 .leakage-pct{font-size:12px;color:var(--text-mid)}
 .leakage-zero-badge{display:inline-block;background:var(--green-bg);color:var(--green);font-size:12px;padding:3px 10px;border-radius:999px;font-weight:700}
@@ -332,10 +332,13 @@ a{color:inherit}
       <img src="assets/logo-white.svg" alt="Master Your Finance" width="94" height="41">
     </a>
     <div class="topnav-links">
-      <a href="https://masteryourfinance.org/services/" class="hide-mob">Services</a>
-      <a href="https://masteryourfinance.org/tools-resources/" class="hide-mob">Tools &amp; Resources</a>
-      <a href="https://masteryourfinance.org/about-us/" class="hide-mob">About Us</a>
-      <a href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener" class="topnav-cta">Book a free review</a>
+      <a href="index.html" class="hide-mob">Home</a>
+      <a href="services.html" class="hide-mob">Services</a>
+      <a href="industries.html" class="hide-mob">Industries</a>
+      <a href="tools.html" class="hide-mob">Tools &amp; Resources</a>
+      <a href="about.html" class="hide-mob">About Us</a>
+      <a href="book.html" class="hide-mob">Contact Us</a>
+      <a href="book.html" class="topnav-cta">Book a call</a>
     </div>
   </nav>
 </header>

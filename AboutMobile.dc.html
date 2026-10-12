@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MYF · about page · phone</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./myf.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+</style>
+</helmet>
+<div class="myf {{motionCls}} {{rvReadyCls}} {{allCls}}" ref="{{setRoot}}" onClick="{{onLinkClick}}" style="width: 390px; height: auto; margin: 0 auto; display: flex; flex-direction: column; background: #231F20; overflow: clip; position: relative">
+
+
+<header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
+<div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
+<a href="index.html" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<div style="display: flex; align-items: center; gap: 8px">
+<a class="btn btn-light btn-sm" href="book.html" style="padding: 0 16px">Book a call</a>
+<button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
+<sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+</button>
+</div>
+</div>
+<sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+<nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
+<a href="index.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
+<a href="services.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="industries.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
+<a href="tools.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="about.html" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">About Us</a>
+<a href="book.html" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
+<a class="btn btn-block" href="book.html" style="margin-top: 16px">Book a call</a>
+</nav>
+</sc-if>
+</header>
+
+<section data-rv="0" class="rsec {{rv0}}" id="top" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 90% 0%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 32px 20px 40px">
+<nav aria-label="Breadcrumb" class="small rv" style="margin-bottom: 16px"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">About us</span></nav>
+<div style="display: flex; flex-direction: column; gap: 14px"><span class="eyebrow rv">About us</span><h1 class="h1 rv rv-d1" style="font-size: 32px; line-height: 1.12">Your extended finance team and trusted Financial GPS</h1><p class="lede rv rv-d2" style="font-size: 16px">Master Your Finance (MYF), based in the Netherlands, provides data-backed, technology-enabled financial services that go beyond traditional accounting. We handle reporting, analysis, bookkeeping and closing, while business owners stay focused on strategy, not spreadsheets.</p></div>
+</section>
+<section data-rv="1" class="rsec {{rv1}}" style="flex-shrink: 0; background: #FFFFFF; padding: 48px 20px">
+<div style="display: flex; flex-direction: column; gap: 14px"><span class="eyebrow rv">Who we are</span><h2 class="h2 rv rv-d1" style="font-size: 28px">Finance clarity for firms that sell expertise</h2><p class="body rv rv-d2">We serve small to mid-sized professional service firms in the United States, United Kingdom and Australia. Backed by 24+ years of expertise in finance and 15+ years in leadership, MYF delivers predictable, reliable and cost-effective financial insights, giving business owners clarity and confidence.</p><p class="body rv rv-d3">MYF is part of masteryourbusiness.org, reinforcing our commitment to helping businesses with streamlined financial solutions.</p></div>
+</section>
+<section data-rv="2" class="rsec {{rv2}}" style="flex-shrink: 0; background: linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 48px 20px">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px"><span class="eyebrow rv">Mission &amp; vision</span><h2 class="h2 rv rv-d1" style="font-size: 28px">What drives us</h2><p class="body rv rv-d2" style="margin: 0">Tap Mission or Vision.</p></div>
+<div class="mv mv-phone rv rv-d2"><input type="radio" name="mv" id="mv-m" class="mv-r" checked><input type="radio" name="mv" id="mv-v" class="mv-r"><div class="mv-tabs" role="tablist" aria-label="Mission and vision"><label for="mv-m" class="mv-tab mv-tab-m">Mission</label><label for="mv-v" class="mv-tab mv-tab-v">Vision</label></div><div class="mv-orb" aria-hidden="true"><span class="mv-ring"></span><span class="mv-core"><svg viewBox="0 0 120 120" class="mv-needle"><polygon points="60,14 68,60 52,60" fill="#D1674A"></polygon><polygon points="60,106 68,60 52,60" fill="#1A4A3A"></polygon><circle cx="60" cy="60" r="7" fill="#FFFFFF" stroke="#1A4A3A" stroke-width="3"></circle></svg><span class="mv-n">N</span><span class="mv-e">E</span><span class="mv-s">S</span><span class="mv-w">W</span></span></div><div class="mv-txt"><div class="mv-t mv-tm"><span class="eyebrow">Our mission</span><p>To become the leading finance partner for small to mid-sized businesses in the US, UK and Australia, redefining how companies experience financial reporting.</p></div><div class="mv-t mv-tv"><span class="eyebrow">Our vision</span><p>We believe every small and midsize business deserves a flexible finance partner that keeps numbers clean, prevents cash leaks, and delivers timely analysis for confident growth.</p></div></div></div>
+</section>
+<section data-rv="3" class="rsec {{rv3}}" style="flex-shrink: 0; background: #FFFFFF; padding: 48px 20px">
+<div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px"><span class="eyebrow rv">Your financial journey</span><h2 class="h2 rv rv-d1" style="font-size: 28px">From a free snapshot to clarity and growth</h2></div>
+<div style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 16px"><div class="card rv rv-d1" style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 50%; background: #266952; color: #FFFFFF; display: grid; place-items: center; font-size: 14px; font-weight: 800">1</span><b style="font-size: 17px; color: #1A4A3A">Free Snapshot</b><span class="small" style="font-size: 14px; line-height: 1.55">A quick health check of the gaps in your reporting, cash flow and performance.</span></div><div class="card rv rv-d2" style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 50%; background: #266952; color: #FFFFFF; display: grid; place-items: center; font-size: 14px; font-weight: 800">2</span><b style="font-size: 17px; color: #1A4A3A">Month-End Support</b><span class="small" style="font-size: 14px; line-height: 1.55">We take over bookkeeping, AR/AP and month-end reporting.</span></div><div class="card rv rv-d3" style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 50%; background: #266952; color: #FFFFFF; display: grid; place-items: center; font-size: 14px; font-weight: 800">3</span><b style="font-size: 17px; color: #1A4A3A">Reports &amp; KPIs</b><span class="small" style="font-size: 14px; line-height: 1.55">Dashboards for DSO, utilisation, realisation and profitability.</span></div><div class="card rv rv-d4" style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 50%; background: #266952; color: #FFFFFF; display: grid; place-items: center; font-size: 14px; font-weight: 800">4</span><b style="font-size: 17px; color: #1A4A3A">Cash Flow Forecast</b><span class="small" style="font-size: 14px; line-height: 1.55">A forecast of collections, expenses and runway.</span></div><div class="card rv rv-d5" style="padding: 24px; display: flex; flex-direction: column; gap: 10px"><span style="width: 36px; height: 36px; border-radius: 50%; background: #266952; color: #FFFFFF; display: grid; place-items: center; font-size: 14px; font-weight: 800">5</span><b style="font-size: 17px; color: #1A4A3A">Clarity &amp; Growth</b><span class="small" style="font-size: 14px; line-height: 1.55">Reporting and forecasting that give you the confidence to scale.</span></div></div>
+</section>
+<section data-rv="4" class="rsec {{rv4}}" id="team" tabindex="-1" style="flex-shrink: 0; background: #FFFFFF; padding: 48px 20px; border-top: 1px solid #ECE8D6">
+<div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px">
+<span class="eyebrow rv">Our team</span>
+<h2 class="h2 rv rv-d1" style="font-size: 30px">The people behind your numbers</h2>
+<p class="body rv rv-d2">24+ years in finance and 15+ years of leadership, across the US, UK and Australia.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 14px; align-items: stretch"><article class="card tilt rv rv-d3" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CEO</span><h3 class="h3">Joel Schenk</h3><span class="small" style="font-weight: 700; color: #266952">Founder &amp; Chief Executive Officer</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">With 24 years in finance and over 15 years in leadership, Joel is the driving force behind Master Your Finance and Master Your Business. His vision is to make financial clarity accessible and actionable for business owners.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article><article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">MD</span><h3 class="h3">Himanshu Sachdeva</h3><span class="small" style="font-weight: 700; color: #266952">Managing Director</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Himanshu combines analytical precision with a practical approach to help firms make confident financial decisions.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article><article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">Finance team</span><h3 class="h3">Twisha Gajjar</h3><span class="small" style="font-weight: 700; color: #266952">Finance Analyst</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with 3 years as an Article Assistant and 3+ years in accounting, auditing and taxation. Twisha’s strong foundation in compliance and financial reporting keeps your numbers accurate, and her problem-solving mindset adds strategic value to every project.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/twishagajjar/" target="_blank" rel="noopener" aria-label="Twisha Gajjar on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article></div>
+</section>
+<section data-rv="5" class="rsec {{rv5}}" style="flex-shrink: 0; background: #FFFFFF; padding: 40px 20px 48px">
+<div class="card-green rv" style="border-radius: 24px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF"><h2 class="h2" style="color: #FFFFFF; font-size: 24px">Want someone to read the numbers with you?</h2><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Book a free 30-minute finance review.</p><a class="btn btn-light btn-block" href="book.html">Book a call</a></div>
+</section>
+<footer style="flex-grow: 1; background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 48px 20px 32px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" style="width: 80px; height: 35px">
+<p style="font-size: 14px; line-height: 1.6">The extended finance team for professional service firms.</p>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
+<nav aria-label="Services" style="display: flex; flex-direction: column">
+<span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="services.html" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column">
+<span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
+<a href="about.html" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="industries.html" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="tools.html" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="book.html" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+</nav>
+</div>
+<div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding-top: 20px; border-top: 1px solid #3A3637; font-size: 12px">
+<button type="button" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" style="align-self: flex-start; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #4A4546; background: transparent; color: #FFFFFF; font-size: 13px; font-weight: 700; cursor: pointer">{{motionLabel}}</button>
+<span>© Master Your Finance · <a href="#">Privacy policy</a> · <a href="#">Terms</a></span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":18900}}'>
+class Component extends DCLogic {
+  _flipStart() {
+    let red = false;
+    try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (red) return;
+    this._flipT = setInterval(() => {
+      const s = this.state || {};
+      if (s.motionOff) return;
+      const i = s.fi || 0;
+      this.setState({ fi: (i + 1) % 4, fprev: i });
+    }, 2600);
+  }
+  _scroller() {
+    let p = this._root ? this._root.parentElement : null;
+    while (p && p !== document.body && p !== document.documentElement) {
+      const cs = getComputedStyle(p);
+      if (/(auto|scroll|overlay)/.test(cs.overflowY) && p.scrollHeight > p.clientHeight + 1) return p;
+      p = p.parentElement;
+    }
+    return document.scrollingElement || document.documentElement;
+  }
+  _isDoc(sc) { return sc === document.scrollingElement || sc === document.documentElement || sc === document.body; }
+  _scale() { const r = this._root; if (!r || !r.offsetWidth) return 1; return (r.getBoundingClientRect().width / r.offsetWidth) || 1; }
+  _reduced() {
+    if ((this.state || {}).motionOff) return true;
+    try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; }
+  }
+  _jump(id) {
+    const root = this._root; if (!root) return;
+    const el = root.querySelector('#' + id); if (!el) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    sc.scrollTop = Math.max(0, sc.scrollTop + (el.getBoundingClientRect().top - viewTop) - (id === 'all-tools' ? 0 : 72 * k));
+    try { el.focus({ preventScroll: true }); } catch (e) {}
+  }
+  scrollToId(id) {
+    const root = this._root; if (!root) return;
+    const el = root.querySelector('#' + id); if (!el) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    const from = sc.scrollTop;
+    const to = id === 'top' ? 0 : Math.max(0, from + (el.getBoundingClientRect().top - viewTop) - (64) * k);
+    if (this._anim) cancelAnimationFrame(this._anim);
+    const done = () => { try { el.focus({ preventScroll: true }); } catch (e) {} this.setState({ active: id }); };
+    if (this._reduced() || Math.abs(to - from) < 2) { sc.scrollTop = to; done(); return; }
+    const dist = Math.abs(to - from);
+    const dur = Math.min(1100, Math.max(450, 300 + dist * 0.12));
+    const t0 = performance.now();
+    let aborted = false;
+    const abort = () => { aborted = true; };
+    window.addEventListener('wheel', abort, { once: true, passive: true });
+    window.addEventListener('touchstart', abort, { once: true, passive: true });
+    const step = (now) => {
+      if (aborted || this._dead) return;
+      const t = Math.min(1, (now - t0) / dur);
+      const e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      sc.scrollTop = from + (to - from) * e;
+      if (t < 1) this._anim = requestAnimationFrame(step);
+      else { window.removeEventListener('wheel', abort); window.removeEventListener('touchstart', abort); done(); }
+    };
+    this._anim = requestAnimationFrame(step);
+  }
+  _spy() {
+    const root = this._root; if (!root) return;
+    const sc = this._scroller(); const k = this._scale();
+    const viewTop = this._isDoc(sc) ? 0 : sc.getBoundingClientRect().top;
+    const scrolled = sc.scrollTop > 40;
+    let active = 'top';
+    ['top', 'proof', 'services', 'industries', 'about', 'tools', 'contact'].forEach((id) => {
+      const el = root.querySelector('#' + id);
+      if (el && el.getBoundingClientRect().top - viewTop <= (64 + 60) * k) active = id;
+    });
+    const s = this.state || {};
+    const upd = {};
+    if (s.scrolled !== scrolled) upd.scrolled = scrolled;
+    if (s.active !== active) upd.active = active;
+    const cards = root.querySelectorAll('.hw-card');
+    if (cards.length && sc.scrollHeight > sc.clientHeight + 1) {
+      const vh = this._isDoc(sc) ? window.innerHeight : sc.clientHeight;
+      let st = 0;
+      cards.forEach((c, i) => { if (c.getBoundingClientRect().top - viewTop < vh * 0.55) st = i; });
+      if ((s.step == null ? 0 : s.step) !== st) upd.step = st;
+    }
+    if (Object.keys(upd).length) this.setState(upd);
+  }
+  _reveal() {
+    const root = this._root; if (!root) return;
+    const secs = root.querySelectorAll('.rsec'); if (!secs.length) return;
+    const sc = this._scroller();
+    const scrollable = sc.scrollHeight > sc.clientHeight + 1;
+    const bottom = this._isDoc(sc) ? window.innerHeight : sc.getBoundingClientRect().bottom;
+    const cur = (this.state || {}).rvIn || {};
+    const next = Object.assign({}, cur);
+    let changed = false;
+    secs.forEach((el) => {
+      const k = el.getAttribute('data-rv');
+      if (next[k]) return;
+      if (!scrollable || el.getBoundingClientRect().top < bottom - 90) { next[k] = true; changed = true; }
+    });
+    if (changed) this.setState({ rvIn: next });
+  }
+  _initReveal() {
+    let red = false;
+    try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (!red) this.setState({ rvReady: true });
+    this._rvT = setTimeout(() => this._reveal(), 60);
+  }
+  _listen() {
+    this._onScroll = () => {
+      if (this._spyRaf) return;
+      this._spyRaf = requestAnimationFrame(() => { this._spyRaf = 0; this._spy(); this._reveal(); });
+    };
+    window.addEventListener('scroll', this._onScroll, { capture: true, passive: true });
+  }
+  _unlisten() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll, { capture: true });
+    if (this._anim) cancelAnimationFrame(this._anim);
+    if (this._spyRaf) cancelAnimationFrame(this._spyRaf);
+  }
+  componentDidMount() {
+    this._listen();
+    this._initReveal();
+    this._flipStart();
+    let reduced = false;
+    try { reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduced) { this.setState({ statT: 1 }); return; }
+    const start = performance.now() + 500;
+    const dur = 1600;
+    const tick = (now) => {
+      if (this._dead) return;
+      const k = Math.min(1, Math.max(0, (now - start) / dur));
+      this.setState({ statT: 1 - Math.pow(1 - k, 3) });
+      if (k < 1) this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+  componentWillUnmount() { clearInterval(this._flipT); this._dead = true; if (this._raf) cancelAnimationFrame(this._raf); this._unlisten(); if (this._rvT) clearTimeout(this._rvT); }
+  renderVals() {
+    const s = this.state || {};
+    const dkp = (i) => { const cur = s.tlI || 0; const pos = (i - cur + 4) % 4; return 'p' + pos + (s.tlPrev === i && pos === 3 ? ' out' : ''); };
+    const atf = s.atf || 'fa';
+    const motionOff = !!s.motionOff;
+    const t = motionOff ? 1 : (s.statT == null ? 0 : s.statT);
+    const step = s.step == null ? 0 : s.step;
+    const faqOpen = s.faq == null ? 0 : s.faq;
+    const ar = s.ar == null ? 120000 : s.ar;
+    const rev = s.rev == null ? 300000 : s.rev;
+    const hwData = [
+      ['Vehicle Check', 'Free scan', 'Free', 'A free Financial GPS snapshot of where your finances stand today.', 'Share read-only access to your accounting software.', 'Review your books, cash and receivables, and flag the gaps.'],
+      ['Cruise Control', 'Data collection', 'Days 1–14', 'We collect your data and set up clean, reconciled books.', 'Answer a short set of questions about how you bill and pay.', 'Clean up the books, reconcile accounts and connect your data.'],
+      ['Dashboard Metrics', 'Reports and KPIs', 'Every month', 'Monthly reports and KPIs you can read as easily as your car’s dashboard.', 'Read the monthly pack and ask us anything.', 'Close the month, report your KPIs and explain what changed.'],
+      ['Fuel Check', 'Cash flow forecast', 'Every month', 'A 13-week cash flow forecast, so you always know what is in the tank.', 'Flag big payments or hires coming up.', 'Update the forecast, track DSO and chase receivables.'],
+      ['Total Control', 'Control and growth', 'Ongoing', 'Total control of your numbers, with CFO-lite guidance on the next turn.', 'Make hiring, pricing and growth calls with confidence.', 'Flag risks early and suggest the next move.']
+    ];
+    const faqData = [
+      ['How is pricing structured?', "Transparent monthly pricing based on team size, transaction volume and the services you select. Book a free call and we’ll give you an instant estimate."],
+      ['How long does onboarding take?', "On average, 7–14 days. During onboarding we review your books of accounts, study your business and industry trends, and deliver your first reporting pack with tailored financial insights in under two weeks."],
+      ['What platforms does MYF use for reporting and accounting?', "We work in Zoho Books, Exact, NetSuite, Actionstep, QuickBooks (ProAdvisor), Xero (certified) and Wave, report through Power BI, Excel and web dashboards, and connect with common CRM, payroll and project tools. Rather than changing how you work, we adapt to your existing setup."],
+      ['What kind of insights will I get?', "Along with clean books, you’ll get dashboards showing DSO, utilisation, realisation, AR ageing, cash flow runway and profitability trends, updated in near real time in the software of your choice."],
+      ['Can I scale MYF services as my business grows?', "Yes. MYF is designed to grow with you. Start with core bookkeeping and reporting, then add AR/AP, cash flow forecasting and CFO-lite advisory as you need them."]
+    ];
+    const logos = [];
+    const clientLogos = [["KSB", "assets/ksb.svg"], ["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"]];
+    for (let r = 0; r < 2; r++) for (let k = 0; k < 4; k++) clientLogos.forEach((c) => logos.push({ name: c[0], src: c[1], hidden: (r === 1 || k > 0) ? 'true' : 'false' }));
+    const num = (v) => { const n = parseFloat(v); return isNaN(n) || n < 0 ? 0 : n; };
+    const menu = !!s.menu;
+    const rvIn = s.rvIn || {};
+    const rvMap = {};
+    for (let i = 0; i < 12; i++) rvMap['rv' + i] = rvIn[i] ? 'in' : '';
+    const fwc = (k) => { const st = this.state || {}; const i = st.fi || 0; return k === i ? 'on' : (st.fprev === k ? 'out' : ''); };
+    const ind = s.ind == null ? 0 : s.ind;
+    return {
+      ...rvMap,
+      ind0: ind === 0, ind1: ind === 1, ind2: ind === 2, ind3: ind === 3, ind4: ind === 4,
+      indC0: ind === 0 ? 'on' : '', indC1: ind === 1 ? 'on' : '', indC2: ind === 2 ? 'on' : '', indC3: ind === 3 ? 'on' : '', indC4: ind === 4 ? 'on' : '',
+      indS0: ind === 0 ? 'true' : 'false', indS1: ind === 1 ? 'true' : 'false', indS2: ind === 2 ? 'true' : 'false', indS3: ind === 3 ? 'true' : 'false', indS4: ind === 4 ? 'true' : 'false',
+      indT0: ind === 0 ? '0' : '-1', indT1: ind === 1 ? '0' : '-1', indT2: ind === 2 ? '0' : '-1', indT3: ind === 3 ? '0' : '-1', indT4: ind === 4 ? '0' : '-1',
+      indPick0: () => this.setState({ ind: 0 }), indPick1: () => this.setState({ ind: 1 }), indPick2: () => this.setState({ ind: 2 }), indPick3: () => this.setState({ ind: 3 }), indPick4: () => this.setState({ ind: 4 }),
+      inkX: ind === 0 ? '0px' : 'calc(' + (ind * 100) + '% + ' + (ind * 8) + 'px)',
+      indKey: (e) => {
+        const k = e.key; let n = ind;
+        if (k === 'ArrowRight') n = (ind + 1) % 5; else if (k === 'ArrowLeft') n = (ind + 4) % 5; else if (k === 'Home') n = 0; else if (k === 'End') n = 4; else return;
+        e.preventDefault(); this.setState({ ind: n });
+        const root = e.currentTarget.closest('[role="tablist"]'); const t = root && root.querySelector('#ind-t' + n); if (t) t.focus();
+      },
+      baOld: (s.baSide || 'old') === 'old', baNew: s.baSide === 'new',
+      baOldCls: (s.baSide || 'old') === 'old' ? 'on-old' : '', baNewCls: s.baSide === 'new' ? 'on-new' : '',
+      baOldP: (s.baSide || 'old') === 'old' ? 'true' : 'false', baNewP: s.baSide === 'new' ? 'true' : 'false',
+      showOld: () => this.setState({ baSide: 'old' }), showNew: () => this.setState({ baSide: 'new' }),
+      fw0: fwc(0), fw1: fwc(1), fw2: fwc(2), fw3: fwc(3),
+      tlPos: (s.tlI || 0) + 1,
+      tlName: ['Health check for law firms', 'Utilisation, realisation & DSO self-diagnostic', 'Cash flow runway estimator', '30-day finance improvement sprint planner'][s.tlI || 0],
+      tlNext: () => this.setState({ tlI: ((s.tlI || 0) + 1) % 4, tlPrev: s.tlI || 0 }),
+      dkClick: (e) => { if (e.currentTarget.classList.contains('p0')) return; this.setState({ tlI: ((s.tlI || 0) + 1) % 4, tlPrev: s.tlI || 0 }); },
+      dkP1: dkp(0), dkP2: dkp(1), dkP3: dkp(2), dkP4: dkp(3),
+      dkH1: (s.tlI || 0) === 0 ? 'false' : 'true', dkH2: (s.tlI || 0) === 1 ? 'false' : 'true', dkH3: (s.tlI || 0) === 2 ? 'false' : 'true', dkH4: (s.tlI || 0) === 3 ? 'false' : 'true',
+      tlD1: (s.tlI || 0) === 0 ? 'on' : '', tlD2: (s.tlI || 0) === 1 ? 'on' : '', tlD3: (s.tlI || 0) === 2 ? 'on' : '', tlD4: (s.tlI || 0) === 3 ? 'on' : '',
+      tlA1: (s.tlI || 0) === 0 ? 'true' : 'false', tlA2: (s.tlI || 0) === 1 ? 'true' : 'false', tlA3: (s.tlI || 0) === 2 ? 'true' : 'false', tlA4: (s.tlI || 0) === 3 ? 'true' : 'false',
+      tlGo1: () => this.setState({ tlI: 0, tlPrev: -1 }), tlGo2: () => this.setState({ tlI: 1, tlPrev: -1 }), tlGo3: () => this.setState({ tlI: 2, tlPrev: -1 }), tlGo4: () => this.setState({ tlI: 3, tlPrev: -1 }),
+      allOn: !!s.allTools, allCls: s.allTools ? 'show-all' : '',
+      openAll: () => { this.setState({ allTools: true, menu: false }); setTimeout(() => this._jump('all-tools'), 30); },
+      closeAll: () => { this.setState({ allTools: false }); setTimeout(() => this._jump('tools'), 30); },
+      atSh1: atf === 'fa' || atf === 'fb', atSh2: atf === 'fa' || atf === 'fb', atSh3: atf === 'fa' || atf === 'fb', atSh4: atf === 'fa' || atf === 'fc', atSh5: atf === 'fa' || atf === 'fr', atSh6: atf === 'fa' || atf === 'fr',
+      atFaC: atf === 'fa' ? 'on' : '', atFbC: atf === 'fb' ? 'on' : '', atFcC: atf === 'fc' ? 'on' : '', atFrC: atf === 'fr' ? 'on' : '',
+      atFaP: atf === 'fa' ? 'true' : 'false', atFbP: atf === 'fb' ? 'true' : 'false', atFcP: atf === 'fc' ? 'true' : 'false', atFrP: atf === 'fr' ? 'true' : 'false',
+      atFaGo: () => this.setState({ atf: 'fa' }), atFbGo: () => this.setState({ atf: 'fb' }), atFcGo: () => this.setState({ atf: 'fc' }), atFrGo: () => this.setState({ atf: 'fr' }),
+      tqCls: s.tqPaused ? 'paused' : '', tqPausedStr: s.tqPaused ? 'true' : 'false', tqLabel: s.tqPaused ? 'Play testimonials' : 'Pause testimonials',
+      tqToggle: () => this.setState({ tqPaused: !s.tqPaused }),
+      vidOn: !!s.vid, vidOff: !s.vid,
+      playVid: (e) => { const pv = e.currentTarget.querySelector('.vd-prev'); this._vt = pv && pv.currentTime ? pv.currentTime : 0; if (pv) pv.pause(); this.setState({ vid: true }); },
+      prevOn: (e) => { let red = false; try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (x) {} if (red || (this.state || {}).motionOff) return; const b = e.currentTarget; const pv = b.querySelector('.vd-prev'); if (!pv) return; b.classList.add('is-prev'); pv.muted = true; const pr = pv.play(); if (pr && pr.catch) pr.catch(() => b.classList.remove('is-prev')); },
+      prevOff: (e) => { const b = e.currentTarget; b.classList.remove('is-prev'); const pv = b.querySelector('.vd-prev'); if (pv) pv.pause(); },
+      setVidRef: (el) => { if (!el || el._init) return; el._init = true; if (this._vt) { try { el.currentTime = this._vt; } catch (x) {} } el.muted = false; const pr = el.play(); if (pr && pr.catch) pr.catch(() => {}); },
+      imgErr: (e) => { e.currentTarget.style.display = 'none'; },
+      setTqRef: (el) => { if (!el || el._init) return; el._init = true; this._tqv = el; const calc = () => { const cards = el.querySelectorAll('.tqc-card'); if (!cards.length) return; const step = cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : el.clientWidth; const vis = Math.max(1, Math.round(el.clientWidth / step)); const pages = Math.max(1, cards.length - vis + 1); const idx = Math.min(pages - 1, Math.round(el.scrollLeft / step)); const st = this.state || {}; if (st.tqPages !== pages || st.tqIdx !== idx) this.setState({ tqPages: pages, tqIdx: idx }); this._tqStep = step; }; el.addEventListener('scroll', () => { if (this._tqRaf) return; this._tqRaf = requestAnimationFrame(() => { this._tqRaf = 0; calc(); }); }, { passive: true }); window.addEventListener('resize', calc); setTimeout(calc, 200); },
+      tqGo: (i) => { const el = this._tqv; if (!el) return; let red = false; try { red = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (x) {} el.scrollTo({ left: i * (this._tqStep || el.clientWidth), behavior: red ? 'auto' : 'smooth' }); },
+      tqPrev: () => { const st = this.state || {}; const i = Math.max(0, (st.tqIdx || 0) - 1); const el = this._tqv; if (!el) return; el.scrollTo({ left: i * (this._tqStep || el.clientWidth), behavior: 'smooth' }); },
+      tqNext: () => { const st = this.state || {}; const i = Math.min((st.tqPages || 1) - 1, (st.tqIdx || 0) + 1); const el = this._tqv; if (!el) return; el.scrollTo({ left: i * (this._tqStep || el.clientWidth), behavior: 'smooth' }); },
+      tqAtStart: !(s.tqIdx > 0) ? 'true' : 'false', tqAtEnd: (s.tqIdx || 0) >= ((s.tqPages || 2) - 1) ? 'true' : 'false', tqStartCls: !(s.tqIdx > 0) ? 'off' : '', tqEndCls: (s.tqIdx || 0) >= ((s.tqPages || 2) - 1) ? 'off' : '',
+      tqDots: Array.from({ length: s.tqPages || 2 }, (_, i) => ({ cls: i === (s.tqIdx || 0) ? 'on' : '', cur: i === (s.tqIdx || 0) ? 'true' : 'false', label: 'Show testimonials from ' + (i + 1), go: () => { const el = this._tqv; if (!el) return; el.scrollTo({ left: i * (this._tqStep || el.clientWidth), behavior: 'smooth' }); } })),
+      tqMore: (e) => { const b = e.currentTarget; const f = b.closest('figure'); const o = f.classList.toggle('open'); b.setAttribute('aria-expanded', o ? 'true' : 'false'); },
+      rvReadyCls: s.rvReady && !motionOff ? 'rv-ready' : '',
+      setRoot: (el) => { this._root = el; },
+      onLinkClick: (e) => {
+        const a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (!a || !this._root) return;
+        const id = (a.getAttribute('href') || '').slice(1);
+        if (!id || !this._root.querySelector('#' + id)) return;
+        e.preventDefault();
+        if ((this.state || {}).menu) this.setState({ menu: false });
+        this.scrollToId(id);
+      },
+      hdrCls: s.scrolled ? 'is-scrolled' : '',
+      motionCls: motionOff ? 'motion-off' : '',
+      motionLabel: motionOff ? 'Turn animations on' : 'Reduce motion',
+      motionPressed: motionOff ? 'true' : 'false',
+      toggleMotion: () => this.setState({ motionOff: !motionOff, mqPaused: !motionOff }),
+      menuOpen: menu, menuClosed: !menu, menuExp: menu ? 'true' : 'false',
+      menuAria: menu ? 'Close menu' : 'Open menu',
+      toggleMenu: () => this.setState({ menu: !menu }),
+      s24: Math.round(24 * t), s15: Math.round(15 * t), s3: Math.round(3 * t),
+      logos,
+      mqCls: s.mqPaused ? 'mq-paused' : '',
+      mqLabel: s.mqPaused ? 'Play logos' : 'Pause logos',
+      mqPressed: s.mqPaused ? 'true' : 'false',
+      toggleMq: () => this.setState({ mqPaused: !s.mqPaused }),
+      hw: hwData.map((d, i) => ({ id: 'hw-' + (i + 1), n: i + 1, title: d[0], sub: d[1], time: d[2], text: d[3], you: d[4], we: d[5], cls: i === step ? 'on' : '', current: i === step ? 'step' : 'false', pick: () => { this.setState({ step: i }); this.scrollToId('hw-' + (i + 1)); } })),
+      stepNo: step + 1, stepName: hwData[step][0], pct: [6, 30, 55, 80, 100][step],
+      mapAria: 'Route map with five stops. You are at stop ' + (step + 1) + ', ' + hwData[step][0] + '. The final destination is clarity and growth.',
+      seg1: step >= 1 ? 0 : 700, seg2: step >= 2 ? 0 : 700, seg3: step >= 3 ? 0 : 700, seg4: step >= 4 ? 0 : 700,
+      sf1: '#266952', sf2: step >= 1 ? '#266952' : '#FFFFFF', sf3: step >= 2 ? '#266952' : '#FFFFFF', sf4: step >= 3 ? '#266952' : '#FFFFFF',
+      st1: '#FFFFFF', st2: step >= 1 ? '#FFFFFF' : '#266952', st3: step >= 2 ? '#FFFFFF' : '#266952', st4: step >= 3 ? '#FFFFFF' : '#266952',
+      destFill: step >= 4 ? '#E6F0EC' : '#FFFFFF', needle: step >= 4 ? 0 : -130,
+      mx: [60, 380, 60, 380, 220][step], my: [40, 150, 270, 390, 510][step], mOp: step >= 4 ? 0 : 1,
+      faqs: faqData.map((d, i) => ({ q: d[0], a: d[1], cls: i === faqOpen ? 'open' : '', exp: i === faqOpen ? 'true' : 'false', toggle: () => this.setState({ faq: i === faqOpen ? -1 : i }) })),
+      ar, rev,
+      setAr: (e) => this.setState({ ar: e.target.value }),
+      setRev: (e) => this.setState({ rev: e.target.value }),
+      dsoOut: num(rev) > 0 ? Math.round(num(ar) / num(rev) * 90) : '–',
+      sent: !!s.sent,
+      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
