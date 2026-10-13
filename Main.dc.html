@@ -607,7 +607,7 @@ class Component extends DCLogic {
       ['Do I need to be hands-on in daily finance tasks?', "No. We only loop you in for key approvals or exceptions. Our team takes care of day-to-day transactions, invoices, payments and reporting."]
     ];
     const logos = [];
-    const clientLogos = [["KSB", "assets/ksb.svg"], ["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"]];
+    const clientLogos = [["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"], ["Accountant For Everyone", "assets/accountant-for-everyone.svg"], ["Waardkracht", "assets/waardkracht.svg"]];
     for (let r = 0; r < 2; r++) for (let k = 0; k < 4; k++) clientLogos.forEach((c) => logos.push({ name: c[0], src: c[1], hidden: (r === 1 || k > 0) ? 'true' : 'false' }));
     const num = (v) => { const n = parseFloat(v); return isNaN(n) || n < 0 ? 0 : n; };
     const act = s.active || 'top';

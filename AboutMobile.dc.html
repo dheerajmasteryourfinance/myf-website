@@ -281,7 +281,7 @@ class Component extends DCLogic {
       ['Can I scale MYF services as my business grows?', "Yes. MYF is designed to grow with you. Start with core bookkeeping and reporting, then add AR/AP, cash flow forecasting and CFO-lite advisory as you need them."]
     ];
     const logos = [];
-    const clientLogos = [["KSB", "assets/ksb.svg"], ["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"]];
+    const clientLogos = [["HBA Legal", "assets/hba.svg"], ["Rator", "assets/rator.svg"], ["Verschoor Elektrotechniek", "assets/verschoor.png"], ["Accountant For Everyone", "assets/accountant-for-everyone.svg"], ["Waardkracht", "assets/waardkracht.svg"]];
     for (let r = 0; r < 2; r++) for (let k = 0; k < 4; k++) clientLogos.forEach((c) => logos.push({ name: c[0], src: c[1], hidden: (r === 1 || k > 0) ? 'true' : 'false' }));
     const num = (v) => { const n = parseFloat(v); return isNaN(n) || n < 0 ? 0 : n; };
     const menu = !!s.menu;
