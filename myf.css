@@ -703,3 +703,9 @@ select.inp{background-image:linear-gradient(45deg,transparent 50%,#266952 50%),l
 .mv-phone .mv-t p{font-size:20px}
 .motion-off .mv-ring{animation:none}
 @media (prefers-reduced-motion:reduce){.mv-ring{animation:none}.mv-needle,.mv-t,.mv-tab{transition:none}}
+/* Homepage hero fills the first screen below the navbar (--vh is set by the page loader) */
+.hero-fill{min-height:max(660px,calc(var(--vh,860px) - 80px));display:flex;flex-direction:column;justify-content:center;box-sizing:border-box}
+.hero-fill > div{width:100%}
+.hero-fill .h1{font-size:64px}
+.hero-fill .lede{font-size:19px}
+.hero-fill [style*="width: 560px; height: 560px"]{zoom:1.12}

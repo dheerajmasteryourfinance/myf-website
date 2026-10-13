@@ -51,6 +51,8 @@ html,body{margin:0;background:#231F20}
       app.style.setProperty('--dw', Math.max(cur.w, Math.floor(w / z)) + 'px');
     }
     app.style.zoom = z === 1 ? '' : String(z);
+    /* visible height in design pixels, so the hero can fill the first screen */
+    app.style.setProperty('--vh', Math.round(h / z) + 'px');
   }
   app.innerHTML = '';
   DCRuntime.mount(cur.name, app).ready.then(function () {
