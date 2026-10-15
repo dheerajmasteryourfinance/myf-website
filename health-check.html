@@ -3,12 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--seo:start-->
 <title>Law Firm Revenue Health Check | Master Your Finance</title>
+<meta name="description" content="Free revenue health check for law firms by Master Your Finance. See how much revenue your firm loses to utilisation, realisation, collections and slow billing.">
+<link rel="canonical" href="https://masteryourfinance.org/health-check.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Master Your Finance">
+<meta property="og:title" content="Law Firm Revenue Health Check | Master Your Finance">
+<meta property="og:description" content="Free revenue health check for law firms by Master Your Finance. See how much revenue your firm loses to utilisation, realisation, collections and slow billing.">
+<meta property="og:url" content="https://masteryourfinance.org/health-check.html">
+<meta property="og:image" content="https://masteryourfinance.org/assets/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Master Your Finance: your outsourced finance team">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Law Firm Revenue Health Check | Master Your Finance">
+<meta name="twitter:description" content="Free revenue health check for law firms by Master Your Finance. See how much revenue your firm loses to utilisation, realisation, collections and slow billing.">
+<meta name="twitter:image" content="https://masteryourfinance.org/assets/og-image.png">
+<!--seo:end-->
 <link rel="icon" href="assets/logo-green.svg" type="image/svg+xml">
 <meta name="theme-color" content="#266952">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<meta name="description" content="Free revenue health check for law firms by Master Your Finance. See how much revenue your firm loses to utilisation, realisation, collections and slow billing.">
 <meta name="theme-color" content="#266952">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
@@ -684,11 +699,8 @@ a{color:inherit}
 
 <script>
 if(window.Chart){Chart.defaults.font.family="Montserrat, system-ui, sans-serif";Chart.defaults.color="#5D6670";}
-var AIRTABLE_BASE  = 'appnvzj2hl731uVhc';
-var AIRTABLE_TABLE = 'tblGuSpwMsEiDHjrC';
-var AIRTABLE_TOKEN = ''; // removed for the public preview: never put a live token in page code
-var FIELD_NAME     = 'fldQyJFfRPPAQpmRE';
-var FIELD_EMAIL    = 'flde5cGK654cdAtqe';
+/* Leads are saved to Airtable by api/lead.php on the server, so no token is ever in this page. */
+var LEAD_URL = 'api/lead.php';
 
 var emailCaptured = false;
 var pendingAction = null;
@@ -1262,10 +1274,10 @@ async function submitGate(){
   if(!name||!email||!email.includes('@')){errEl.style.display='block';return;}
   btnEl.textContent='Saving...';btnEl.disabled=true;
   try{
-    if(AIRTABLE_TOKEN) await fetch('https://api.airtable.com/v0/'+AIRTABLE_BASE+'/'+AIRTABLE_TABLE,{
+    await fetch(LEAD_URL,{
       method:'POST',
-      headers:{'Authorization':'Bearer '+AIRTABLE_TOKEN,'Content-Type':'application/json'},
-      body:JSON.stringify({records:[{fields:{[FIELD_NAME]:name,[FIELD_EMAIL]:email}}]})
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name:name,email:email})
     });
   }catch(e){}
   try{localStorage.setItem('myf_lead',JSON.stringify({name:name,email:email,ts:Date.now()}));}catch(e){}

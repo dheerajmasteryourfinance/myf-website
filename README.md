@@ -35,3 +35,21 @@ Share that link for feedback. To update the site later, upload the changed files
 - The contact form is a mockup and does not send anything yet. It will be connected during the WordPress build.
 - The Health check still contains an Airtable token in its code. Replace it before sharing the link widely.
 - This preview is for review only. The final site will be rebuilt in WordPress with Elementor Pro.
+
+## SEO build
+
+Each page ships its own title, description, share image tags and a plain-HTML copy of its content
+(for Google, LinkedIn previews and visitors without JavaScript). After changing any page content, refresh them:
+
+```
+python -m http.server 8765          # in this folder, leave it running
+python scripts/build_seo.py         # in a second terminal (needs: pip install playwright)
+```
+
+Also updated by the build: `sitemap.xml`, `robots.txt`. Share image: `assets/og-image.png` (1200×630).
+
+## Airtable token (health check leads)
+
+The token is never put in page code. `api/lead.php` saves leads to Airtable on the server and reads the
+token from `myf-config.php`, which sits one folder **above** `public_html` on Hostinger (not downloadable,
+and ignored by git). Copy `myf-config.example.php`, rename it to `myf-config.php`, paste the token.
