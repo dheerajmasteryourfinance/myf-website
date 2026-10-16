@@ -33,7 +33,6 @@ Share that link for feedback. To update the site later, upload the changed files
 - The "Why MYF?" video streams from masteryourfinance.org.
 - The Book buttons go to the Calendly discovery-call link.
 - The contact form is a mockup and does not send anything yet. It will be connected during the WordPress build.
-- The Health check still contains an Airtable token in its code. Replace it before sharing the link widely.
 - This preview is for review only. The final site will be rebuilt in WordPress with Elementor Pro.
 
 ## SEO build
@@ -48,14 +47,11 @@ python scripts/build_seo.py         # in a second terminal (needs: pip install p
 
 Also updated by the build: `sitemap.xml`, `robots.txt`. Share image: `assets/og-image.png` (1200×630).
 
-## Forms and the Airtable token
+## Forms
 
-- Health check leads: `api/lead.php` saves name + email to Airtable.
-- Book a call form: `api/contact.php` emails the enquiry to `CONTACT_TO` and, if a table is set, saves it to Airtable
-  (fields: Name, Email, Firm size, Needs, Page).
+Both forms email the team; nothing secret is in the website code.
+- Book a call form: `api/contact.php`
+- Health check leads: `api/lead.php`
 
-### Airtable token
-
-The token is never put in page code. `api/lead.php` saves leads to Airtable on the server and reads the
-token from `myf-config.php`, which sits one folder **above** `public_html` on Hostinger (not downloadable,
-and ignored by git). Copy `myf-config.example.php`, rename it to `myf-config.php`, paste the token.
+The receiving address lives in `myf-config.php`, one folder **above** `public_html` on Hostinger
+(not downloadable, ignored by git). Copy `myf-config.example.php`, rename it to `myf-config.php`, fill in `CONTACT_TO`.
