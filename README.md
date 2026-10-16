@@ -53,5 +53,5 @@ Both forms email the team; nothing secret is in the website code.
 - Book a call form: `api/contact.php`
 - Health check leads: `api/lead.php`
 
-The receiving address lives in `myf-config.php`, one folder **above** `public_html` on Hostinger
-(not downloadable, ignored by git). Copy `myf-config.example.php`, rename it to `myf-config.php`, fill in `CONTACT_TO`.
+Emails go to **himanshu@masteryourbusiness.org**. To use a different address, create `myf-config.php` one folder
+**above** `public_html` on Hostinger (copy `myf-config.example.php`) and set `CONTACT_TO`.

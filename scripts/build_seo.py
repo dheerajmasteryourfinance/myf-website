@@ -87,6 +87,7 @@ PRE_CSS = ('/* Plain-HTML copy of the page (for search engines and no-JavaScript
 def clean(html):
     html = re.sub(r'class="myf([^"]*)"', lambda m: 'class="myf' + m.group(1).replace('rv-ready', '') + '"', html, 1)
     html = re.sub(r'class="rsec\b([^"]*)"', lambda m: 'class="' + ' '.join(['rsec', 'in'] + [c for c in m.group(1).split() if c != 'in']) + '"', html)
+    html = html.replace(' data-off=""', '')
     html = re.sub(r'\n{3,}', '\n\n', html)
     return html.strip()
 

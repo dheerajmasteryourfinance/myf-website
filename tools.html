@@ -180,6 +180,8 @@ html:not(.js) #app > .boot{display:none}
   if (navE && navE.type === 'reload' && location.hash) history.replaceState(null, '', location.pathname + location.search);
   window.scrollTo(0, 0);
 
+  /* Slower devices (few CPU cores or little memory): stop endless decorative animations */
+  try { if ((navigator.hardwareConcurrency || 8) <= 4 || (navigator.deviceMemory || 8) <= 4) document.documentElement.classList.add('lite'); } catch (e) {}
   function pick() { return MOB && window.innerWidth < 700 ? MOB : DESK; }
   var cur = pick();
   /* Desktop: scale the 1280px design to the screen. Height decides too, so the
@@ -200,6 +202,9 @@ html:not(.js) #app > .boot{display:none}
   app.innerHTML = '';
   DCRuntime.mount(cur.name, app).ready.then(function () {
     fit();
+    /* Pause animations in sections that are off-screen */
+    if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) en.target.removeAttribute('data-off'); else en.target.setAttribute('data-off', ''); }); }, { rootMargin: '200px 0px' });
+      document.querySelectorAll('#app .myf > section, #app .myf > footer, #app .myf > main > section').forEach(function (el) { io.observe(el); }); }
     if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function () { el.scrollIntoView(); window.scrollBy(0, -90); }, 300); }
   });
   fit();

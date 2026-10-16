@@ -1,5 +1,5 @@
 <?php
-/* Shared helpers for the website forms. Emails go to CONTACT_TO from myf-config.php,
+/* Shared helpers for the website forms. Emails go to himanshu@masteryourbusiness.org (or CONTACT_TO in myf-config.php,
    which sits one folder ABOVE public_html (never on GitHub). */
 function myf_json($code, $ok) { http_response_code($code); echo json_encode(['ok' => $ok]); exit; }
 
@@ -23,13 +23,16 @@ function myf_field($in, $key, $max) {
 function myf_mail($subject, $lines, $replyName, $replyEmail) {
     $cfgFile = dirname(__DIR__, 2) . '/myf-config.php';
     $cfg = is_file($cfgFile) ? require $cfgFile : [];
-    $to = $cfg['CONTACT_TO'] ?? '';
-    if (!$to) return null;                                             // not configured yet
+    // Enquiries go to Himanshu unless myf-config.php sets another address
+    $to = $cfg['CONTACT_TO'] ?? 'himanshu@masteryourbusiness.org';
     $domain = preg_replace('/^www\./', '', strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? 'masteryourfinance.org')));
     $from = $cfg['CONTACT_FROM'] ?? "website@$domain";
     $body = '';
     foreach ($lines as $k => $v) $body .= str_pad("$k:", 12) . $v . "\n";
     $body .= 'Time (UTC): ' . gmdate('Y-m-d H:i') . "\n\nReply to this email to answer $replyName directly.\n";
-    $headers = "From: Master Your Finance website <$from>\r\nReply-To: $replyName <$replyEmail>\r\nContent-Type: text/plain; charset=UTF-8";
+    // Inbox shows the visitor's name as the sender; the address stays ours so Gmail does not block it.
+    // Reply goes straight to the visitor.
+    $fromName = '=?UTF-8?B?' . base64_encode(str_replace(['"', '<', '>'], '', $replyName) . ' via MYF website') . '?=';
+    $headers = "From: $fromName <$from>\r\nReply-To: $replyName <$replyEmail>\r\nContent-Type: text/plain; charset=UTF-8";
     return @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, "-f$from");
 }
