@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') { http_response_code(405); echo '{"ok
 // Only accept requests from our own site
 $host = $_SERVER['HTTP_HOST'] ?? '';
 $origin = $_SERVER['HTTP_ORIGIN'] ?? ($_SERVER['HTTP_REFERER'] ?? '');
-if ($origin !== '' && parse_url($origin, PHP_URL_HOST) !== $host) { http_response_code(403); echo '{"ok":false}'; exit; }
+if ($origin !== '' && strtolower((string)parse_url($origin, PHP_URL_HOST)) !== strtolower(preg_replace('/:\d+$/', '', $host))) { http_response_code(403); echo '{"ok":false}'; exit; }
 
 $cfgFile = dirname(__DIR__, 2) . '/myf-config.php';   // e.g. domains/masteryourfinance.org/myf-config.php
 $cfg = is_file($cfgFile) ? require $cfgFile : [];

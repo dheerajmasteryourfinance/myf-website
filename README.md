@@ -48,7 +48,13 @@ python scripts/build_seo.py         # in a second terminal (needs: pip install p
 
 Also updated by the build: `sitemap.xml`, `robots.txt`. Share image: `assets/og-image.png` (1200×630).
 
-## Airtable token (health check leads)
+## Forms and the Airtable token
+
+- Health check leads: `api/lead.php` saves name + email to Airtable.
+- Book a call form: `api/contact.php` emails the enquiry to `CONTACT_TO` and, if a table is set, saves it to Airtable
+  (fields: Name, Email, Firm size, Needs, Page).
+
+### Airtable token
 
 The token is never put in page code. `api/lead.php` saves leads to Airtable on the server and reads the
 token from `myf-config.php`, which sits one folder **above** `public_html` on Hostinger (not downloadable,

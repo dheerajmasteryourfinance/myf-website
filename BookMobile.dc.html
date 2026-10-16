@@ -58,12 +58,12 @@ body{margin:0;background:#FFFFFF}
 </ol>
 </div>
 <form class="rv rv-d2 card" onSubmit="{{submit}}" aria-label="Book a free review" style="margin-top: 28px; padding: 24px; display: flex; flex-direction: column; gap: 16px; border: 0; color: #231F20">
-<label class="fld">Name<input class="inp" type="text" autocomplete="name" placeholder="Your name"></label>
-<label class="fld">Work email<input class="inp" type="email" autocomplete="email" placeholder="you@yourfirm.com"></label>
-<label class="fld">Firm size<select class="inp"><option>11–25 staff</option><option>26–100 staff</option><option>101–250 staff</option></select></label>
-<label class="fld">What do you need most?<select class="inp"><option>Bookkeeping &amp; accounting</option><option>Cash flow forecasting</option><option>Monthly reporting</option><option>CFO-lite support</option><option>Finance operations</option><option>Not sure yet</option></select></label>
-<button class="btn btn-block" type="submit">Book my free review</button>
-<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}"><div role="status" style="border-radius: 12px; background: #E6F0EC; color: #1A4A3A; padding: 12px 14px; font-size: 14px; font-weight: 600">Design mockup: nothing was sent.</div></sc-if>
+<label class="fld">Name<input class="inp" type="text" name="name" required autocomplete="name" placeholder="Your name"></label>
+<label class="fld">Work email<input class="inp" type="email" name="email" required autocomplete="email" placeholder="you@yourfirm.com"></label>
+<label class="fld">Firm size<select class="inp" name="size"><option>11–25 staff</option><option>26–100 staff</option><option>101–250 staff</option></select></label>
+<label class="fld">What do you need most?<select class="inp" name="need"><option>Bookkeeping &amp; accounting</option><option>Cash flow forecasting</option><option>Monthly reporting</option><option>CFO-lite support</option><option>Finance operations</option><option>Not sure yet</option></select></label>
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0"><button class="btn btn-block" type="submit">{{btnText}}</button>
+<sc-if value="{{sent}}" hint-placeholder-val="{{ false }}"><div role="status" style="border-radius: 12px; background: #E6F0EC; color: #1A4A3A; padding: 12px 14px; font-size: 14px; font-weight: 600">Thanks! We have your request and will reply within one working day.</div></sc-if><sc-if value="{{formErr}}" hint-placeholder-val="{{ false }}"><div role="alert" style="border-radius: 12px; background: #FBEAE5; color: #8A3A24; padding: 12px 14px; font-size: 14px; font-weight: 600">{{formErr}}</div></sc-if>
 <span class="small" style="color: #5D6670">We only use your details to reply to your enquiry.</span>
 </form>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
@@ -369,7 +369,21 @@ class Component extends DCLogic {
       setRev: (e) => this.setState({ rev: e.target.value }),
       dsoOut: num(rev) > 0 ? Math.round(num(ar) / num(rev) * 90) : '–',
       sent: !!s.sent,
-      submit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); }
+      formErr: s.formErr || '',
+      btnText: s.sending ? 'Sending…' : 'Book my free review',
+      submit: (e) => {
+        if (e && e.preventDefault) e.preventDefault();
+        const f = e && e.target ? (e.target.closest ? e.target.closest('form') : e.target) : null;
+        if (!f || (this.state || {}).sending) return;
+        const v = (n) => { const el = f.querySelector('[name="' + n + '"]'); return el ? String(el.value).trim() : ''; };
+        const d = { name: v('name'), email: v('email'), size: v('size'), need: v('need'), website: v('website'), page: location.pathname };
+        if (!d.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) { this.setState({ formErr: 'Please add your name and a valid work email.', sent: false }); return; }
+        this.setState({ sending: true, formErr: '', sent: false });
+        fetch('api/contact.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(d) })
+          .then((r) => r.json().catch(() => ({})).then((j) => { if (!r.ok || !j.ok) throw new Error('send'); }))
+          .then(() => { this.setState({ sending: false, sent: true }); try { f.reset(); } catch (x) {} })
+          .catch(() => this.setState({ sending: false, formErr: 'Sorry, that did not send. Please try again, or book a time on Calendly below.' }));
+      }
     };
   }
 }
