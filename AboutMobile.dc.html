@@ -20,9 +20,9 @@ body{margin:0;background:#FFFFFF}
 
 <header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
 <div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
-<a href="index.html" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<a href="./" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
 <div style="display: flex; align-items: center; gap: 8px">
-<a class="btn btn-light btn-sm" href="book.html" style="padding: 0 16px">Book a call</a>
+<a class="btn btn-light btn-sm" href="contact-us" style="padding: 0 16px">Book a call</a>
 <button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
@@ -31,19 +31,19 @@ body{margin:0;background:#FFFFFF}
 </div>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
-<a href="index.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
-<a href="services.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
-<a href="industries.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
-<a href="tools.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
-<a href="about.html" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">About Us</a>
-<a href="book.html" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
-<a class="btn btn-block" href="book.html" style="margin-top: 16px">Book a call</a>
+<a href="./" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
+<a href="services" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="industries" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
+<a href="tools" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="about-us" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">About Us</a>
+<a href="contact-us" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
+<a class="btn btn-block" href="contact-us" style="margin-top: 16px">Book a call</a>
 </nav>
 </sc-if>
 </header>
 
 <section data-rv="0" class="rsec {{rv0}}" id="top" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 90% 0%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 32px 20px 40px">
-<nav aria-label="Breadcrumb" class="small rv" style="margin-bottom: 16px"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">About us</span></nav>
+<nav aria-label="Breadcrumb" class="small rv" style="margin-bottom: 16px"><a href="./">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">About us</span></nav>
 <div style="display: flex; flex-direction: column; gap: 14px"><span class="eyebrow rv">About us</span><h1 class="h1 rv rv-d1" style="font-size: 32px; line-height: 1.12">Your extended finance team and trusted Financial GPS</h1><p class="lede rv rv-d2" style="font-size: 16px">Master Your Finance (MYF), based in the Netherlands, provides data-backed, technology-enabled financial services that go beyond traditional accounting. We handle reporting, analysis, bookkeeping and closing, while business owners stay focused on strategy, not spreadsheets.</p></div>
 </section>
 <section data-rv="1" class="rsec {{rv1}}" style="flex-shrink: 0; background: #FFFFFF; padding: 40px 20px">
@@ -69,25 +69,25 @@ body{margin:0;background:#FFFFFF}
 <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CEO</span><h3 class="h3">Joel Schenk</h3><span class="small" style="font-weight: 700; color: #266952">Founder &amp; Chief Executive Officer</span></div>
 </div>
 <p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">With 24 years in finance and over 15 years in leadership, Joel is the driving force behind Master Your Finance and Master Your Business. His vision is to make financial clarity accessible and actionable for business owners.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </article><article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; gap: 16px; align-items: center">
 <div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
 <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">MD</span><h3 class="h3">Himanshu Sachdeva</h3><span class="small" style="font-weight: 700; color: #266952">Managing Director</span></div>
 </div>
 <p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Himanshu combines analytical precision with a practical approach to help firms make confident financial decisions.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </article><article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; gap: 16px; align-items: center">
 <div class="person-pic" style="width: 72px; height: 72px"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
 <div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">Finance team</span><h3 class="h3">Twisha Gajjar</h3><span class="small" style="font-weight: 700; color: #266952">Finance Analyst</span></div>
 </div>
 <p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with 3 years as an Article Assistant and 3+ years in accounting, auditing and taxation. Twisha’s strong foundation in compliance and financial reporting keeps your numbers accurate, and her problem-solving mindset adds strategic value to every project.</p>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/twishagajjar/" target="_blank" rel="noopener" aria-label="Twisha Gajjar on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-top: auto"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/twishagajjar/" target="_blank" rel="noopener" aria-label="Twisha Gajjar on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </article></div>
 </section>
 <section data-rv="5" class="rsec {{rv5}}" style="flex-shrink: 0; background: #FFFFFF; padding: 32px 20px 40px">
-<div class="card-green rv" style="border-radius: 24px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF"><h2 class="h2" style="color: #FFFFFF; font-size: 24px">Want someone to read the numbers with you?</h2><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Book a free 30-minute finance review.</p><a class="btn btn-light btn-block" href="book.html">Book a call</a></div>
+<div class="card-green rv" style="border-radius: 24px; padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; color: #FFFFFF"><h2 class="h2" style="color: #FFFFFF; font-size: 24px">Want someone to read the numbers with you?</h2><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #DCEBE4">Book a free 30-minute finance review.</p><a class="btn btn-light btn-block" href="contact-us">Book a call</a></div>
 </section>
 <footer style="flex-grow: 1; background: radial-gradient(70% 60% at 0% 0%, rgba(38,105,82,.35) 0%, rgba(38,105,82,0) 60%), #231F20; color: #D5D8DA; padding: 48px 20px 32px; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-direction: column; gap: 14px">
@@ -97,17 +97,17 @@ body{margin:0;background:#FFFFFF}
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
 <nav aria-label="Services" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
 </nav>
 <nav aria-label="Company" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
-<a href="about.html" style="min-height: 44px; display: flex; align-items: center">About Us</a>
-<a href="industries.html" style="min-height: 44px; display: flex; align-items: center">Industries</a>
-<a href="tools.html" style="min-height: 44px; display: flex; align-items: center">Tools</a>
-<a href="book.html" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+<a href="about-us" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="industries" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="tools" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="contact-us" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
 </nav>
 </div>
 <div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>

@@ -20,9 +20,9 @@ body{margin:0;background:#FFFFFF}
 
 <header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
 <div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
-<a href="index.html" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<a href="./" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
 <div style="display: flex; align-items: center; gap: 8px">
-<a class="btn btn-light btn-sm" href="book.html" style="padding: 0 16px">Book a call</a>
+<a class="btn btn-light btn-sm" href="contact-us" style="padding: 0 16px">Book a call</a>
 <button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
@@ -31,19 +31,19 @@ body{margin:0;background:#FFFFFF}
 </div>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
-<a href="index.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
-<a href="services.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
-<a href="industries.html" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">Industries</a>
-<a href="tools.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
-<a href="about.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
-<a href="book.html" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
-<a class="btn btn-block" href="book.html" style="margin-top: 16px">Book a call</a>
+<a href="./" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
+<a href="services" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="industries" aria-current="page" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 700; color: #266952">Industries</a>
+<a href="tools" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="about-us" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
+<a href="contact-us" style="min-height: 52px; display: flex; align-items: center; font-weight: 600; color: #231F20">Contact Us</a>
+<a class="btn btn-block" href="contact-us" style="margin-top: 16px">Book a call</a>
 </nav>
 </sc-if>
 </header>
 
 <section data-rv="0" class="rsec {{rv0}}" id="top" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 90% 0%, rgba(38,105,82,.12) 0%, rgba(38,105,82,0) 70%), linear-gradient(180deg, #FDFCF5 0%, #F2F7F3 100%); padding: 32px 20px 40px">
-<nav aria-label="Breadcrumb" class="small rv" style="margin-bottom: 16px"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">Industries</span></nav>
+<nav aria-label="Breadcrumb" class="small rv" style="margin-bottom: 16px"><a href="./">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #231F20; font-weight: 700">Industries</span></nav>
 <div style="display: flex; flex-direction: column; gap: 14px"><span class="eyebrow rv">Industries</span><h1 class="h1 rv rv-d1" style="font-size: 32px; line-height: 1.12">Built for firms that sell expertise</h1><p class="lede rv rv-d2" style="font-size: 16px">Every professional service firm gets stuck on cash in its own way. See where it usually happens, how we fix it, and what we track.</p><a class="btn btn-block rv rv-d3" href="https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms" target="_blank" rel="noopener">Book a free 30-min finance review<span class="sr-only"> (opens in a new tab)</span></a></div>
 <div class="ind-scroll" style="margin-top: 24px"><a class="ind-pill rv rv-d2" href="#law-firms" style="text-decoration: none"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7h14M7 7l-3 7a3 3 0 0 0 6 0zM17 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span>Law firms</a><a class="ind-pill rv rv-d3" href="#agencies" style="text-decoration: none"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"></path></svg></span>Marketing &amp; creative agencies</a><a class="ind-pill rv rv-d4" href="#it-consulting" style="text-decoration: none"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></span>IT &amp; consulting firms</a><a class="ind-pill rv rv-d5" href="#professional-services" style="text-decoration: none"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg></span>Other professional services</a><a class="ind-pill rv rv-d5" href="#startups" style="text-decoration: none"><span class="ind-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 15c-1.5 1.5-2 4-2 6 2 0 4.5-.5 6-2"></path><path d="M9 15l-3-3c1-4 4-8 10-9 0 6-4 9-9 12z"></path><circle cx="14.5" cy="9.5" r="1.5"></circle></svg></span>Startups</a></div>
 </section>
@@ -161,17 +161,17 @@ body{margin:0;background:#FFFFFF}
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
 <nav aria-label="Services" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
 </nav>
 <nav aria-label="Company" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
-<a href="about.html" style="min-height: 44px; display: flex; align-items: center">About Us</a>
-<a href="industries.html" style="min-height: 44px; display: flex; align-items: center">Industries</a>
-<a href="tools.html" style="min-height: 44px; display: flex; align-items: center">Tools</a>
-<a href="book.html" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+<a href="about-us" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="industries" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="tools" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="contact-us" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
 </nav>
 </div>
 <div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>

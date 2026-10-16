@@ -20,9 +20,9 @@ body{margin:0;background:#FFFFFF}
 
 <header class="hdr hdr-m {{hdrCls}}" style="position: sticky; top: 0; z-index: 30; flex-shrink: 0">
 <div style="height: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between">
-<a href="index.html" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
+<a href="./" aria-label="Master Your Finance, home" style="display: flex; align-items: center; min-height: 44px"><img src="assets/logo-white.svg" alt="Master Your Finance" width="80" height="35" class="hdr-logo" style="width: 80px; height: 35px"></a>
 <div style="display: flex; align-items: center; gap: 8px">
-<a class="btn btn-light btn-sm" href="book.html" style="padding: 0 16px">Book a call</a>
+<a class="btn btn-light btn-sm" href="contact-us" style="padding: 0 16px">Book a call</a>
 <button type="button" onClick="{{toggleMenu}}" aria-expanded="{{menuExp}}" aria-controls="m-menu" aria-label="{{menuAria}}" style="width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer" class="hdr-menu">
 <sc-if value="{{menuClosed}}" hint-placeholder-val="{{ true }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
@@ -31,20 +31,20 @@ body{margin:0;background:#FFFFFF}
 </div>
 <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
 <nav id="m-menu" aria-label="Main" style="position: absolute; left: 0; right: 0; top: 100%; background: #FFFFFF; border-bottom: 1px solid #ECE8D6; box-shadow: 0 24px 40px -24px rgba(26,74,58,.4); padding: 8px 20px 24px; display: flex; flex-direction: column">
-<a href="index.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
-<a href="services.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
-<a href="industries.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
-<a href="tools.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
-<a href="about.html" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
-<a href="book.html" aria-current="page" style="min-height: 52px; display: flex; align-items: center; font-weight: 700; color: #266952">Contact Us</a>
-<a class="btn btn-block" href="book.html" style="margin-top: 16px">Book a call</a>
+<a href="./" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Home</a>
+<a href="services" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Services</a>
+<a href="industries" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Industries</a>
+<a href="tools" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">Tools &amp; Resources</a>
+<a href="about-us" style="min-height: 52px; display: flex; align-items: center; border-bottom: 1px solid #ECE8D6; font-weight: 600; color: #231F20">About Us</a>
+<a href="contact-us" aria-current="page" style="min-height: 52px; display: flex; align-items: center; font-weight: 700; color: #266952">Contact Us</a>
+<a class="btn btn-block" href="contact-us" style="margin-top: 16px">Book a call</a>
 </nav>
 </sc-if>
 </header>
 
 <section data-rv="0" id="top" tabindex="-1" class="rsec {{rv0}} on-dark" style="flex-shrink: 0; background: radial-gradient(90% 70% at 100% 0%, rgba(46,122,99,.55) 0%, rgba(46,122,99,0) 60%), linear-gradient(150deg, #1A4A3A 0%, #1F5A46 55%, #266952 100%); padding: 40px 20px">
 <div style="display: flex; flex-direction: column; gap: 14px">
-<nav aria-label="Breadcrumb" class="small rv" style="color: #CFE0D8"><a href="index.html" style="color: #FFFFFF">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #FFFFFF; font-weight: 700">Book a call</span></nav>
+<nav aria-label="Breadcrumb" class="small rv" style="color: #CFE0D8"><a href="./" style="color: #FFFFFF">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" style="color: #FFFFFF; font-weight: 700">Book a call</span></nav>
 <span class="eyebrow rv">Book a call</span>
 <h1 class="h1 rv rv-d1" style="font-size: 30px">Get on the fastest route to financial clarity.</h1>
 <p class="body rv rv-d2">Book a free 30-minute finance review. Tell us a little about your firm and we will come back with the two or three things worth fixing first.</p>
@@ -87,17 +87,17 @@ body{margin:0;background:#FFFFFF}
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px">
 <nav aria-label="Services" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Services</span>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
-<a href="services.html" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Bookkeeping</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Cash flow</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">Reporting</a>
+<a href="services" style="min-height: 44px; display: flex; align-items: center">CFO-Lite</a>
 </nav>
 <nav aria-label="Company" style="display: flex; flex-direction: column">
 <span style="font-weight: 700; color: #FFFFFF; margin-bottom: 4px">Company</span>
-<a href="about.html" style="min-height: 44px; display: flex; align-items: center">About Us</a>
-<a href="industries.html" style="min-height: 44px; display: flex; align-items: center">Industries</a>
-<a href="tools.html" style="min-height: 44px; display: flex; align-items: center">Tools</a>
-<a href="book.html" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
+<a href="about-us" style="min-height: 44px; display: flex; align-items: center">About Us</a>
+<a href="industries" style="min-height: 44px; display: flex; align-items: center">Industries</a>
+<a href="tools" style="min-height: 44px; display: flex; align-items: center">Tools</a>
+<a href="contact-us" style="min-height: 44px; display: flex; align-items: center">Contact Us</a>
 </nav>
 </div>
 <div style="font-size: 14px"><span style="font-weight: 700; color: #FFFFFF">Regions</span><br>United States · United Kingdom · Australia</div>

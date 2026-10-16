@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://masteryourfinance.org/</loc></url>
-  <url><loc>https://masteryourfinance.org/services.html</loc></url>
-  <url><loc>https://masteryourfinance.org/industries.html</loc></url>
-  <url><loc>https://masteryourfinance.org/tools.html</loc></url>
-  <url><loc>https://masteryourfinance.org/about.html</loc></url>
-  <url><loc>https://masteryourfinance.org/book.html</loc></url>
-  <url><loc>https://masteryourfinance.org/health-check.html</loc></url>
+  <url><loc>https://masteryourfinance.org/services</loc></url>
+  <url><loc>https://masteryourfinance.org/industries</loc></url>
+  <url><loc>https://masteryourfinance.org/tools</loc></url>
+  <url><loc>https://masteryourfinance.org/about-us</loc></url>
+  <url><loc>https://masteryourfinance.org/contact-us</loc></url>
+  <url><loc>https://masteryourfinance.org/health-check</loc></url>
 </urlset>

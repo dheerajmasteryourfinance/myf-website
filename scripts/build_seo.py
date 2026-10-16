@@ -28,9 +28,9 @@ PAGES = {
                         'Outsourced finance for law firms, marketing and creative agencies, IT and consulting firms, other professional services and startups, with the KPIs that matter to each.'),
     'tools.html': ('Free finance tools for professional service firms | Master Your Finance',
                    'Free tools for firms that sell expertise: Financial GPS snapshot, law firm health check, utilisation and DSO self-diagnostic, cash flow runway estimator and a 30-day sprint planner.'),
-    'about.html': ('About us | Master Your Finance',
+    'about-us.html': ('About us | Master Your Finance',
                    'Meet the team behind Master Your Finance, the extended finance team and Financial GPS for small and mid-sized professional service firms in the US, UK and Australia.'),
-    'book.html': ('Book a free 30-minute finance review | Master Your Finance',
+    'contact-us.html': ('Book a free 30-minute finance review | Master Your Finance',
                   'Book a free 30-minute finance review with Master Your Finance. Tell us about your firm and we come back with the two or three things worth fixing first.'),
 }
 ORG = {
@@ -46,7 +46,7 @@ def esc(s):
 
 
 def seo_block(page, title, desc):
-    url = SITE + '/' + ('' if page == 'index.html' else page)
+    url = SITE + '/' + ('' if page == 'index.html' else page[:-5])   # clean URLs: /services, /about-us ...
     out = [
         '<!--seo:start-->',
         f'<title>{esc(title)}</title>',
@@ -131,7 +131,7 @@ def main():
     s = put_seo(s, seo_block('health-check.html', t.replace('&amp;', '&'), d.replace('&amp;', '&')))
     open(hc, 'w', encoding='utf-8').write(s)
 
-    urls = [SITE + '/'] + [f'{SITE}/{p}' for p in PAGES if p != 'index.html'] + [f'{SITE}/health-check.html']
+    urls = [SITE + '/'] + [f'{SITE}/{p[:-5]}' for p in PAGES if p != 'index.html'] + [f'{SITE}/health-check']
     open(os.path.join(ROOT, 'sitemap.xml'), 'w').write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         + ''.join(f'  <url><loc>{u}</loc></url>\n' for u in urls) + '</urlset>\n')
