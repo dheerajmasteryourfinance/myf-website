@@ -30,6 +30,10 @@ PAGES = {
                    'Free tools for firms that sell expertise: Financial GPS snapshot, law firm health check, utilisation and DSO self-diagnostic, cash flow runway estimator and a 30-day sprint planner.'),
     'about-us.html': ('About us | Master Your Finance',
                    'Meet the team behind Master Your Finance, the extended finance team and Financial GPS for small and mid-sized professional service firms in the US, UK and Australia.'),
+    'privacy-policy.html': ('Privacy policy | Master Your Finance',
+                            'How Master Your Finance collects, uses and protects personal data from its website, contact form and free health check.'),
+    'terms.html': ('Terms of use | Master Your Finance',
+                   'Terms for using the Master Your Finance website and its free finance tools, including the health check.'),
     'contact-us.html': ('Book a free 30-minute finance review | Master Your Finance',
                   'Book a free 30-minute finance review with Master Your Finance. Tell us about your firm and we come back with the two or three things worth fixing first.'),
 }

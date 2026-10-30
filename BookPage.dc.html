@@ -71,7 +71,7 @@ body{margin:0;background:#FFFFFF}
 <label class="fld">What do you need most?<select class="inp" name="need"><option>Bookkeeping &amp; accounting</option><option>Cash flow forecasting</option><option>Monthly reporting</option><option>CFO-lite support</option><option>Finance operations</option><option>Not sure yet</option></select></label>
 <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0"><button class="btn btn-block" type="submit" style="margin-top: 6px">{{btnText}}<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
 <sc-if value="{{sent}}" hint-placeholder-val="{{ false }}"><div role="status" style="border-radius: 12px; background: #E6F0EC; color: #1A4A3A; padding: 12px 14px; font-size: 14px; font-weight: 600">Thanks! We have your request and will reply within one working day.</div></sc-if><sc-if value="{{formErr}}" hint-placeholder-val="{{ false }}"><div role="alert" style="border-radius: 12px; background: #FBEAE5; color: #8A3A24; padding: 12px 14px; font-size: 14px; font-weight: 600">{{formErr}}</div></sc-if>
-<span class="small" style="color: #5D6670">We only use your details to reply to your enquiry. See our <a href="#" style="color: #266952; text-decoration: underline">privacy policy</a>.</span>
+<span class="small" style="color: #5D6670">We only use your details to reply to your enquiry. See our <a href="privacy-policy" style="color: #266952; text-decoration: underline">privacy policy</a>.</span>
 </form>
 </div>
 </section>
@@ -106,7 +106,7 @@ body{margin:0;background:#FFFFFF}
 </div>
 </div>
 <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 56px; padding-top: 24px; border-top: 1px solid #3A3637; font-size: 13px">
-<span>© Master Your Finance · <a href="#">Privacy policy</a> · <a href="#">Terms</a></span>
+<span>© Master Your Finance · <a href="privacy-policy">Privacy policy</a> · <a href="terms">Terms</a></span>
 <button type="button" onClick="{{toggleMotion}}" aria-pressed="{{motionPressed}}" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #4A4546; background: transparent; color: #FFFFFF; font-size: 13px; font-weight: 700; cursor: pointer">{{motionLabel}}</button>
 </div>
 </footer>
