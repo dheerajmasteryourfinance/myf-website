@@ -316,8 +316,8 @@ body{margin:0;background:#FFFFFF}
 <!-- 6b · TEAM -->
 <section data-rv="9" class="rsec {{rv9}}" id="about" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 100% 0%, rgba(209,103,74,.08) 0%, rgba(209,103,74,0) 70%), #FFFFFF; padding: 60px 80px; border-top: 1px solid #ECE8D6">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 36px"><div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px"><span class="eyebrow rv">About us</span><h2 class="h2 rv rv-d1">The people behind your numbers</h2><p class="lede rv rv-d2">Based in the Netherlands, serving professional service firms in the US, UK and Australia.</p></div><a class="btn rv rv-d3" href="about-us" style="flex-shrink: 0">More about us<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-<div style="display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 20px; align-items: center">
-<article class="card rv rv-d2" style="padding: 16px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto; gap: 20px">
+<article class="card rv rv-d2" style="grid-column: 1 / 3; grid-row: 1 / 3; padding: 16px; display: flex; flex-direction: column; gap: 16px">
 <sc-if value="{{vidOff}}" hint-placeholder-val="{{ true }}">
 <button type="button" class="yt-facade" onClick="{{playVid}}" onMouseEnter="{{prevOn}}" onMouseLeave="{{prevOff}}" aria-label="Play video with sound: Why MYF? (1 minute 51 seconds)">
 <img class="vd-bg" src="assets/video-thumb.jpg" alt="" aria-hidden="true">
@@ -339,7 +339,35 @@ body{margin:0;background:#FFFFFF}
 <a class="more" href="assets/intro-video.mp4" target="_blank" rel="noopener" style="flex-shrink: 0">Open full screen<span class="sr-only"> (opens in a new tab)</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </article>
-<div style="display: flex; flex-direction: column; gap: 14px; justify-content: center"><div class="card rv rv-d2" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Joel Schenk</b><span class="small">Founder &amp; Chief Executive Officer</span></div></div><div class="card rv rv-d3" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Himanshu Sachdeva</b><span class="small">Managing Director</span></div></div><div class="card rv rv-d4" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Twisha Gajjar</b><span class="small">Finance Analyst</span></div></div></div>
+<div class="ppl-col rv rv-d3">
+<div class="ppl-scroll" ref="{{setPplRef}}" tabindex="0" role="region" aria-label="Our team">
+<article class="card tilt rv rv-d3" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 88px; height: 88px"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">CEO</span><h3 class="h3">Joel Schenk</h3><span class="small" style="font-weight: 700; color: #266952">Founder &amp; Chief Executive Officer</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">With 24 years in finance and over 15 years in leadership, Joel is the driving force behind Master Your Finance and Master Your Business. His vision is to make financial clarity accessible and actionable for business owners.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">24+ yrs finance · 15+ yrs leadership</span><a class="more" href="https://www.linkedin.com/in/joel-schenk/" target="_blank" rel="noopener" aria-label="Joel Schenk on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article>
+<article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 88px; height: 88px"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">MD</span><h3 class="h3">Himanshu Sachdeva</h3><span class="small" style="font-weight: 700; color: #266952">Managing Director</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with over 6 years of hands-on experience in financial management, reporting and business advisory. Himanshu combines analytical precision with a practical approach to help firms make confident financial decisions.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/ca-himanshu-sachdeva/" target="_blank" rel="noopener" aria-label="Himanshu Sachdeva on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article>
+<article class="card tilt rv rv-d4" style="padding: 22px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 16px; align-items: center">
+<div class="person-pic" style="width: 88px; height: 88px"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0"><span class="hw-kicker">Finance team</span><h3 class="h3">Twisha Gajjar</h3><span class="small" style="font-weight: 700; color: #266952">Finance Analyst</span></div>
+</div>
+<p class="small" style="font-size: 14px; line-height: 1.6; color: #231F20">A qualified Chartered Accountant with 3 years as an Article Assistant and 3+ years in accounting, auditing and taxation. Twisha’s strong foundation in compliance and financial reporting keeps your numbers accurate, and her problem-solving mindset adds strategic value to every project.</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap"><span class="tag">Chartered Accountant (CA)</span><a class="more" href="https://www.linkedin.com/in/twishagajjar/" target="_blank" rel="noopener" aria-label="Twisha Gajjar on LinkedIn (opens in a new tab)">LinkedIn<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</article>
+</div>
+<button type="button" class="ppl-more {{pplIcon}}" onClick="{{pplNext}}"><span>{{pplLabel}}</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></button>
+</div>
 </div>
 </section>
 
