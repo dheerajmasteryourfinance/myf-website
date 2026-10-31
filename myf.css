@@ -732,3 +732,5 @@ select.inp{background-image:linear-gradient(45deg,transparent 50%,#266952 50%),l
 .legal-phone ul{font-size:15px}
 .legal a{color:#266952}
 .legal-sec b{color:#231F20}
+.legal-toc .toc-a:hover{background:#EEF5F1;color:#1A4A3A !important}
+.legal-toc .toc-a:focus-visible{outline:2px solid #266952;outline-offset:2px}
