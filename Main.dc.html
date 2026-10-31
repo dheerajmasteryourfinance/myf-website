@@ -316,7 +316,31 @@ body{margin:0;background:#FFFFFF}
 <!-- 6b · TEAM -->
 <section data-rv="9" class="rsec {{rv9}}" id="about" tabindex="-1" style="flex-shrink: 0; background: radial-gradient(50% 60% at 100% 0%, rgba(209,103,74,.08) 0%, rgba(209,103,74,0) 70%), #FFFFFF; padding: 60px 80px; border-top: 1px solid #ECE8D6">
 <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 36px"><div style="display: flex; flex-direction: column; gap: 16px; max-width: 700px"><span class="eyebrow rv">About us</span><h2 class="h2 rv rv-d1">The people behind your numbers</h2><p class="lede rv rv-d2">Based in the Netherlands, serving professional service firms in the US, UK and Australia.</p></div><a class="btn rv rv-d3" href="about-us" style="flex-shrink: 0">More about us<svg class="arr" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px"><div class="card rv rv-d2" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Joel Schenk</b><span class="small">Founder &amp; Chief Executive Officer</span></div></div><div class="card rv rv-d3" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Himanshu Sachdeva</b><span class="small">Managing Director</span></div></div><div class="card rv rv-d4" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Twisha Gajjar</b><span class="small">Finance Analyst</span></div></div></div>
+<div style="display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 20px; align-items: center">
+<article class="card rv rv-d2" style="padding: 16px; display: flex; flex-direction: column; gap: 16px">
+<sc-if value="{{vidOff}}" hint-placeholder-val="{{ true }}">
+<button type="button" class="yt-facade" onClick="{{playVid}}" onMouseEnter="{{prevOn}}" onMouseLeave="{{prevOff}}" aria-label="Play video with sound: Why MYF? (1 minute 51 seconds)">
+<img class="vd-bg" src="assets/video-thumb.jpg" alt="" aria-hidden="true">
+<video class="vd-prev" src="assets/intro-video.mp4" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+<span class="vd-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12.5-7.5z"></path></svg>Click to play with sound</span>
+<span class="yt-chip vd-muted" style="left: 16px; top: 16px" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M17 9l5 6M22 9l-5 6"></path></svg>Muted preview</span>
+<span class="yt-chip" style="right: 16px; bottom: 16px">1:51</span>
+</button>
+</sc-if>
+<sc-if value="{{vidOn}}" hint-placeholder-val="{{ false }}">
+<video class="vd-player" src="assets/intro-video.mp4" controls autoplay playsinline preload="auto" poster="assets/video-thumb.jpg" aria-label="Why MYF? video" ref="{{setVidRef}}"></video>
+</sc-if>
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 0 8px 8px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span class="hw-kicker">Watch · 2 min</span>
+<h3 class="h3" style="font-size: 20px">Why MYF?</h3>
+<span class="small">Your extended finance team: who we are, who we work with and how we bring clarity to your numbers.</span>
+</div>
+<a class="more" href="assets/intro-video.mp4" target="_blank" rel="noopener" style="flex-shrink: 0">Open full screen<span class="sr-only"> (opens in a new tab)</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</article>
+<div style="display: flex; flex-direction: column; gap: 14px; justify-content: center"><div class="card rv rv-d2" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">JS</span><img src="assets/joel-sq.jpg" alt="Joel Schenk, Founder and CEO of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Joel Schenk</b><span class="small">Founder &amp; Chief Executive Officer</span></div></div><div class="card rv rv-d3" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">HS</span><img src="assets/him-sq.jpg" alt="Himanshu Sachdeva, Managing Director of Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Himanshu Sachdeva</b><span class="small">Managing Director</span></div></div><div class="card rv rv-d4" style="padding: 16px 18px; display: flex; align-items: center; gap: 14px"><div class="person-pic" style="width: 56px; height: 56px; flex-shrink: 0"><span aria-hidden="true">TG</span><img src="assets/twisha-sq.jpg" alt="Twisha Gajjar, Finance Analyst at Master Your Finance" loading="lazy" onError="{{imgErr}}"></div><div style="display: flex; flex-direction: column; gap: 2px; min-width: 0"><b style="font-size: 16px; color: #1A4A3A">Twisha Gajjar</b><span class="small">Finance Analyst</span></div></div></div>
+</div>
 </section>
 
 <!-- 7 · FREE TOOLS -->
