@@ -1,0 +1,24 @@
+# Master Your Finance
+
+> Master Your Finance (MYF) is an outsourced finance team for professional service firms (law firms, agencies, IT and consulting firms, startups) in the United States, the United Kingdom and Australia. We handle bookkeeping, monthly reporting, 13-week cash flow forecasting, CFO-lite support and finance operations.
+
+Based in the Netherlands. Contact: himanshu@masteryourbusiness.org. Book a free 30-minute finance review: https://calendly.com/himanshu-masteryourbusiness/30-minutes-discovery-call-law-firms. Every page below is also available as HTML at the same address without ".md".
+
+## Main pages
+- [Home](https://masteryourfinance.org/index.md): what MYF does, how it works (the Financial GPS), who it is for, team and FAQs
+- [Services](https://masteryourfinance.org/services.md): the five services, what is included in each, pricing approach and setup FAQs
+- [Industries](https://masteryourfinance.org/industries.md): how MYF works with law firms, agencies, IT and consulting firms, other professional services and startups
+- [About us](https://masteryourfinance.org/about-us.md): who we are, mission and vision, how we work, the team
+- [Contact us](https://masteryourfinance.org/contact-us.md): book a free 30-minute finance review or send an enquiry
+
+## Free tools
+- [Tools & Resources](https://masteryourfinance.org/tools.md): free self-assessment tools: Financial GPS snapshot, utilisation, realisation and DSO checks, cash runway estimator, 30-day sprint planner
+- [Law firm health check](https://masteryourfinance.org/health-check.md): interactive revenue health check for law firms (runs in the browser)
+
+## For agents
+- [MCP server card](https://masteryourfinance.org/.well-known/mcp/server-card.json): read-only MCP server with tools to read these pages
+- [Sitemap](https://masteryourfinance.org/sitemap.xml)
+
+## Optional
+- [Privacy policy](https://masteryourfinance.org/privacy-policy.md): how personal data from the website and forms is handled
+- [Terms of use](https://masteryourfinance.org/terms.md): terms for using the website and free tools; content is information only, not financial advice

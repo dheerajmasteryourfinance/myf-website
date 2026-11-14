@@ -1,4 +1,7 @@
+# Content Signals (https://contentsignals.org): search engines may index this site, AI assistants may use it
+# to answer questions and link to us, but the content may not be used to train AI models.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /scripts/
 Disallow: /api/

@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "masteryourfinance",
+    "title": "Master Your Finance",
+    "version": "1.0.0"
+  },
+  "description": "Read-only MCP server for masteryourfinance.org: an outsourced finance team for professional service firms in the US, UK and Australia. Tools return a site overview, the list of services, a booking link, and any page of the website as Markdown.",
+  "iconUrl": "https://masteryourfinance.org/assets/logo-green.svg",
+  "documentationUrl": "https://masteryourfinance.org/llms.txt",
+  "transport": {
+    "type": "streamable-http",
+    "endpoint": "https://masteryourfinance.org/mcp"
+  },
+  "remotes": [
+    { "type": "streamable-http", "url": "https://masteryourfinance.org/mcp" }
+  ],
+  "capabilities": {
+    "tools": { "listChanged": false }
+  },
+  "authentication": { "required": false },
+  "tools": [
+    { "name": "get_site_overview", "description": "Summary of Master Your Finance with links to every page." },
+    { "name": "list_services", "description": "The finance services offered, with a one-line summary of each." },
+    { "name": "read_page", "description": "Read a page of masteryourfinance.org as Markdown." },
+    { "name": "get_booking_link", "description": "Link to book a free 30-minute finance review call." }
+  ],
+  "contact": { "email": "himanshu@masteryourbusiness.org", "url": "https://masteryourfinance.org/contact-us" }
+}
