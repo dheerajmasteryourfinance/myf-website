@@ -28,15 +28,28 @@ RewriteRule ^ /%1 [L,R=301]
 RewriteCond %{REQUEST_URI} !^/$
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [L,R=301]
-# Serve /services from services.html (inside the server, address stays clean)
+# AI agents that ask for Markdown (Accept: text/markdown) get the Markdown copy of the page
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteRule ^$ index.md [L]
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1.md -f
+RewriteRule ^([a-z0-9-]+)$ $1.md [L,NC]
+# MCP server endpoint for AI agents (see /.well-known/mcp/server-card.json)
+RewriteRule ^mcp$ api/mcp.php [L]
+# Serve /services from services.html, and /crm/index from crm/index.html (address stays clean)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^([a-z0-9-]+)$ $1.html [L,NC]
+RewriteRule ^([a-z0-9/_-]+)$ $1.html [L,NC]
 
 # Hide files that are not part of the website
 RedirectMatch 404 ^/\.git
 RedirectMatch 404 ^/scripts/
 RedirectMatch 404 ^/(README\.md|myf-config\.example\.php|\.gitignore|\.nojekyll)$
+
+# File types for agent files
+AddType "text/markdown; charset=utf-8" .md
+AddType "text/plain; charset=utf-8" .txt
+AddType "application/json; charset=utf-8" .json
 
 ErrorDocument 404 /index.html
 
@@ -54,8 +67,48 @@ ExpiresByType image/svg+xml "access plus 30 days"
 # Always check for a newer version of pages, templates, styles and scripts
 # (stops browsers showing an old page after a deploy; unchanged files still load from cache)
 <IfModule mod_headers.c>
-<FilesMatch "\.(html|css|js|php|xml|txt)$">
+<FilesMatch "\.(html|css|js|php|xml|txt|md|json)$">
 Header set Cache-Control "no-cache"
 Header unset Expires
 </FilesMatch>
+</IfModule>
+
+# Point agents to llms.txt and to the Markdown copy of each page (RFC 8288 Link header)
+<IfModule mod_headers.c>
+<FilesMatch "\.(html|md)$">
+Header append Vary Accept
+</FilesMatch>
+<Files "index.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </index.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "services.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </services.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "industries.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </industries.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "tools.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </tools.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "about-us.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </about-us.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "contact-us.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </contact-us.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "privacy-policy.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </privacy-policy.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "terms.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </terms.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "health-check.html">
+Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </health-check.md>; rel=\"alternate\"; type=\"text/markdown\""
+</Files>
+<Files "server-card.json">
+Header set Access-Control-Allow-Origin "*"
+</Files>
+<Files "llms.txt">
+Header set Access-Control-Allow-Origin "*"
+</Files>
 </IfModule>
