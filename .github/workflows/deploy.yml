@@ -1,0 +1,41 @@
+# Deploy to Hostinger on every push to main.
+# Uploads only the files that changed and never deletes anything it did not upload itself,
+# so folders added by hand on Hostinger (crm, hba, ...) are left alone.
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upload changed files by FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
+          # Folder on Hostinger where the website lives, relative to the FTP account's start folder.
+          # Hostinger's main FTP account usually starts in public_html, so "./" is right; change if not.
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            scripts/**
+            README.md
+            myf-config.php
+            assets/with-BG-Master-your-finance.mp4
+            crm/**
+            hba/**
